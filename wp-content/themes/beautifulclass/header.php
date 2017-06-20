@@ -45,10 +45,10 @@
                                             <div class="thim-link-login thim-login-popup"> <a class="register" href="#">Register</a> <a class="login" href="#">Login</a></div>
                                             <div id="thim-popup-login" class="has-shortcode">
                                                 <div class="thim-login-container">
-                                                    <a href="http://miniorange.com/cloud-identity-broker-service" style="display:none;"></a>
-                                                    <a href="http://miniorange.com/strong_auth" style="display:none;"></a>
-                                                    <a href="http://miniorange.com/single-sign-on-sso" style="display:none;"></a>
-                                                    <a href="http://miniorange.com/fraud" style="display:none;"></a>
+                                                    <a href="#" style="display:none;"></a>
+                                                    <a href="#" style="display:none;"></a>
+                                                    <a href="#" style="display:none;"></a>
+                                                    <a href="#" style="display:none;"></a>
                                                     <div class="mo-openid-app-icons">
                                                         <p style="color:#000000"> Login with social networks</p>
                                                         <a style="width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;" class="btn btn-block btn-social btn-facebook btn-custom-dec login-button" onclick="moOpenIdLogin(&quot;facebook&quot;);"> <i style="padding-top:5px !important" class="fa fa-facebook"></i> Facebook</a>
@@ -59,7 +59,7 @@
                                                     <br>
                                                     <div class="thim-login">
                                                         <h2 class="title">Login with your site account</h2>
-                                                        <form name="loginform" id="loginform" action="https://educationwp.thimpress.com/wp-login.php?wpe-login=thim" method="post" data-dpmaxz-eid="1">
+                                                        <form name="loginform" id="loginform" action="#" method="post" data-dpmaxz-eid="1">
                                                             <p class="login-username">
                                                                 <input type="text" name="user_login" placeholder="Username or email" id="thim_login" class="input" value="" size="20" data-dpmaxz-eid="2">
                                                             </p>
@@ -90,8 +90,8 @@
                         <div class="navigation col-sm-12">
                             <div class="tm-table">
                                 <div class="width-logo table-cell sm-logo">
-                                    <a href="http://localhost:8080/wordpress" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
-                                    <a href="http://localhost:8080/wordpress/" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
+                                    <a href="http://localhost:8080/FGCClass_WordPress" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
+                                    <a href="http://localhost:8080/FGCClass_WordPress" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
                                 </div>
                                 <nav class="width-navigation table-cell table-right">
 	                                <?php echo wp_nav_menu( array( "theme_location" => "menu-1" ) ); ?>

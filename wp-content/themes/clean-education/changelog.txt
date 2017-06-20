@@ -1,0 +1,57 @@
+== Change log ==
+
+= 1.2.4 =
+* Bug Fixed: Closing div in portfolio section (Reported by sinfomac)
+
+= 1.2.3 =
+* Bug Fixed: Widget layout issue in footer widget area
+
+= 1.2.2 =
+* Code Optimization
+
+= 1.2.1 =
+* Bug Fixed: CT:Social Icon widget not displaying
+
+= 1.2 =
+* Added: Headline and Sub-headline in Demo Featured Content
+* Bug Fixed: Margin issue with section header
+* Bug Fixed: Missing closing div of #site-branding with logo is enabled
+* Code Optimization
+
+= 1.1.2 =
+* Bug Fixed: Slider display issue before loading
+* Updated: Demo images and Screenshot
+
+= 1.1.1 =
+* Added: Option to Display all Categories in Customizer
+* Bug Fixed: Site title font size in rem value
+* Enhanced: HTML structure of site title and tagline
+
+= 1.1 =
+* Changed default excerpt length to 40 words
+* Enhanced: Slider content width as per responsive design
+* Added: Upgrade to pro button
+* Updated: Custom CSS to Additional CSS( Core Support ) for WP version 4.7
+* Code Optimization
+
+= 1.0 =
+* Added courses section
+* Added events section
+* Added hero content section
+* Added news section
+* Added news ticker section
+* Added our professors section
+* Added portfolio section
+* Added testimonial section
+* Separated Custom CSS
+* Initial Release in https://catchthemes.com/
+
+
+= 0.2 =
+* Added Slider in featured content
+* Bug Fixed: `sprintf() too few arguments` issue on other languages
+* Code Optimizations
+* Updated Scripts for menu (Removed sidr and added core twentysixteen menu)
+
+= 0.1 =
+* Submitted to WordPress.org

@@ -1,0 +1,85 @@
+/*!
+ *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face {
+    font-family:'FontAwesome-ics';src:url('../fonts/fontawesome-webfont.eot?v=4.1.0');src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;
+}
+
+.fa-ics {
+    display: inline-block;
+    font-family: FontAwesome-ics;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-desktop-ics:before {
+    content: "\f108";
+}
+.fa-inbox-ics:before {
+    content: "\f01c";
+}
+.fa-circle-o-ics:before {
+    content: "\f10c";
+}
+.fa-users-ics:before {
+    content: "\f0c0";
+}
+.fa-bolt-ics:before {
+    content: "\f0e7";
+}
+.fa-camera-ics:before {
+    content: "\f030";
+}
+.fa-envelope-o-ics:before {
+    content: "\f003";
+}
+.fa-facebook-ics:before {
+    content: "\f09a";
+}
+.fa-twitter-ics:before {
+    content: "\f099";
+}
+.fa-google-plus-ics:before {
+    content: "\f0d5";
+}
+.fa-linkedin-ics:before {
+    content: "\f0e1";
+}
+.fa-instagram-ics:before {
+    content: "\f16d";
+}
+.fa-pinterest-ics:before {
+    content: "\f0d2";
+}
+.fa-youtube-ics:before {
+    content: "\f167";
+}
+.fa-youtube-ics:before {
+    content: "\f167";
+}
+.fa-vk-ics:before {
+    content: "\f189";
+}
+.fa-vimeo-ics:before {
+    content: "\f194";
+}
+.fa-dribbble-ics:before {
+    content: "\f17d";
+}
+.fa-bullhorn-ics:before {
+    content: "\f0a1";
+}
+.fa-bars-ics:before {
+    content: "\f0c9";
+}
+.fa-check-ics:before {
+    content: "\f00c";
+}
+.fa-times-ics:before {
+    content: "\f00d";
+}
+
+/***********/

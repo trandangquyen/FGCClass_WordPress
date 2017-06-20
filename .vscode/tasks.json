@@ -1,0 +1,52 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "isShellCommand": true,
+    "args": [],
+    "showOutput": "always",
+    "echoCommand": true,
+    "suppressTaskName": true,
+    "tasks": [{
+            "taskName": "tsc",
+            "command": "tsc",
+            "args": ["-w"],
+            "isShellCommand": true,
+            "isBackground": true,
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "PHP",
+            "command": "php",
+            "args": ["${file}", "1", "2"],
+            "isShellCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "build",
+            "command": "gulp",
+            "isShellCommand": true,
+            "windows": {
+                "args": ["build", "win32"]
+            },
+            "linux": {
+                "args": ["build", "linux"]
+            },
+            "osx": {
+                "args": ["build", "osx"]
+            }
+        }
+    ]
+}
+/**
+    ${workspaceRoot} the path of the folder opened in VS Code
+    ${workspaceRootFolderName} the name of the folder opened in VS Code without any slashes (/)
+    ${file} the current opened file
+    ${relativeFile} the current opened file relative to workspaceRoot
+    ${fileBasename} the current opened file's basename
+    ${fileBasenameNoExtension} the current opened file's basename without the extension
+    ${fileDirname} the current opened file's dirname
+    ${fileExtname} the current opened file's extension
+    ${cwd} the task runner's current working directory on startup
+    ${lineNumber} the current selected line number in the active file
+*/

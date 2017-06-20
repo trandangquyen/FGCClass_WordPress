@@ -1,0 +1,63 @@
+body {
+  overflow-x: hidden; }
+
+body.thim-body-load-overlay {
+  overflow-x: hidden; }
+
+body.thim-body-preload {
+  overflow-x: hidden; }
+
+#pgc-12-0-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+#pgc-12-2-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+#pgc-12-4-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+#pgc-12-5-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+#pgc-12-6-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+#pgc-12-7-0 {
+  width: 100%;
+  width: calc(100% - ( 0 * 30px)); }
+
+.thim-course-grid .course-item .thim-course-content .course-author img {
+  display: inline;
+  width: 40px; }
+
+footer#colophon.has-footer-bottom {
+  margin-bottom: 0; }
+
+#mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > .link_content > .link_text {
+  text-transform: uppercase !important; }
+
+#masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > .link_content > .link_text {
+  color: #333; }
+#masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > i:before {
+  color: #333; }
+#masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li.nav_search_box #mega_main_menu_searchform .icosearch:before {
+  color: #333; }
+
+.thim-get-100s h2 {
+  line-height: 100px; }
+
+.wp-tiles-tile-with-image .wp-tiles-byline-title {
+  color: #fff; }
+
+footer#colophon .thim-social {
+  margin: 20px 0 0; }
+
+#mega_main_menu > .menu_holder > .menu_inner > ul > li > .item_link {
+  padding: 0px 13px !important; }
+
+/*# sourceMappingURL=theme-custom.css.map */

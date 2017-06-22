@@ -33,16 +33,16 @@ if($_SERVER["SERVER_NAME"]==="localhost") {
 
 	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
-} elseif(strpos($_SERVER["SERVER_NAME"], 'megavn.net') !== false) {
-	define('WP_SITEURL', 'http://wordpress.megavn.net');
+} elseif(strpos($_SERVER["SERVER_NAME"], 'dangquyen.wdev.fgct.net') !== false) {
+	define('WP_SITEURL', 'http://dangquyen.wdev.fgct.net/FGCClass_WordPress/');
 	define('WP_HOME', WP_SITEURL);
-	define('DB_NAME', 'wordpress');
+	define('DB_NAME', 'dangquyen_fgcclass');
 
 	/** MySQL database username */
-	define('DB_USER', 'quiz');
+	define('DB_USER', 'dangquyen');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', '123456');
+	define('DB_PASSWORD', 'quyen.1987');
 
 	/** MySQL hostname */
 	define('DB_HOST', 'localhost');

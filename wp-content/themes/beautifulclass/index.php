@@ -35,7 +35,7 @@ get_header(); ?>
                                         <div class="thim-widget-icon-box thim-widget-icon-box-base">
                                             <div class="wrapper-box-icon has_custom_image has_read_more text-left overlay " data-text-readmore="#ffb606">
                                                 <div class="smicon-box iconbox-left">
-                                                    <div class="boxes-icon" style="width: 135px;height: 135px;"><span class="inner-icon"><span class="icon icon-images"><img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/logo-top-1.png" alt="logo-top-1" title="logo-top-1" width="61" height="52"></span></span>
+                                                    <div class="boxes-icon" style="width: 135px;height: 135px;"><span class="inner-icon"><span class="icon icon-images"><img src="<?php echo get_template_directory_uri() ; ?>/images/logo-top-1.png" alt="logo-top-1" title="logo-top-1" width="61" height="52"></span></span>
                                                     </div>
                                                     <div class="content-inner" style="width: calc( 100% - 135px - 15px);">
                                                         <div class="sc-heading article_heading">
@@ -50,7 +50,7 @@ get_header(); ?>
                                         <div class="thim-widget-icon-box thim-widget-icon-box-base">
                                             <div class="wrapper-box-icon has_custom_image has_read_more text-left overlay " data-text-readmore="#ffb606">
                                                 <div class="smicon-box iconbox-left">
-                                                    <div class="boxes-icon" style="width: 132px;height: 132px;"><span class="inner-icon"><span class="icon icon-images"><img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/logo-top-2.png" alt="logo-top-2" title="logo-top-2" width="66" height="51"></span></span>
+                                                    <div class="boxes-icon" style="width: 132px;height: 132px;"><span class="inner-icon"><span class="icon icon-images"><img src="<?php echo get_template_directory_uri() ; ?>/images/logo-top-2.png" alt="logo-top-2" title="logo-top-2" width="66" height="51"></span></span>
                                                     </div>
                                                     <div class="content-inner" style="width: calc( 100% - 132px - 15px);">
                                                         <div class="sc-heading article_heading">
@@ -65,7 +65,7 @@ get_header(); ?>
                                         <div class="thim-widget-icon-box thim-widget-icon-box-base">
                                             <div class="wrapper-box-icon has_custom_image has_read_more text-left overlay " data-text-readmore="#ffb606">
                                                 <div class="smicon-box iconbox-left">
-                                                    <div class="boxes-icon" style="width: 135px;height: 135px;"><span class="inner-icon"><span class="icon icon-images"><img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/logo-top-3.png" alt="logo-top-3" title="logo-top-3" width="59" height="50"></span></span>
+                                                    <div class="boxes-icon" style="width: 135px;height: 135px;"><span class="inner-icon"><span class="icon icon-images"><img src="<?php echo get_template_directory_uri() ; ?>/images/logo-top-3.png" alt="logo-top-3" title="logo-top-3" width="59" height="50"></span></span>
                                                     </div>
                                                     <div class="content-inner" style="width: calc( 100% - 135px - 15px);">
                                                         <div class="sc-heading article_heading">
@@ -90,15 +90,15 @@ get_header(); ?>
                                         <div class="owl-carousel owl-theme thim-carousel-wrapper thim-course-carousel thim-course-grid">
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp học vỡ lòng A1</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp học vỡ lòng A1</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -116,15 +116,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-1-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-1-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp học cơ bản A2 - TA cơ bản</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp học cơ bản A2 - TA cơ bản</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -142,15 +142,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-16-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-16-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp học nâng cao B1 - TA cho công việc</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp học nâng cao B1 - TA cho công việc</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -168,15 +168,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-9-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-9-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp cao học C1 - TA cho công việc</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp cao học C1 - TA cho công việc</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -194,15 +194,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp vỡ lòng A - TA cơ bản</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp vỡ lòng A - TA cơ bản</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -220,15 +220,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-1-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-1-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp giao tiếp C2</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp giao tiếp C2</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -246,15 +246,15 @@ get_header(); ?>
                                             </div>
                                             <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="https://educationwp.thimpress.com/courses/learnpress-101/"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
                                                 <div class="thim-course-content">
                                                     <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="https://educationwp.thimpress.com/profile/keny/courses/"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="https://educationwp.thimpress.com/courses/learnpress-101/"> Lớp ngữ pháp A3</a></h2>
+                                                    <h2 class="course-title"> <a href="#"> Lớp ngữ pháp A3</a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>

@@ -87,6 +87,7 @@ class FGC_Manager{
     function fgc_get_contents_category_listen(){
        // $_REQUEST['category_name'] = 'bai-nghe';
         //unset($_REQUEST['page']);
+
         $_SERVER['REQUEST_URI'] = str_replace('&page','&category_name',$_SERVER['REQUEST_URI']);
         $_SERVER['QUERY_STRING'] = str_replace('&page','&category_name',$_SERVER['QUERY_STRING']);
         $typenow = 'exercises';

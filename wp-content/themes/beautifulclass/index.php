@@ -107,37 +107,38 @@ get_header(); ?>
                                                         'post_status' => 'publish'
                                                     );
                                                     $pages = get_pages($args);
-                                                    var_dump($pages);
+
 
                                                     ?>
                                                     <?php foreach ( $pages as $page ): ?>
+
                                                         <div class="course-item">
                                                 <div class="course-thumbnail" style="">
-                                                    <a href="#"><img src="<?php echo get_template_directory_uri() ; ?>/images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a><a class="course-readmore" href="https://educationwp.thimpress.com/courses/learnpress-101/">Read More</a></div>
+                                                    <a href="#"><?php echo get_the_post_thumbnail($page->ID, array( 450, 450)) ; ?></a><a class="course-readmore" href="<?php echo $page->guid ?>">Xem thêm</a></div>
                                                 <div class="thim-course-content">
-                                                    <div class="course-author" itemscope="" itemtype="http://schema.org/Person"> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
+                                                    <div class="course-author" itemscope=""> <img alt="Admin bar avatar" src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg" class="avatar avatar-40 photo" height="40" width="40">
                                                         <div class="author-contain">
                                                             <label itemprop="jobTitle">Teacher</label>
-                                                            <div class="value" itemprop="name"> <a href="#"> GV: Hoàng Hải </a></div>
+                                                            <div class="value" itemprop="name"> <a href="<?php echo $page->guid ?>"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="#"><?php echo $page->$post_title?></a></h2>
+                                                    <h2 class="course-title"> <a href="#"><?php echo $page->post_title ?></a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
                                                             <div class="value"><i class="fa fa-group"></i> 367</div>
                                                         </div>
                                                         <div class="course-comments-count">
-                                                            <div class="value"><i class="fa fa-comment"></i>3</div>
+                                                            <div class="value"><i class="fa fa-comment"></i><?php echo $page->comment_count; ?></div>
                                                         </div>
-                                                        <div class="course-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                                        <div class="course-price" itemprop="offers" itemscope="">
                                                             <div class="value free-course" itemprop="price"> Free</div>
                                                             <meta itemprop="priceCurrency" content="$">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                                    <?php endforeach; ?>
+                                            <?php endforeach; ?>
 
 
                                         </div>

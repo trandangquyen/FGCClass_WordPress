@@ -122,3 +122,48 @@ footer#colophon{
 		}
 	}
 }
+.top_site_main{
+	.page-title-wrapper{
+		margin-top: -233px;
+	}
+}
+
+aside.widget-area{
+	ul{
+		margin: 0;
+		li{
+			margin: 0;
+		    padding: 5px 0;
+		    list-style: none;
+		    line-height: 20px;
+		    font-weight: 400;
+		    font-size: 13px;
+			a {
+				color: #333;
+			    font-weight: 700;
+			    font-size: 13px;
+			    text-transform: uppercase;
+			    &:hover{
+			    	color: #ffb606;
+			    }
+			}
+		}
+	}
+}
+#primary-gallery{
+	article.page{
+		background: #fff;
+	}
+}
+.wp-tiles-tile-with-image {
+	.wp-tiles-byline-title{
+		font-size: 14px;
+	}
+}
+article{
+	.entry-header {
+		.entry-title {
+			display: none;
+		}
+	} 
+} 

@@ -1,63 +1,119 @@
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 body.thim-body-load-overlay {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 body.thim-body-preload {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 #pgc-12-0-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 #pgc-12-2-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 #pgc-12-4-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 #pgc-12-5-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 #pgc-12-6-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 #pgc-12-7-0 {
   width: 100%;
-  width: calc(100% - ( 0 * 30px)); }
+  width: calc(100% - ( 0 * 30px));
+}
 
 .thim-course-grid .course-item .thim-course-content .course-author img {
   display: inline;
-  width: 40px; }
+  width: 40px;
+}
 
 footer#colophon.has-footer-bottom {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > .link_content > .link_text {
-  text-transform: uppercase !important; }
+  text-transform: uppercase !important;
+}
 
 #masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > .link_content > .link_text {
-  color: #333; }
+  color: #333;
+}
 #masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li > .item_link > i:before {
-  color: #333; }
+  color: #333;
+}
 #masthead.affix #mega_main_menu.menu-1 > .menu_holder > .menu_inner > ul > li.nav_search_box #mega_main_menu_searchform .icosearch:before {
-  color: #333; }
+  color: #333;
+}
 
 .thim-get-100s h2 {
-  line-height: 100px; }
+  line-height: 100px;
+}
 
 .wp-tiles-tile-with-image .wp-tiles-byline-title {
-  color: #fff; }
+  color: #fff;
+}
 
 footer#colophon .thim-social {
-  margin: 20px 0 0; }
+  margin: 20px 0 0;
+}
 
 #mega_main_menu > .menu_holder > .menu_inner > ul > li > .item_link {
-  padding: 0px 13px !important; }
+  padding: 0px 13px !important;
+}
+
+.top_site_main .page-title-wrapper {
+  margin-top: -233px;
+}
+
+aside.widget-area ul {
+  margin: 0;
+}
+aside.widget-area ul li {
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+aside.widget-area ul li a {
+  color: #333;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+aside.widget-area ul li a:hover {
+  color: #ffb606;
+}
+
+#primary-gallery article.page {
+  background: #fff;
+}
+
+.wp-tiles-tile-with-image .wp-tiles-byline-title {
+  font-size: 14px;
+}
+
+article .entry-header .entry-title {
+  display: none;
+}
 
 /*# sourceMappingURL=theme-custom.css.map */

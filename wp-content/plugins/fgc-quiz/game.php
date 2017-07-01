@@ -4,22 +4,26 @@ class Quiz_game {
     private $table_timetable;
     private $table_game;
 
-    public $list_game;
+    //public $list_game;
     function __construct() {
-        global $wpdb;
-        $this->table_class = $wpdb->prefix . "fgc_class";
-        $this->table_timetable = $wpdb->prefix . "fgc_timetable";
-        $this->table_game = $wpdb->prefix . "fgc_game";
+        global $wpdb, $fgc_config;
+        $this->table_class = $fgc_config['table_class'];
+        $this->table_timetable = $fgc_config['table_timetable'];
+        $this->table_game = $fgc_config['table_game'];
 
-        $this->list_game = $wpdb->get_results( "SELECT * FROM $this->table_game ORDER BY name ASC", ARRAY_A);
+        //$this->list_game = $wpdb->get_results( "SELECT * FROM $this->table_game ORDER BY name ASC", ARRAY_A);
     }
 
     public function get_game($id) {
-        if(isset($this->list_game[$id])) return $this->list_game[$id];
-        //$game = (array) $wpdb->get_row("SELECT * FROM $this->table_game WHERE id = '$id'");
+        global $wpdb;
+        //if(isset($this->list_game[$id])) return $this->list_game[$id];
+        $game = (array) $wpdb->get_row("SELECT * FROM $this->table_game WHERE id = '$id'");
+        if($game) return $game;
         return null;
     }
     public function list_game() {
+        global $wpdb;
+        $list_class = $wpdb->get_results( "SELECT * FROM $this->table_game ORDER BY name ASC", ARRAY_A);
     ?>
         <div class="wrap">
             <h1 class="wp-heading-inline">List game</h1> | <a href="?<?php echo $_SERVER['QUERY_STRING']; ?>&action=add" class="page-title-action">Add game</a>
@@ -41,7 +45,7 @@ class Quiz_game {
 
         <tbody id="the-list">
             <?php 
-            foreach ($this->list_game as $game) {
+            foreach ($list_class as $game) {
                 echo '<td>'.$game['id'].'</td>
                     <td>'.$game['name'].'</td>
                     <td> '.$game['url'].' </td>
@@ -149,5 +153,10 @@ class Quiz_game {
     <?php
         echo '</div>';
     }
-    
+    public function delete_game($game_id) {
+        global $wpdb;
+        $wpdb->delete( $this->table_game, ['id'=>$game_id]);
+        $url = $_SERVER['HTTP_REFERER'];
+        echo '<script>location.href=\''.$url.'\';</script>';
+    }
 }

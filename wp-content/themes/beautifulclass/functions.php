@@ -126,6 +126,9 @@ function beautifulclass_scripts() {
 	wp_enqueue_script( 'beautifulclass-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), 'v1', true );
 	wp_enqueue_script( 'beautifulclass-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), 'v1', true );
 	wp_enqueue_script( 'beautifulclass-homepage', get_template_directory_uri() . '/js/homepage.js', array(), 'v1', true );
+        
+        wp_register_style('main-style', get_template_directory_uri().'/style.css');
+        wp_enqueue_style('main-style');
 }
 add_action( 'wp_enqueue_scripts', 'beautifulclass_scripts' );
 
@@ -153,3 +156,17 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+/**
+ * Load menu mobile file
+ */
+require get_template_directory() . '/inc/menu_mobile.php';
+/**
+ * Load core functions file
+ */
+require get_template_directory() . '/inc/core.php';
+/* Load file Login Custom*/
+require get_template_directory() . '/inc/login-customs.php';
+/**
+ * Disable Admin bar in template pages , still show on admin page
+ */
+add_filter('show_admin_bar', '__return_false');

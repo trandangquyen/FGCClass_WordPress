@@ -69,7 +69,7 @@ class wfDiagnostic
 			'userCanTruncate'   => 'Checking if MySQL user has <code>TRUNCATE</code> privilege',
 		),
 		'PHP' => array(
-			'phpVersion' => 'PHP version >= PHP 5.2.4<br><em> (<a href="https://wordpress.org/about/requirements/" target="_blank">Minimum version required by WordPress</a>)</em>',
+			'phpVersion' => 'PHP version >= PHP 5.2.4<br><em> (<a href="https://wordpress.org/about/requirements/" target="_blank" rel="noopener noreferrer">Minimum version required by WordPress</a>)</em>',
 			'processOwner' => 'Process Owner',
 			'hasOpenSSL' => 'Checking for OpenSSL support',
 			'hasCurl'    => 'Checking for cURL support',

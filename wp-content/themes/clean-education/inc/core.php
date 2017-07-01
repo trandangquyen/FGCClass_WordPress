@@ -437,8 +437,8 @@ if ( ! function_exists( 'clean_education_content_nav' ) ) :
 					else {
 						// Previous/next page navigation.
 						the_posts_pagination( array(
-							'prev_text'          => esc_html__( 'Previous page', 'clean-education' ),
-							'next_text'          => esc_html__( 'Next page', 'clean-education' ),
+							'prev_text'          => esc_html__( 'Trang trước', 'clean-education' ),
+							'next_text'          => esc_html__( 'Trang sau', 'clean-education' ),
 							'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'clean-education' ) . ' </span>',
 						) );
 					}

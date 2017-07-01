@@ -755,6 +755,84 @@ class wfWAFUtils {
 		return ($bin_network === $bin_ip);
 	}
 	
+	/**
+	 * Behaves exactly like PHP's parse_url but uses WP's compatibility fixes for early PHP 5 versions.
+	 * 
+	 * @param string $url
+	 * @param int $component
+	 * @return mixed
+	 */
+	public static function parse_url($url, $component = -1) {
+		$to_unset = array();
+		$url = strval($url);
+		
+		if (substr($url, 0, 2) === '//') {
+			$to_unset[] = 'scheme';
+			$url = 'placeholder:' . $url;
+		}
+		elseif (substr($url, 0, 1) === '/') {
+			$to_unset[] = 'scheme';
+			$to_unset[] = 'host';
+			$url = 'placeholder://placeholder' . $url;
+		}
+		
+		$parts = @parse_url($url);
+		
+		if ($parts === false) { // Parsing failure
+			return $parts;
+		}
+		
+		// Remove the placeholder values
+		foreach ($to_unset as $key) {
+			unset($parts[$key]);
+		}
+		
+		if ($component === -1) {
+			return $parts;
+		}
+		
+		$translation = array(
+			PHP_URL_SCHEME   => 'scheme',
+			PHP_URL_HOST     => 'host',
+			PHP_URL_PORT     => 'port',
+			PHP_URL_USER     => 'user',
+			PHP_URL_PASS     => 'pass',
+			PHP_URL_PATH     => 'path',
+			PHP_URL_QUERY    => 'query',
+			PHP_URL_FRAGMENT => 'fragment',
+		);
+		
+		$key = false;
+		if (isset($translation[$component])) {
+			$key = $translation[$component];
+		}
+		
+		if ($key !== false && is_array($parts) && isset($parts[$key])) {
+			return $parts[$key];
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Validates the URL, supporting both scheme-relative and path-relative formats.
+	 * 
+	 * @param $url
+	 * @return mixed
+	 */
+	public static function validate_url($url) {
+		$url = strval($url);
+		
+		if (substr($url, 0, 2) === '//') {
+			$url = 'placeholder:' . $url;
+		}
+		elseif (substr($url, 0, 1) === '/') {
+			$url = 'placeholder://placeholder' . $url;
+		}
+		
+		return filter_var($url, FILTER_VALIDATE_URL);
+	}
+	
 	public static function rawPOSTBody() {
 		global $HTTP_RAW_POST_DATA;
 		if (empty($HTTP_RAW_POST_DATA)) { //Defined if always_populate_raw_post_data is on, PHP < 7, and the encoding type is not multipart/form-data

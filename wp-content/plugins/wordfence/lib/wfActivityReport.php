@@ -634,7 +634,7 @@ class wfRecentlyModifiedFiles extends wfDirectoryIterator {
 	public function __construct($directory = ABSPATH, $max_files_per_directory = 20000, $max_iterations = 250000, $time_range = 604800) {
 		parent::__construct($directory, $max_files_per_directory, $max_iterations);
 		$this->time_range = $time_range;
-		$excluded_directories = explode(',', (string) wfConfig::get('email_summary_excluded_directories'));
+		$excluded_directories = explode("\n", wfUtils::cleanupOneEntryPerLine(wfConfig::get('email_summary_excluded_directories', '')));
 		$this->excluded_directories = array();
 		foreach ($excluded_directories  as $index => $path) {
 			if (($dir = realpath(ABSPATH . $path)) !== false) {

@@ -37,8 +37,15 @@
 				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-1"><?php _e('Standard Interface', 'Super-Socializer' ) ?></a></li>
 				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-2"><?php _e('Floating Interface', 'Super-Socializer' ) ?></a></li>
 				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-3"><?php _e('Miscellaneous', 'Super-Socializer' ) ?></a></li>
-				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-4"><?php _e('Shortcode & Widget', 'Super-Socializer') ?></a></li>
-				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-5"><?php _e('FAQ', 'Super-Socializer' ) ?></a></li>
+				<?php
+				if(heateor_ss_is_plugin_active('mycred/mycred.php')){
+					?>
+					<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-4"><?php _e('3rd Party Integration', 'Super-Socializer' ) ?></a></li>
+					<?php
+				}
+				?>
+				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-5"><?php _e('Shortcode & Widget', 'Super-Socializer') ?></a></li>
+				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-6"><?php _e('FAQ', 'Super-Socializer' ) ?></a></li>
 			</ul>
 			</h2>
 			<div class="menu_containt_div" id="tabs-1">
@@ -257,7 +264,7 @@
 								<label for="the_champ_counter_bb_reply"><?php _e('BBPress reply', 'Super-Socializer') ?></label>
 								<?php
 							}
-							if(the_champ_ss_woocom_is_active()){
+							if(heateor_ss_is_plugin_active('woocommerce/woocommerce.php')){
 								?>
 								<br/>
 								<input id="the_champ_counter_woocom_shop" name="the_champ_counter[woocom_shop]" type="checkbox" <?php echo isset($theChampCounterOptions['woocom_shop']) ? 'checked = "checked"' : '';?> value="1" />
@@ -750,7 +757,36 @@
 				<?php include 'help.php'; ?>
 			</div>
 			
-			<div class="menu_containt_div" id="tabs-4">
+			<?php
+			if(heateor_ss_is_plugin_active('mycred/mycred.php')){
+				?>
+				<div class="menu_containt_div" id="tabs-4">
+					<div class="clear"></div>
+					<div class="the_champ_left_column">
+					<div class="stuffbox">
+						<h3><label><?php _e('myCRED', 'Super-Socializer' );?></label></h3>
+						<div class="inside">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
+							<tr>
+								<th>
+								<img id="the_champ_mycred_referral_id_like_button_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
+								<label for="the_champ_mycred_referral_id_like_button"><?php _e("Append myCRED referral ID to the urls being shared", 'Super-Socializer'); ?></label>
+								</th>
+								<td>
+								<input id="the_champ_mycred_referral_id_like_button" name="the_champ_counter[mycred_referral]" type="checkbox" <?php echo isset( $theChampCounterOptions['mycred_referral'] ) ? 'checked = "checked"' : '';?> value="1" />
+								</td>
+							</tr>
+						</table>
+						</div>
+					</div>
+					</div>
+					<?php include 'help.php'; ?>
+				</div>
+				<?php
+			}
+			?>
+
+			<div class="menu_containt_div" id="tabs-5">
 				<div class="clear"></div>
 				<div class="the_champ_left_column">
 				<div class="stuffbox">
@@ -763,7 +799,7 @@
 				<?php include 'help.php'; ?>
 			</div>
 
-			<div class="menu_containt_div" id="tabs-5">
+			<div class="menu_containt_div" id="tabs-6">
 				<div class="clear"></div>
 				<div class="the_champ_left_column">
 				<div class="stuffbox">

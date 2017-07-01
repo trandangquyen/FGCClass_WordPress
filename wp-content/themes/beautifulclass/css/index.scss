@@ -14,7 +14,7 @@ $whit: #FFFFFF;
 $grey: #CCCCCC;
 $blab: #666666;
 $blac: #333333;
-@charset "UTF-8";
+@charset"UTF-8";
 .btn-social {
     position: relative;
     padding-left: 44px;
@@ -19992,7 +19992,8 @@ input[type=checkbox]:checked:before {
     max-width: none;
     width: auto;
     min-width: 100%;
-    display: table
+    display: table;
+    
 }
 
 .quiz-result {

@@ -11,7 +11,7 @@
 		<li>Access to Premium Support</li>
 		<li>Discounts of up to 90% available for multiyear and multi-license purchases</li>
 	</ul>
-	<p class="center"><a class="wf-btn wf-btn-primary wf-btn-callout" href="https://www.wordfence.com/gnl1scanSched1/wordfence-signup/" target="_blank">Get Premium</a></p>
+	<p class="center"><a class="wf-btn wf-btn-primary wf-btn-callout" href="https://www.wordfence.com/gnl1scanSched1/wordfence-signup/" target="_blank" rel="noopener noreferrer">Get Premium</a></p>
 </div>
 <?php } ?>
 <?php $schedMode = wfConfig::get('isPaid') ? wfConfig::get('schedMode', 'auto') : 'auto'; ?>
@@ -268,7 +268,7 @@ if(wfConfig::get('isPaid')){
 } else {
 ?>
 	If you would like access to this premium feature, please 
-	<a href="https://www.wordfence.com/gnl1scanSched2/wordfence-signup/" target="_blank">upgrade to our Premium version</a>.
+	<a href="https://www.wordfence.com/gnl1scanSched2/wordfence-signup/" target="_blank" rel="noopener noreferrer">upgrade to our Premium version</a>.
 </p>
 <?php
 }

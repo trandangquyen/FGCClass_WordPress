@@ -210,8 +210,7 @@ function the_champ_create_user($profileData, $verification = false){
 		'user_url' => isset($profileData['link']) && $profileData['link'] != '' ? $profileData['link'] : '',
 		'role' => get_option('default_role')
 	);
-
-	if(in_array('theme-my-login/theme-my-login.php', apply_filters('active_plugins', get_option('active_plugins')))){
+	if(heateor_ss_is_plugin_active('theme-my-login/theme-my-login.php')){
 		$tmlOptions = get_option('theme_my_login');
 		$tmlLoginType = isset($tmlOptions['login_type']) ? $tmlOptions['login_type'] : '';
 		if($tmlLoginType == 'email'){

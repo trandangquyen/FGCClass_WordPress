@@ -74,7 +74,7 @@
 	<div class="stuffbox">
 		<h3><label><?php _e('Testimonial', 'Super-Socializer');?></label></h3>
 		<div class="inside">
-		<p><?php _e('You can send us testimonial at <a href="mailto:hello@heateor.com">hello@heateor.com</a>', 'Super-Socializer'); ?></p>
+		<p><?php _e('You can send us testimonial at <a href="mailto:testimonials@heateor.com">testimonials@heateor.com</a>', 'Super-Socializer'); ?></p>
 		</div>
 	</div>
 

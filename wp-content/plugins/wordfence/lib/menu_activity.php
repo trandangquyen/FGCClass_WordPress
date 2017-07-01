@@ -21,7 +21,7 @@
 	</div>
 	<div class="wp-header-end"></div>
 	
-	<a href="http://docs.wordfence.com/en/Live_traffic" target="_blank" class="wfhelp"></a><a href="http://docs.wordfence.com/en/Live_traffic" target="_blank">Learn more about Wordfence Live Traffic</a>
+	<a href="http://docs.wordfence.com/en/Live_traffic" target="_blank" rel="noopener noreferrer" class="wfhelp"></a><a href="http://docs.wordfence.com/en/Live_traffic" target="_blank" rel="noopener noreferrer">Learn more about Wordfence Live Traffic</a>
 
 	<div class="wordfenceModeElem" id="wordfenceMode_activity"></div>
 	<?php include('live_activity.php'); ?>
@@ -155,16 +155,16 @@
 													 class="wfFlag"/>
 												<a data-bind="text: (loc().city ? loc().city + ', ' : '') + loc().countryName,
 															attr: { href: 'http://maps.google.com/maps?q=' + loc().lat + ',' + loc().lon + '&z=6' }"
-												   target="_blank"></a>
+												   target="_blank" rel="noopener noreferrer"></a>
 											</div>
 											<div data-bind="if: !loc()">
 												An unknown location at IP <a
-													data-bind="text: IP, attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank"></a>
+													data-bind="text: IP, attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank" rel="noopener noreferrer"></a>
 											</div>
 				
 											<div>
 												<strong>IP:</strong>&nbsp;<a
-													data-bind="text: IP, attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank"></a>
+													data-bind="text: IP, attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank" rel="noopener noreferrer"></a>
 												<span data-bind="if: blocked()">
 													[<a data-bind="click: $root.unblockIP">unblock</a>]
 												</span>
@@ -226,7 +226,7 @@
 													<span data-bind="if: action() != 'loginOK' && action() != 'loginFailValidUsername' && action() != 'loginFailInvalidUsername' && user()">
 														<span data-bind="html: user.avatar" class="wfAvatar"></span>
 														<a data-bind="attr: { href: user.editLink }, text: user().display_name"
-														   target="_blank"></a>
+														   target="_blank" rel="noopener noreferrer"></a>
 													</span>
 													<span data-bind="if: loc()">
 														<span data-bind="if: action() != 'loginOK' && action() != 'loginFailValidUsername' && action() != 'loginFailInvalidUsername' && user()"> in</span>
@@ -236,23 +236,23 @@
 															 class="wfFlag"/>
 														<a data-bind="text: (loc().city ? loc().city + ', ' : '') + loc().countryName,
 															attr: { href: 'http://maps.google.com/maps?q=' + loc().lat + ',' + loc().lon + '&z=6' }"
-														   target="_blank"></a>
+														   target="_blank" rel="noopener noreferrer"></a>
 													</span>
 													<span data-bind="if: !loc()">
 														<span
 															data-bind="text: action() != 'loginOK' && action() != 'loginFailValidUsername' && action() != 'loginFailInvalidUsername' && user() ? 'at an' : 'An'"></span> unknown location at IP <a
 															data-bind="text: IP, attr: { href: WFAD.makeIPTrafLink(IP()) }"
-															target="_blank"></a>
+															target="_blank" rel="noopener noreferrer"></a>
 													</span>
 													<span data-bind="if: referer()">
 														<span data-bind="if: extReferer()">
 															arrived from <a data-bind="text: referer, attr: { href: referer }"
-																			target="_blank"
+																			target="_blank" rel="noopener noreferrer"
 																			style="color: #A00; font-weight: bold;" class="wf-split-word-xs"></a> and
 														</span>
 														<span data-bind="if: !extReferer()">
 															left <a data-bind="text: referer, attr: { href: referer }"
-																	target="_blank"
+																	target="_blank" rel="noopener noreferrer"
 																	style="color: #999; font-weight: normal;" class="wf-split-word-xs"></a> and
 														</span>
 													</span>
@@ -288,14 +288,14 @@
 													</span>
 													<a class="wf-lt-url wf-split-word-xs"
 													   data-bind="text: displayURL, attr: { href: URL, title: URL }"
-													   target="_blank"></a>
+													   target="_blank" rel="noopener noreferrer"></a>
 										</div>
 										<div>
 											<span data-bind="text: timeAgo, attr: { 'data-timestamp': ctime }"
 														  class="wfTimeAgo wfTimeAgo-timestamp"></span>&nbsp;&nbsp;
 													<strong>IP:</strong> <a
 														data-bind="attr: { href: WFAD.makeIPTrafLink(IP()) }, text: IP"
-														target="_blank"></a>
+														target="_blank" rel="noopener noreferrer"></a>
 													<span data-bind="if: blocked()">
 														[<a data-bind="click: $root.unblockIP">unblock</a>]
 													</span>
@@ -345,9 +345,9 @@
 													</a>
 													<a class="wf-btn wf-btn-default wf-btn-sm" data-bind="text: 'Run WHOIS on ' + IP(),
 														attr: { href: 'admin.php?page=WordfenceTools&whoisval=' + IP() + '#top#whois' }"
-															target="_blank"></a>
+															target="_blank" rel="noopener noreferrer"></a>
 													<a class="wf-btn wf-btn-default wf-btn-sm"
-															data-bind="attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank">
+															data-bind="attr: { href: WFAD.makeIPTrafLink(IP()) }" target="_blank" rel="noopener noreferrer">
 														See recent traffic
 													</a>
 													<span data-bind="if: action() == 'blocked:waf'">
@@ -358,7 +358,7 @@
 														</a>
 														<?php if (WFWAF_DEBUG): ?>
 															<a href="#" class="wf-btn wf-btn-default wf-btn-sm"
-																	data-bind="attr: { href: '<?php echo esc_js(home_url()) ?>?_wfsf=debugWAF&nonce=' + WFAD.nonce + '&hitid=' + id() }" target="_blank">
+																	data-bind="attr: { href: '<?php echo esc_js(home_url()) ?>?_wfsf=debugWAF&nonce=' + WFAD.nonce + '&hitid=' + id() }" target="_blank" rel="noopener noreferrer">
 																Debug this Request
 															</a>
 														<?php endif ?>

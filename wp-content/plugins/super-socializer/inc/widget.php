@@ -152,6 +152,8 @@ class TheChampSharingWidget extends WP_Widget {
 			$sharingUrl = get_permalink($post->ID);
 		}
 
+		$sharingUrl = heateor_ss_apply_target_share_url_filter($sharingUrl, 'horizontal', !is_singular() ? true : false);
+
 		$shareCountTransientId = heateor_ss_get_share_count_transient_id($sharingUrl);
 		$cachedShareCount = heateor_ss_get_cached_share_count($shareCountTransientId);
 
@@ -315,6 +317,9 @@ class TheChampVerticalSharingWidget extends WP_Widget {
 		}else{
 			$sharingUrl = get_permalink($post->ID);
 		}
+
+		$sharingUrl = heateor_ss_apply_target_share_url_filter($sharingUrl, 'vertical', false);
+
 		$ssOffset = 0;
 		if(isset($instance['alignment']) && isset($instance[$instance['alignment'] . '_offset'])){
 			$ssOffset = $instance[$instance['alignment'] . '_offset'];
@@ -494,6 +499,8 @@ class TheChampCounterWidget extends WP_Widget {
 		}else{
 			$counterUrl = get_permalink($post->ID);
 		}
+
+		$counterUrl = heateor_ss_apply_target_like_button_url_filter($counterUrl, 'horizontal', !is_singular() ? true : false);
 		echo "<div class='the_champ_counter_container the_champ_horizontal_counter'>";
 		
 		echo $before_widget;
@@ -640,6 +647,9 @@ class TheChampVerticalCounterWidget extends WP_Widget {
 		}else{
 			$counterUrl = get_permalink($post->ID);
 		}
+
+		$counterUrl = heateor_ss_apply_target_like_button_url_filter($counterUrl, 'vertical', false);
+
 		$ssOffset = 0;
 		if(isset($instance['alignment']) && isset($instance[$instance['alignment'] . '_offset'])){
 			$ssOffset = $instance[$instance['alignment'] . '_offset'];

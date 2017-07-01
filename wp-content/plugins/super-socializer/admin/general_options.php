@@ -78,7 +78,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 					<tr class="the_champ_help_content" id="the_champ_browser_msg_enable_help_cont">
 						<td colspan="2">
 						<div>
-						<?php _e('If enabled, your website visitors will see a popup notification if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these.', 'Super-Socializer') ?>
+						<?php _e('If enabled, your website visitors will see a popup notification (only once) if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these.', 'Super-Socializer') ?>
 						<img src="<?php echo plugins_url('../images/snaps/general_browser_notification.png', __FILE__); ?>" width="760" />
 						</div>
 						</td>

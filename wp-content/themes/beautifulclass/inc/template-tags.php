@@ -25,12 +25,12 @@ function beautifulclass_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'beautifulclass' ),
+		esc_html_x( 'Đăng vào %s', 'post date', 'beautifulclass' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'beautifulclass' ),
+		esc_html_x( 'bởi %s', 'post author', 'beautifulclass' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -49,7 +49,7 @@ function beautifulclass_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'beautifulclass' ) );
 		if ( $categories_list && beautifulclass_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'beautifulclass' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Được đăng trong:  %1$s', 'beautifulclass' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -62,7 +62,7 @@ function beautifulclass_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'beautifulclass' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Để lại bình luận:<span class="screen-reader-text"> on %s</span>', 'beautifulclass' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 

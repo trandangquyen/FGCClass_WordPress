@@ -2024,11 +2024,11 @@ class wfUtils {
 	 * Formats and returns the given timestamp using the time zone set for the WordPress installation.
 	 * 
 	 * @param string $format See the PHP docs on DateTime for the format options. 
-	 * @param int|null $timestamp Assumed to be in UTC. If null, defaults to the current timestamp.
+	 * @param int|bool $timestamp Assumed to be in UTC. If false, defaults to the current timestamp.
 	 * @return string
 	 */
-	public static function formatLocalTime($format, $timestamp = null) {
-		if ($timestamp === null) {
+	public static function formatLocalTime($format, $timestamp = false) {
+		if ($timestamp === false) {
 			$timestamp = time();
 		}
 		
@@ -2042,7 +2042,17 @@ class wfUtils {
 		else {
 			$gmt = get_option('gmt_offset');
 			if (!empty($gmt)) {
-				$dt->setTimezone(new DateTimeZone('Etc/GMT' . ($gmt < 0 ? '+' : '-') . abs($gmt))); //The Etc/GMT timezones have the +- signs flipped
+				if (PHP_VERSION_ID < 50510) {
+					$dtStr = gmdate("c", $timestamp + $gmt * 3600); //Have to do it this way because of < PHP 5.5.10
+					$dt = new DateTime($dtStr, $utc);
+				}
+				else {
+					$direction = ($gmt > 0 ? '+' : '-');
+					$gmt = abs($gmt);
+					$h = (int) $gmt;
+					$m = ($gmt - $h) * 60;
+					$dt->setTimezone(new DateTimeZone($direction . str_pad($h, 2, '0', STR_PAD_LEFT) . str_pad($m, 2, '0', STR_PAD_LEFT)));
+				}
 			}
 		}
 		return $dt->format($format);
@@ -2078,11 +2088,12 @@ class wfWebServerInfo {
 	 */
 	public static function createFromEnvironment() {
 		$serverInfo = new self;
+		$sapi = php_sapi_name();
 		if (stripos($_SERVER['SERVER_SOFTWARE'], 'apache') !== false) {
 			$serverInfo->setSoftware(self::APACHE);
 			$serverInfo->setSoftwareName('apache');
 		}
-		if (stripos($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false) {
+		if (stripos($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false || $sapi == 'litespeed') {
 			$serverInfo->setSoftware(self::LITESPEED);
 			$serverInfo->setSoftwareName('litespeed');
 		}
@@ -2095,7 +2106,7 @@ class wfWebServerInfo {
 			$serverInfo->setSoftwareName('iis');
 		}
 
-		$serverInfo->setHandler(php_sapi_name());
+		$serverInfo->setHandler($sapi);
 
 		return $serverInfo;
 	}

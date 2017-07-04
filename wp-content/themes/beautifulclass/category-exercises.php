@@ -28,7 +28,12 @@ get_header();
     <div class="col-xs-3"><?php get_sidebar(); ?></div>
 </div>
 
-
+<?php 
+//    echo '112112121212';
+if(comments_open() || get_comments_number()):
+    comments_template();
+endif;
+?>
 
 <?php
 get_footer();

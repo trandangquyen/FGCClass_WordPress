@@ -19,6 +19,7 @@
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/template/fav.ico.png">
         <link rel="apple-touch-icon image_src" href="images/template/fav.ico.png">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
     </head>
 
     <body <?php body_class(); ?>>

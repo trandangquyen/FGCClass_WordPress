@@ -166,4 +166,47 @@ article{
 			display: none;
 		}
 	} 
-} 
+}
+.page{
+	background-color: #fff;
+}
+.review-stars-rated{
+	a{
+		display: none;
+	}
+}
+li.comment{
+    border-top: 1px solid #eee;
+    padding: 50px 0;
+    overflow: hidden;
+    list-style: none;
+    display: block;
+}
+.eft-simple-table {
+    width: 100%;
+    border-bottom: 1px solid #dad3cb;
+    border-left: 1px solid #dad3cb;
+}
+.eft-simple-table tr:first-of-type td {
+    background: rgba(255, 182, 6, 0.55);
+}
+.eft-simple-table td {
+    padding: 0 4px;
+    border-top: 1px solid #dad3cb;
+    border-right: 1px solid #dad3cb;
+}
+.eft-simple-table tr:first-of-type p {
+    font-weight: 700;
+}
+@media (min-width: 768px){
+	.eft-simple-table td {
+	    padding: 0 15px;
+	}
+	.eft-simple-table td p {
+	    margin: 20px 0;
+	    font-size: 14px;
+	}
+}
+.comment-content{
+	padding-left: 20px;
+}

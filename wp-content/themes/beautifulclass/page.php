@@ -49,63 +49,53 @@ get_header(); ?>
                                  class="post-5299 lp_course type-lp_course status-publish has-post-thumbnail hentry course_category-technology course_tag-node course_tag-tutorial pmpro-has-access course">
                             <div class="entry-content">
                                 <div id="lp-single-course" class="learnpress-content learn-press"><h1
-                                            class="entry-title" itemprop="name">From Zero to Hero with Nodejs</h1>
+                                            class="entry-title" itemprop="name"><?php echo 'Giới Thiệu '; echo the_title();?></h1>
                                     <div class="course-meta">
                                         <div class="course-author" itemscope="" itemtype="http://schema.org/Person"><img
                                                     alt="Admin bar avatar"
                                                     src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/learn-press-profile/7/9c081444f942cc8fe0ddf55631b584e2.jpg"
                                                     class="avatar avatar-40 photo" height="40" width="40">
-                                            <div class="author-contain"><label itemprop="jobTitle">Teacher</label>
+                                            <div class="author-contain"><label itemprop="jobTitle">Giáo viên</label>
                                                 <div class="value" itemprop="name"><a
                                                             href="https://educationwp.thimpress.com/profile/keny/courses/">
-                                                        Keny White </a></div>
+                                                        Hoàng Hải </a></div>
                                             </div>
                                         </div>
-                                        <div class="course-categories"><label>Categories</label>
+                                        <div class="course-categories"><label>Danh mục</label>
                                             <div class="value"><span class="cat-links"><a
-                                                            href="https://educationwp.thimpress.com/course-category/technology/"
-                                                            rel="tag">Technology</a></span></div>
+                                                            href="<?php
+                                                            $parent_link = get_queried_object();
+                                                            if(isset($parent_link))
+                                                            echo get_page_link($parent_link->post_parent);
+                                                            ?>"
+                                                            rel="tag"><?php
+
+                                                        if(isset($parent_link))
+                                                        echo get_the_title($parent_link->post_parent);
+                                                        ?>
+
+                                                        </a></span></div>
                                         </div>
-                                        <div class="course-review"><label>Review</label>
+                                        <div class="course-review"><label>Đánh giá</label>
                                             <div class="value">
-                                                <div class="review-stars-rated">
-                                                    <ul class="review-stars">
-                                                        <li><span class="fa fa-star-o"></span></li>
-                                                        <li><span class="fa fa-star-o"></span></li>
-                                                        <li><span class="fa fa-star-o"></span></li>
-                                                        <li><span class="fa fa-star-o"></span></li>
-                                                        <li><span class="fa fa-star-o"></span></li>
-                                                    </ul>
-                                                    <ul class="review-stars filled" style="width: 100%">
-                                                        <li><span class="fa fa-star"></span></li>
-                                                        <li><span class="fa fa-star"></span></li>
-                                                        <li><span class="fa fa-star"></span></li>
-                                                        <li><span class="fa fa-star"></span></li>
-                                                        <li><span class="fa fa-star"></span></li>
-                                                    </ul>
-                                                </div>
-                                                <span>(1 review)</span></div>
+                                                <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="course-payment">
                                         <div class="course-price" itemprop="offers" itemscope=""
                                              itemtype="http://schema.org/Offer">
-                                            <div class="value free-course" itemprop="price"> Free</div>
+                                            <div class="value free-course" itemprop="price"> Miễn phí</div>
                                             <meta itemprop="priceCurrency" content="$">
                                         </div>
                                         <form name="purchase-course" class="purchase-course form-purchase-course"
                                               method="post" enctype="multipart/form-data" data-dpmaxz-eid="9">
                                             <button class="button purchase-button thim-enroll-course-button"
-                                                    data-dpmaxz-eid="10"> Take this course
+                                                    data-dpmaxz-eid="10"> Tham gia khóa học này
                                             </button>
                                             <input type="hidden" name="purchase-course" value="5299"></form>
                                     </div>
-                                    <div class="course-thumbnail"><img width="870" height="500"
-                                                                       src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-1.jpg"
-                                                                       class="attachment-full size-full wp-post-image"
-                                                                       alt="From Zero to Hero with Nodejs"
-                                                                       srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-1.jpg 870w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-1-300x172.jpg 300w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-1-768x441.jpg 768w"
-                                                                       sizes="(max-width: 870px) 100vw, 870px"></div>
+                                    <div class="course-thumbnail"><?php the_post_thumbnail( 'full' ); ?></php></div>
                                     <div class="course-summary">
                                         <div class="course-landing-summary">
                                             <script type="text/template" id="learn-press-template-curriculum-popup">
@@ -167,93 +157,62 @@ get_header(); ?>
                                                 <ul class="nav nav-tabs">
                                                     <li class="active thim-col-4"><a href="#tab-course-description"
                                                                                      data-toggle="tab"> <i
-                                                                    class="fa fa-bookmark"></i> <span>Description</span>
+                                                                    class="fa fa-bookmark"></i> <span>Giới thiệu</span>
                                                         </a></li>
                                                     <li role="presentation" class="thim-col-4"><a
                                                                 href="#tab-course-curriculum" data-toggle="tab"> <i
-                                                                    class="fa fa-cube"></i> <span>Curriculum</span> </a>
+                                                                    class="fa fa-cube"></i> <span>Chương trình học</span> </a>
                                                     </li>
                                                     <li role="presentation" class="thim-col-4"><a
                                                                 href="#tab-course-instructor" data-toggle="tab"> <i
-                                                                    class="fa fa-user"></i> <span>Instructors</span>
+                                                                    class="fa fa-user"></i> <span>Giảng viên</span>
                                                         </a></li>
                                                     <li role="presentation" class="thim-col-4"><a
                                                                 href="#tab-course-review" data-toggle="tab"> <i
-                                                                    class="fa fa-comments"></i> <span>Reviews</span>
-                                                            <span>(1)</span> </a></li>
+                                                                    class="fa fa-comments"></i> <span>Đánh giá</span>
+                                                            <span>(<?php comments_number( 0, 1, '%' ); ?>)</span> </a></li>
                                                 </ul>
                                                 <div class="tab-content">
                                                     <div class="tab-pane active" id="tab-course-description">
-                                                        <div class="thim-course-content"><h4>COURSE DESCRIPTION</h4>
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and
-                                                                typesetting industry. Lorem Ipsum has been the
-                                                                industry’s standard dummy text ever since the 1500s,
-                                                                when an unknown printer took a galley of type and
-                                                                scrambled it to make a type specimen book. It has
-                                                                survived not only five centuries, but also the leap into
-                                                                electronic typesetting, remaining essentially
-                                                                unchanged.</p><h4>CERTIFICATION</h4>
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and
-                                                                typesetting industry. Lorem Ipsum has been the
-                                                                industry’s standard dummy text ever since the 1500s,
-                                                                when an unknown printer took a galley of type and
-                                                                scrambled it to make a type specimen book. It has
-                                                                survived not only five centuries, but also the leap into
-                                                                electronic typesetting, remaining essentially
-                                                                unchanged.</p><h4>LEARNING OUTCOMES</h4>
-                                                            <ul class="thim-list-content">
-                                                                <li>Over 37 lectures and 55.5 hours of content!</li>
-                                                                <li>LIVE PROJECT End to End Software Testing Training
-                                                                    Included.
-                                                                </li>
-                                                                <li>Learn Software Testing and Automation basics from a
-                                                                    professional trainer from your own desk.
-                                                                </li>
-                                                                <li>Information packed practical training starting from
-                                                                    basics to advanced testing techniques.
-                                                                </li>
-                                                                <li>Best suitable for beginners to advanced level users
-                                                                    and who learn faster when demonstrated.
-                                                                </li>
-                                                                <li>Course content designed by considering current
-                                                                    software testing technology and the job market.
-                                                                </li>
-                                                                <li>Practical assignments at the end of every session.
-                                                                </li>
-                                                                <li>Practical learning experience with live project work
-                                                                    and examples.
-                                                                </li>
-                                                            </ul>
+                                                        <div class="thim-course-content"><h4>Tổng quan về khóa học</h4>
+                                                            <?php
+                                                            // Start the loop.
+                                                            while ( have_posts() ) : the_post();
+
+                                                                // Include the page content template.
+                                                                get_template_part( 'template-parts/content', 'page' );
+                                                                // End the loop.
+                                                            endwhile;
+                                                            ?>
                                                             <span class="cp-load-after-post"></span></div>
-                                                        <div class="thim-course-info"><h3 class="title">Course
-                                                                Features</h3>
+                                                        <div class="thim-course-info"><h3 class="title">Chi Tiết Khóa Học</h3>
                                                             <ul>
                                                                 <li class="lectures-feature"><i
                                                                             class="fa fa-files-o"></i> <span
-                                                                            class="label">Lectures</span> <span
+                                                                            class="label">Bài giảng</span> <span
                                                                             class="value">7</span></li>
                                                                 <li class="quizzes-feature"><i
                                                                             class="fa fa-puzzle-piece"></i> <span
-                                                                            class="label">Quizzes</span> <span
+                                                                            class="label">Bài trắc nghiệm</span> <span
                                                                             class="value">1</span></li>
                                                                 <li class="duration-feature"><i
                                                                             class="fa fa-clock-o"></i> <span
-                                                                            class="label">Duration</span> <span
-                                                                            class="value">33 hours</span></li>
+                                                                            class="label">Thời lượng</span> <span
+                                                                            class="value">600 Giờ</span></li>
                                                                 <li class="skill-feature"><i class="fa fa-level-up"></i>
-                                                                    <span class="label">Skill level</span> <span
+                                                                    <span class="label">Trình độ kỹ năng</span> <span
                                                                             class="value">Beginner</span></li>
                                                                 <li class="language-feature"><i
                                                                             class="fa fa-language"></i> <span
-                                                                            class="label">Language</span> <span
+                                                                            class="label">Ngôn ngữ</span> <span
                                                                             class="value">English</span></li>
                                                                 <li class="students-feature"><i class="fa fa-users"></i>
-                                                                    <span class="label">Students</span> <span
-                                                                            class="value">81</span></li>
+                                                                    <span class="label">Số học viên</span> <span
+                                                                            class="value">8</span></li>
                                                                 <li class="assessments-feature"><i
                                                                             class="fa fa-check-square-o"></i> <span
-                                                                            class="label">Assessments</span> <span
-                                                                            class="value">Self</span></li>
+                                                                            class="label">Đánh giá</span> <span
+                                                                            class="value">Tốt</span></li>
                                                             </ul>
                                                         </div>
                                                         <ul class="thim-social-share">
@@ -474,7 +433,7 @@ get_header(); ?>
                                                                 <div class="author-bio">
                                                                     <div class="author-top"><a class="name"
                                                                                                href="https://educationwp.thimpress.com/profile/keny/courses/">
-                                                                            Keny White </a>
+                                                                            Mr. Hoàng Hải </a>
                                                                         <p class="job">Professor</p></div>
                                                                     <ul class="thim-author-social">
                                                                         <li>
@@ -504,15 +463,7 @@ get_header(); ?>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
-                                                                <div class="author-description"> Keny White is Professor
-                                                                    of the Department of Computer Science at Boston
-                                                                    University, where he has been since 2004. He also
-                                                                    currently serves as Chief Scientist of Guavus, Inc.
-                                                                    During 2003-2004 he was a Visiting Associate
-                                                                    Professor at the Laboratoire d'Infomatique de Paris
-                                                                    VI (LIP6). He received a B.S. from Cornell
-                                                                    University in 1992, and an M.S. from the State
-                                                                    University of New York at Buffalo.
+                                                                <div class="author-description"> Hoàng Hải là một giáo viên giàu kinh nghiệm, anh đã tốt nghiệm đại học Kinh Tế đầy danh tiếng với tấm bằng cử nhân xuất sắc. Hoàng hải đã có một thời gian dài học tập và làm việc với người bản xứ. Đến với giáo viên Hoàng Hải, mọi khoảng cách tiếng anh sẽ bị xóa nhòa.
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -577,100 +528,13 @@ get_header(); ?>
                                                     </div>
                                                     <div class="tab-pane" id="tab-course-review">
                                                         <div class="course-rating"><h3>Reviews</h3>
-                                                            <div class="average-rating" itemprop="aggregateRating"
-                                                                 itemscope=""
-                                                                 itemtype="http://schema.org/AggregateRating"><p
-                                                                        class="rating-title">Average Rating</p>
-                                                                <div class="rating-box">
-                                                                    <div class="average-value" itemprop="ratingValue">
-                                                                        5
-                                                                    </div>
-                                                                    <div class="review-star">
-                                                                        <div class="review-stars-rated">
-                                                                            <ul class="review-stars">
-                                                                                <li><span class="fa fa-star-o"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star-o"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star-o"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star-o"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star-o"></span>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <ul class="review-stars filled"
-                                                                                style="width: 100%">
-                                                                                <li><span class="fa fa-star"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star"></span>
-                                                                                </li>
-                                                                                <li><span class="fa fa-star"></span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="review-amount" itemprop="ratingCount"> 1
-                                                                        rating
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="detailed-rating"><p class="rating-title">
-                                                                    Detailed Rating</p>
-                                                                <div class="rating-box">
-                                                                    <div class="detailed-rating">
-                                                                        <div class="stars">
-                                                                            <div class="key">5 stars</div>
-                                                                            <div class="bar">
-                                                                                <div class="full_bar">
-                                                                                    <div style="width: 100%"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="value">1</div>
-                                                                        </div>
-                                                                        <div class="stars">
-                                                                            <div class="key">4 stars</div>
-                                                                            <div class="bar">
-                                                                                <div class="full_bar">
-                                                                                    <div style="width: 0%"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="value">0</div>
-                                                                        </div>
-                                                                        <div class="stars">
-                                                                            <div class="key">3 stars</div>
-                                                                            <div class="bar">
-                                                                                <div class="full_bar">
-                                                                                    <div style="width: 0%"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="value">0</div>
-                                                                        </div>
-                                                                        <div class="stars">
-                                                                            <div class="key">2 stars</div>
-                                                                            <div class="bar">
-                                                                                <div class="full_bar">
-                                                                                    <div style="width: 0%"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="value">0</div>
-                                                                        </div>
-                                                                        <div class="stars">
-                                                                            <div class="key">1 star</div>
-                                                                            <div class="bar">
-                                                                                <div class="full_bar">
-                                                                                    <div style="width: 0%"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="value">0</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <?php
+                                                                if(function_exists('the_ratings')) { the_ratings(); }
+                                                                if ( comments_open() || get_comments_number() ) :
+                                                                    comments_template();
+                                                                endif;
+
+                                                            ?>
                                                         </div>
                                                         <div class="course-review">
                                                             <div id="course-reviews" class="content-review">
@@ -1021,6 +885,5 @@ get_header(); ?>
             </div>
         </section>
     </div><!-- #primary -->
-
 <?php
 get_footer();

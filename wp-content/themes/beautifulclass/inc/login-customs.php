@@ -18,7 +18,7 @@ function my_login_redirect($redirect_to, $request, $user) {
         if (in_array('administrator', $user->roles)) {
             return admin_url();
         } else {
-            return home_url();
+            return home_url('/dang-nhap/');
         }
     } else {
         return $redirect_to;
@@ -54,12 +54,16 @@ add_action('wp_login_failed', 'login_failed');
 
 // 
 function verify_username_password($user, $username, $password) {
+    global $wpdb;
+    
     $login_page = home_url();
     if ($username == "" || $password == "") {
         wp_redirect($login_page . "?login=empty");
         exit;
-
     }
+//    elseif ($username!=) {
+//        
+//    }
 }
 
 add_filter('authenticate', 'verify_username_password', 1, 3);

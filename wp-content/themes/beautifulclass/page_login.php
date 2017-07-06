@@ -94,7 +94,17 @@ get_header();
             'label_remember' => __('Ghi nhớ'),
             'label_log_in' => __('Đăng nhập'),
         );
-        wp_login_form($args);
+        if (!is_user_logged_in()) {
+
+            wp_login_form($args);
+        } else {
+            $current_user = wp_get_current_user();
+            ?>
+            <b>Welcome:  <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->display_name; ?></span></b>
+            
+            <p><a href="http://localhost:8080/FGCClass_WordPress">Quay về trang chủ</a></p>
+            <?php
+        }
         ?>
     </div>
 </div>

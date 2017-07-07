@@ -20,26 +20,15 @@ get_header(); ?>
                 <?php echo do_shortcode('[rev_slider alias="banner-class"]'); ?>
                 <span class="overlay-top-header" style="background:rgba(0,0,0,0.5);"></span>
                 <div class="page-title-wrapper">
-                    <div class="banner-wrapper container"><h2>Technology</h2></div>
+                    <div class="banner-wrapper container"><h2><?php echo the_title();?></h2></div>
                 </div>
             </div>
             <div class="breadcrumbs-wrapper">
                 <div class="container">
-                    <ul itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" id="breadcrumbs"
-                        class="breadcrumbs">
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a
-                                    itemprop="item" href="https://educationwp.thimpress.com" title="Home"><span
-                                        itemprop="name">Home</span></a></li>
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a
-                                    itemprop="item" href="https://educationwp.thimpress.com/courses/"
-                                    title="All courses"><span itemprop="name">All courses</span></a></li>
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a
-                                    itemprop="item" href="https://educationwp.thimpress.com/course-category/technology/"
-                                    title="Technology"><span itemprop="name">Technology</span></a></li>
-                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span
-                                    itemprop="name"
-                                    title="From Zero to Hero with Nodejs">From Zero to Hero with Nodejs</span></li>
+                    <ul itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" id="breadcrumbs" class="breadcrumbs">
+                        <?php bcn_display_list() ?>
                     </ul>
+
                 </div>
             </div>
             <div class="container site-content sidebar-right" style="transform: none;">
@@ -634,32 +623,50 @@ get_header(); ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="thim-ralated-course"><h3 class="related-title">You May Like</h3>
+                                    <div class="thim-ralated-course"><h3 class="related-title">Có thể bạn sẽ thích:</h3>
                                         <div class="thim-course-grid">
+                                        <?php
+                                        $args = array(
+                                            'sort_order' => 'asc',
+                                            'sort_column' => 'post_title',
+                                            'hierarchical' => 1,
+                                            'exclude' => '',
+                                            'include' => '',
+                                            'meta_key' => '',
+                                            'meta_value' => '',
+                                            'authors' => '',
+                                            'child_of' => 291,
+                                            'parent' => -1,
+                                            'exclude_tree' => '',
+                                            'number' => '',
+                                            'offset' => 0,
+                                            'post_type' => 'page',
+                                            'post_status' => 'publish'
+                                        );
+                                        $pages = get_pages($args);
+                                        $random_keys=array_rand($pages,3);
+                                        $newarray = [$pages[$random_keys[0]],$pages[$random_keys[1]],$pages[$random_keys[2]]];
+                                        ?>
+
+                                        <?php foreach ( $newarray as $page ): ?>
                                             <article class="course-grid-3 lpr_course">
                                                 <div class="course-item">
-                                                    <div class="course-thumbnail"><a
-                                                                href="https://educationwp.thimpress.com/courses/python/">
-                                                            <img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/12/course-16-450x450.jpg"
-                                                                 alt="Learn Python – Interactive Python"
-                                                                 title="course-16" width="450" height="450"> </a> <a
+                                                    <div class="course-thumbnail"><a href="<?php echo $page->guid ?>">
+                                                            <?php echo get_the_post_thumbnail($page->ID, array( 450, 450)) ; ?></a> <a
                                                                 class="course-readmore"
-                                                                href="https://educationwp.thimpress.com/courses/python/">Read
-                                                            More</a></div>
+                                                                href="<?php echo $page->guid ?>">Xem thêm</a></div>
                                                     <div class="thim-course-content">
                                                         <div class="course-author"><img alt="Admin bar avatar"
-                                                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/learn-press-profile/1/21232f297a57a5a743894a0e4a801fc3.jpg"
+                                                                                        src="<?php echo get_template_directory_uri() ; ?>/images/9c081444f942cc8fe0ddf55631b584e2.jpg"
                                                                                         class="avatar avatar-40 photo"
                                                                                         height="40" width="40">
                                                             <div class="author-contain">
                                                                 <div class="value"><a
-                                                                            href="https://educationwp.thimpress.com/profile/admin/courses/">
-                                                                        Hinata Hyuga </a></div>
+                                                                            href="<?php echo $page->guid ?>">Hoàng Hải</a></div>
                                                             </div>
                                                         </div>
                                                         <h2 class="course-title"><a rel="bookmark"
-                                                                                    href="https://educationwp.thimpress.com/courses/python/">Learn
-                                                                Python - Interactive Python</a></h2>
+                                                                                    href="https://educationwp.thimpress.com/courses/python/"><?php echo $page->post_title ?></a></h2>
                                                         <div class="course-meta">
                                                             <div class="course-students"><label>Students</label>
                                                                 <div class="value"><i class="fa fa-group"></i> 50</div>
@@ -669,92 +676,14 @@ get_header(); ?>
                                                             </div>
                                                             <div class="course-price" itemprop="offers" itemscope=""
                                                                  itemtype="http://schema.org/Offer">
-                                                                <div class="value" itemprop="price"> $69.00</div>
+                                                                <div class="value" itemprop="price">Free</div>
                                                                 <meta itemprop="priceCurrency" content="$">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </article>
-                                            <article class="course-grid-3 lpr_course">
-                                                <div class="course-item">
-                                                    <div class="course-thumbnail"><a
-                                                                href="https://educationwp.thimpress.com/courses/easy-zurb-foundation/">
-                                                            <img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-6-450x450.jpg"
-                                                                 alt="Easy Zurb Foundation" title="course-6" width="450"
-                                                                 height="450"> </a> <a class="course-readmore"
-                                                                                       href="https://educationwp.thimpress.com/courses/easy-zurb-foundation/">Read
-                                                            More</a></div>
-                                                    <div class="thim-course-content">
-                                                        <div class="course-author"><img alt="Admin bar avatar"
-                                                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/learn-press-profile/1/21232f297a57a5a743894a0e4a801fc3.jpg"
-                                                                                        class="avatar avatar-40 photo"
-                                                                                        height="40" width="40">
-                                                            <div class="author-contain">
-                                                                <div class="value"><a
-                                                                            href="https://educationwp.thimpress.com/profile/admin/courses/">
-                                                                        Hinata Hyuga </a></div>
-                                                            </div>
-                                                        </div>
-                                                        <h2 class="course-title"><a rel="bookmark"
-                                                                                    href="https://educationwp.thimpress.com/courses/easy-zurb-foundation/">Easy
-                                                                Zurb Foundation</a></h2>
-                                                        <div class="course-meta">
-                                                            <div class="course-students"><label>Students</label>
-                                                                <div class="value"><i class="fa fa-group"></i> 25</div>
-                                                            </div>
-                                                            <div class="course-comments-count">
-                                                                <div class="value"><i class="fa fa-comment"></i>0</div>
-                                                            </div>
-                                                            <div class="course-price" itemprop="offers" itemscope=""
-                                                                 itemtype="http://schema.org/Offer">
-                                                                <div class="value" itemprop="price"> $75.00</div>
-                                                                <meta itemprop="priceCurrency" content="$">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="course-grid-3 lpr_course">
-                                                <div class="course-item">
-                                                    <div class="course-thumbnail"><a
-                                                                href="https://educationwp.thimpress.com/courses/getting-started-with-less-beginner-crash/">
-                                                            <img src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-12-450x450.jpg"
-                                                                 alt="Getting Started with LESS" title="course-12"
-                                                                 width="450" height="450"> </a> <a
-                                                                class="course-readmore"
-                                                                href="https://educationwp.thimpress.com/courses/getting-started-with-less-beginner-crash/">Read
-                                                            More</a></div>
-                                                    <div class="thim-course-content">
-                                                        <div class="course-author"><img alt="Admin bar avatar"
-                                                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/learn-press-profile/7/9c081444f942cc8fe0ddf55631b584e2.jpg"
-                                                                                        class="avatar avatar-40 photo"
-                                                                                        height="40" width="40">
-                                                            <div class="author-contain">
-                                                                <div class="value"><a
-                                                                            href="https://educationwp.thimpress.com/profile/keny/courses/">
-                                                                        Keny White </a></div>
-                                                            </div>
-                                                        </div>
-                                                        <h2 class="course-title"><a rel="bookmark"
-                                                                                    href="https://educationwp.thimpress.com/courses/getting-started-with-less-beginner-crash/">Getting
-                                                                Started with LESS</a></h2>
-                                                        <div class="course-meta">
-                                                            <div class="course-students"><label>Students</label>
-                                                                <div class="value"><i class="fa fa-group"></i> 25</div>
-                                                            </div>
-                                                            <div class="course-comments-count">
-                                                                <div class="value"><i class="fa fa-comment"></i>0</div>
-                                                            </div>
-                                                            <div class="course-price" itemprop="offers" itemscope=""
-                                                                 itemtype="http://schema.org/Offer">
-                                                                <div class="value" itemprop="price"> $94.00</div>
-                                                                <meta itemprop="priceCurrency" content="$">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -768,17 +697,21 @@ get_header(); ?>
                             <?php
                             get_sidebar();
                             ?>
+                            <?php
+                            $args = array(
+                                'parent'    => 291,
+                                'sort_order' => 'DESC','number' => 3,
+                                );
+                            $latestpage = get_pages($args) ;
+                            ?>
                             <aside id="courses-7" class="widget widget_courses">
-                                <div class="thim-widget-courses thim-widget-courses-base"><h4 class="widget-title">
-                                        Latest Courses</h4>
+                                <div class="thim-widget-courses thim-widget-courses-base"><h4 class="widget-title">Các lớp học mới</h4>
                                     <div class="thim-course-list-sidebar">
+                                        <?php foreach ($latestpage as $page): ?>
                                         <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/course-4-150x150.jpg"
-                                                        alt="Introduction LearnPress – LMS plugin"></div>
+                                            <div class="course-thumbnail"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail') ; ?></div>
                                             <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/learnpress-101/">
-                                                        Introduction LearnPress – LMS plugin</a></h3>
+                                                            href="<?php echo $page->guid ?>"><?php echo $page->post_title ?></a></h3>
                                                 <div class="course-price" itemprop="offers" itemscope=""
                                                      itemtype="http://schema.org/Offer">
                                                     <div class="value free-course" itemprop="price"> Free</div>
@@ -786,39 +719,11 @@ get_header(); ?>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-2-150x150.jpg"
-                                                        alt="Become a PHP Master and Make Money"></div>
-                                            <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/become-a-php-master-and-make-money-fast/">
-                                                        Become a PHP Master and Make Money</a></h3>
-                                                <div class="course-price" itemprop="offers" itemscope=""
-                                                     itemtype="http://schema.org/Offer">
-                                                    <div class="value has-origin" itemprop="price"><span
-                                                                class="course-origin-price">$80.00</span> $69.00
-                                                    </div>
-                                                    <meta itemprop="priceCurrency" content="$">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-5-150x150.jpg"
-                                                        alt="Learning jQuery Mobile for Beginners"></div>
-                                            <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/learning-jquery-mobile-for-beginners/">
-                                                        Learning jQuery Mobile for Beginners</a></h3>
-                                                <div class="course-price" itemprop="offers" itemscope=""
-                                                     itemtype="http://schema.org/Offer">
-                                                    <div class="value" itemprop="price"> $30.00</div>
-                                                    <meta itemprop="priceCurrency" content="$">
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </aside>
+
                             <aside id="single-images-7" class="widget widget_single-images">
                                 <div class="thim-widget-single-images thim-widget-single-images-base">
                                     <div class="single-image text-left"><a href="#"><img

@@ -166,4 +166,8 @@ li.comment {
   padding-left: 20px;
 }
 
+.thim-course-grid .course-item .thim-course-content .course-meta > div.course-price .value {
+  color: #54b551;
+}
+
 /*# sourceMappingURL=theme-custom.css.map */

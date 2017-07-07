@@ -25,13 +25,8 @@ get_header(); ?>
             </div>
             <div class="breadcrumbs-wrapper">
                 <div class="container">
-                    <ul itemprop="breadcrumb" itemscope="" id="breadcrumbs"
-                        class="breadcrumbs">
-                        <li itemprop="itemListElement" itemscope=""><a
-                                    itemprop="item" href="#" title="Home"><span
-                                        itemprop="name">Home</span></a></li>
-                        <li itemprop="itemListElement" itemscope=""><span
-                                    itemprop="name" title="All courses">All courses</span></li>
+                    <ul itemprop="breadcrumb" itemscope="" id="breadcrumbs" class="breadcrumbs">
+                        <?php bcn_display_list() ?>
                     </ul>
                 </div>
             </div>
@@ -40,11 +35,22 @@ get_header(); ?>
                     <main id="main" class="site-main col-sm-9 alignleft">
                         <div id="lp-archive-courses">
                             <div class="thim-course-top switch-layout-container">
-                                <div class="thim-course-switch-layout switch-layout"><a href="#"
-                                                                                        class="list switchToGrid switch-active"><i
+                                <div class="thim-course-switch-layout switch-layout"><a href="#" class="list switchToGrid switch-active"><i
                                                 class="fa fa-th-large"></i></a> <a href="#" class="grid switchToList"><i
                                                 class="fa fa-list-ul"></i></a></div>
-                                <div class="course-index"><span>Showing 1-4 of 4 results</span></div>
+                                <div class="course-index">
+                                    <span><?php $args = array(
+                                            'parent'    => 291,
+                                        );
+                                        $latestpage = get_pages($args) ;
+                                        $total_post = count($latestpage);
+                                        ?>
+
+                                        <?php if($total_post>0): ?>
+                                        Đang hiển thị 1-<?php echo $total_post ?> của <?php echo $total_post ?> kết quả
+                                        <?php endif;?>
+                                    </span>
+                                </div>
                                 <div class="courses-searching">
                                     <form method="get" action="<?php echo home_url( '/' ); ?>"
                                           data-dpmaxz-eid="9"><input type="text" value="" name="s"
@@ -116,7 +122,7 @@ get_header(); ?>
                                                         <div class="value"><i class="fa fa-group"></i> 309</div>
                                                     </div>
                                                     <div class="course-comments-count">
-                                                        <div class="value"><i class="fa fa-comment"></i>3</div>
+                                                        <div class="value"><i class="fa fa-comment"></i><?php comments_number( 0, 1, '%' ); ?></div>
                                                     </div>
                                                     <div class="course-price" itemprop="offers">
                                                         <div class="value free-course" itemprop="price"> Free</div>
@@ -146,54 +152,30 @@ get_header(); ?>
                             <?php
                             get_sidebar();
                             ?>
+                            <?php
+                            $args = array(
+                                'parent'    => 291,
+                                'sort_order' => 'DESC','number' => 3,
+                            );
+                            $latestpage = get_pages($args) ;
+                            ?>
                             <aside id="courses-7" class="widget widget_courses">
                                 <div class="thim-widget-courses thim-widget-courses-base"><h4 class="widget-title">
                                         Latest Courses</h4>
                                     <div class="thim-course-list-sidebar">
-                                        <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/course-4-150x150.jpg"
-                                                        alt="Introduction LearnPress – LMS plugin"></div>
-                                            <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/learnpress-101/">
-                                                        Introduction LearnPress – LMS plugin</a></h3>
-                                                <div class="course-price" itemprop="offers" itemscope=""
-                                                     itemtype="http://schema.org/Offer">
-                                                    <div class="value free-course" itemprop="price"> Free</div>
-                                                    <meta itemprop="priceCurrency" content="$">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-2-150x150.jpg"
-                                                        alt="Become a PHP Master and Make Money"></div>
-                                            <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/become-a-php-master-and-make-money-fast/">
-                                                        Become a PHP Master and Make Money</a></h3>
-                                                <div class="course-price" itemprop="offers" itemscope=""
-                                                     itemtype="http://schema.org/Offer">
-                                                    <div class="value has-origin" itemprop="price"><span
-                                                                class="course-origin-price">$80.00</span> $69.00
+                                        <?php foreach ($latestpage as $page): ?>
+                                            <div class="lpr_course has-post-thumbnail">
+                                                <div class="course-thumbnail"><?php echo get_the_post_thumbnail($page->ID, 'thumbnail') ; ?></div>
+                                                <div class="thim-course-content"><h3 class="course-title"><a
+                                                                href="<?php echo $page->guid ?>"><?php echo $page->post_title ?></a></h3>
+                                                    <div class="course-price" itemprop="offers" itemscope=""
+                                                         itemtype="http://schema.org/Offer">
+                                                        <div class="value free-course" itemprop="price"> Free</div>
+                                                        <meta itemprop="priceCurrency" content="$">
                                                     </div>
-                                                    <meta itemprop="priceCurrency" content="$">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="lpr_course has-post-thumbnail">
-                                            <div class="course-thumbnail"><img
-                                                        src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/course-5-150x150.jpg"
-                                                        alt="Learning jQuery Mobile for Beginners"></div>
-                                            <div class="thim-course-content"><h3 class="course-title"><a
-                                                            href="https://educationwp.thimpress.com/courses/learning-jquery-mobile-for-beginners/">
-                                                        Learning jQuery Mobile for Beginners</a></h3>
-                                                <div class="course-price" itemprop="offers" itemscope=""
-                                                     itemtype="http://schema.org/Offer">
-                                                    <div class="value" itemprop="price"> $30.00</div>
-                                                    <meta itemprop="priceCurrency" content="$">
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </aside>

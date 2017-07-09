@@ -488,3 +488,14 @@ a.course-readmore {
 article .entry-header {
     margin-bottom: 10px;
 }
+.wrapper-box-icon.overlay .smicon-read{
+	&:hover{
+		.fa-chevron-right:before{
+			padding-left: 5px;
+		}
+	}
+	.fa-chevron-right:before{
+		transition: all .15s ease-in;
+	}
+
+}

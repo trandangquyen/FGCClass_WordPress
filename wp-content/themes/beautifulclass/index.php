@@ -39,7 +39,7 @@ get_header(); ?>
                                                     </div>
                                                     <div class="content-inner" style="width: calc( 100% - 135px - 15px);">
                                                         <div class="sc-heading article_heading">
-                                                            <h3 class="heading__primary">Các học viên xuất sắc</h3></div><a class="smicon-read sc-btn" target="_self" href="#" style="color: #ffb606;">View More<i class="fa fa-chevron-right"></i></a></div>
+                                                            <h3 class="heading__primary">Truyện Cười Song Ngữ</h3></div><a class="smicon-read sc-btn" target="_self" href="<?php echo get_site_url().'/category/truyen-cuoi/';?>" style="color: #ffb606;">View More<i class="fa fa-chevron-right"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,7 +69,7 @@ get_header(); ?>
                                                     </div>
                                                     <div class="content-inner" style="width: calc( 100% - 135px - 15px);">
                                                         <div class="sc-heading article_heading">
-                                                            <h3 class="heading__primary">Thư viện sách & giáo trình</h3></div><a class="smicon-read sc-btn" target="_self" href="#" style="color: #ffb606;">View More<i class="fa fa-chevron-right"></i></a></div>
+                                                            <h3 class="heading__primary">Thư viện sách & giáo trình</h3></div><a class="smicon-read sc-btn" target="_self" href="<?php echo get_site_url().'/download-category/english-books/';?>" style="color: #ffb606;">View More<i class="fa fa-chevron-right"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>

@@ -160,8 +160,7 @@ get_header(); ?>
                             $latestpage = get_pages($args) ;
                             ?>
                             <aside id="courses-7" class="widget widget_courses">
-                                <div class="thim-widget-courses thim-widget-courses-base"><h4 class="widget-title">
-                                        Latest Courses</h4>
+                                <div class="thim-widget-courses thim-widget-courses-base"><h4 class="widget-title">Các khóa học mới</h4>
                                     <div class="thim-course-list-sidebar">
                                         <?php foreach ($latestpage as $page): ?>
                                             <div class="lpr_course has-post-thumbnail">
@@ -187,55 +186,25 @@ get_header(); ?>
                                 </div>
                             </aside>
                             <aside id="list-post-9" class="widget widget_list-post">
-                                <div class="thim-widget-list-post thim-widget-list-post-base"><h4 class="widget-title">
-                                        Latest Posts</h4>
+                                <div class="thim-widget-list-post thim-widget-list-post-base"><h4 class="widget-title">Bài nghe mới</h4>
                                     <div class="thim-list-posts sidebar">
+                                        <?php
+                                        global $post;
+                                        $args = array('category' => 21,'numberposts'=> 3 );
+                                        $new_posts = get_posts( $args );
+                                        foreach ($new_posts as $lastest_post):
+                                        ?>
                                         <div class="item-post post-3698 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-course pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
+                                            <div class="article-image">
+                                                <?php echo get_the_post_thumbnail( $lastest_post->ID, 'thumbnail' ); ?>
                                             </div>
                                             <div class="article-title-wrapper"><h5><a
-                                                            href="https://educationwp.thimpress.com/online-learning-glossary/"
-                                                            class="article-title">Online Learning Glossary</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                            class="month">Jan</span><span class="year">2016</span></div>
+                                                            href="<?php echo $lastest_post->guid?>"
+                                                            class="article-title"><?php echo $lastest_post->post_title ?></a></h5>
+                                                <div class="article-date"><?php echo $lastest_post->post_date ?></div>
                                             </div>
                                         </div>
-                                        <div class="item-post post-3699 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-designer tag-seo pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
-                                            </div>
-                                            <div class="article-title-wrapper"><h5><a
-                                                            href="https://educationwp.thimpress.com/tips-to-succeed-in-an-online-course/"
-                                                            class="article-title">Tips to Succeed in an Online
-                                                        Course</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                            class="month">Jan</span><span class="year">2016</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="item-post post-71 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-course tag-thimpress tag-wordpress pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
-                                            </div>
-                                            <div class="article-title-wrapper"><h5><a
-                                                            href="https://educationwp.thimpress.com/introducing-dr-deniz-zeynep-2/"
-                                                            class="article-title">Introducing: Dr. Deniz Zeynep</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                            class="month">Oct</span><span class="year">2015</span></div>
-                                            </div>
-                                        </div>
+                                            <?php endforeach; ?>
                                     </div>
                                 </div>
                             </aside>

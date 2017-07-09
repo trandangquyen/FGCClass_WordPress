@@ -153,3 +153,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Functions that customed by user
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'post-thumb', 300, 300, array( 'center', 'center' ) );
+
+}
+function wpdocs_setup_theme_thumb() {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 300, 300,array( 'center', 'center')  );
+}
+add_action( 'after_setup_theme', 'wpdocs_setup_theme_thumb' );

@@ -59,7 +59,7 @@ function registration_form($username, $password, $email, $website, $first_name, 
     </div>
      
     <div>
-    <label for="nickname">Nickname</label>
+    <label for="nickname">Tên hiển thị</label>
     <input type="text" name="nickname" value="' . ( isset($_POST['nickname']) ? $nickname : null ) . '">
     </div>
      

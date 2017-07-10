@@ -122,7 +122,7 @@ function beautifulclass_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// wp_enqueue_script( 'beautifulclass-jquery', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), 'v1', true );
+    wp_enqueue_script( 'beautifulclass-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), 'v1', true );
 	wp_enqueue_script( 'beautifulclass-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), 'v1', true );
 	wp_enqueue_script( 'beautifulclass-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), 'v1', true );
 	wp_enqueue_script( 'beautifulclass-homepage', get_template_directory_uri() . '/js/homepage.js', array(), 'v1', true );
@@ -153,3 +153,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Functions that customed by user
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'post-thumb', 300, 300, array( 'center', 'center' ) );
+
+}
+function wpdocs_setup_theme_thumb() {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 300, 300,array( 'center', 'center')  );
+}
+add_action( 'after_setup_theme', 'wpdocs_setup_theme_thumb' );

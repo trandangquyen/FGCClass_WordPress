@@ -451,6 +451,11 @@ a.course-readmore {
 		content: "\f040";
 	}
 }
+#learn-via-videos	{
+	.post-thumbnail::before{
+		content: "\f03d";
+	}
+}
 .entry-content{
 	.w3eden{
 		img{

@@ -106,7 +106,7 @@ if (!function_exists('header_customs')) {
 //                                                wp_logout();
                                         } else {
                                             ?>
-                                            <div class="thim-link-login thim-login-popup"> <a class="register" href="#">Register</a> <a class="login" href="#">Login</a></div>
+                                            <div class="thim-link-login thim-login-popup"> <a class="register" href=" http://localhost:8080/FGCClass_WordPress/dang-ky/">Đăng Ký</a> <a class="login" href="#">Đăng Nhập</a></div>
                                             <?php
                                         }
                                         ?>

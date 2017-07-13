@@ -90,8 +90,8 @@
                         <div class="navigation col-sm-12">
                             <div class="tm-table">
                                 <div class="width-logo table-cell sm-logo">
-                                    <a href="http://localhost:8080/FGCClass_WordPress" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
-                                    <a href="http://localhost:8080/FGCClass_WordPress" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
+                                    <a href="<?php  echo get_site_url(); ?>" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
+                                    <a href="<?php  echo get_site_url(); ?>" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
                                 </div>
                                 <nav class="width-navigation table-cell table-right">
 	                                <?php echo wp_nav_menu( array( "theme_location" => "menu-1" ) ); ?>

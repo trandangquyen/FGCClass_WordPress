@@ -100,9 +100,11 @@ get_header();
         } else {
             $current_user = wp_get_current_user();
             ?>
-            <b>Welcome:  <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->display_name; ?></span></b>
-            
-            <p><a href="http://localhost:8080/FGCClass_WordPress">Quay về trang chủ</a></p>
+                <b>Welcome:  <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->display_name; ?></span></b>
+                <b>ID:  <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->ID; ?></span></b>
+                <b>Email:  <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->user_mail; ?></span></b>
+
+                <p><a href="http://localhost:8080/FGCClass_WordPress">Quay về trang chủ</a></p>
             <?php
         }
         ?>

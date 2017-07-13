@@ -3,7 +3,7 @@
  * Plugin Name: WP Statistics
  * Plugin URI: http://wp-statistics.com/
  * Description: Complete statistics for your WordPress site.
- * Version: 12.0.7
+ * Version: 12.0.9
  * Author: WP-Statistics Team
  * Author URI: http://wp-statistics.com/
  * Text Domain: wp_statistics
@@ -12,7 +12,7 @@
  */
 
 // These defines are used later for various reasons.
-define( 'WP_STATISTICS_VERSION', '12.0.7' );
+define( 'WP_STATISTICS_VERSION', '12.0.9' );
 define( 'WP_STATISTICS_REQUIRED_PHP_VERSION', '5.4.0' );
 define( 'WP_STATISTICS_REQUIRED_GEOIP_PHP_VERSION', WP_STATISTICS_REQUIRED_PHP_VERSION );
 define( 'WPS_EXPORT_FILE_NAME', 'wp-statistics' );
@@ -57,7 +57,11 @@ function wp_statistics_language() {
 
 	// If not, go ahead and load the translations.
 	if ( ! $override ) {
-		load_plugin_textdomain( 'wp_statistics', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		$domain = 'wp_statistics';
+		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+
+		load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins/wp-statistics-' . $locale . '.mo' );
+
 		__( 'WP Statistics', 'wp_statistics' );
 		__( 'Complete statistics for your WordPress site.', 'wp_statistics' );
 	}
@@ -513,7 +517,7 @@ function wp_statistics_menu() {
 
 	$WP_Statistics->menu_slugs['optimize'] = add_submenu_page( WP_STATISTICS_OVERVIEW_PAGE, __( 'Optimization', 'wp_statistics' ), __( 'Optimization', 'wp_statistics' ), $manage_cap, WP_STATISTICS_OPTIMIZATION_PAGE, 'wp_statistics_optimization' );
 	$WP_Statistics->menu_slugs['settings'] = add_submenu_page( WP_STATISTICS_OVERVIEW_PAGE, __( 'Settings', 'wp_statistics' ), __( 'Settings', 'wp_statistics' ), $read_cap, WP_STATISTICS_SETTINGS_PAGE, 'wp_statistics_settings' );
-	$WP_Statistics->menu_slugs['donate']   = add_submenu_page( WP_STATISTICS_OVERVIEW_PAGE, __( 'Donate', 'wp_statistics' ), __( 'Donate', 'wp_statistics' ), $read_cap, WP_STATISTICS_DONATE_PAGE, 'wp_statistics_donate' );
+	$WP_Statistics->menu_slugs['donate']   = add_submenu_page( WP_STATISTICS_OVERVIEW_PAGE, __( 'Donate', 'wp_statistics' ), '<span style="color:#459605">' . __( 'Donate', 'wp_statistics' ) . '</span>', $read_cap, WP_STATISTICS_DONATE_PAGE, 'wp_statistics_donate' );
 
 	// Add action to load the meta boxes to the overview page.
 	add_action( 'load-' . $WP_Statistics->menu_slugs['overview'], 'wp_statistics_load_overview_page' );
@@ -679,9 +683,7 @@ function wp_statistics_goto_network_blog() {
 }
 
 function wp_statistics_donate() {
-	$url = get_admin_url() . "/admin.php?page=" . WP_STATISTICS_SETTINGS_PAGE . "&tab=about";
-
-	echo "<script>window.open('http://wp-statistics.com/donate','_blank'); window.location.href = '$url';</script>";
+	echo "<script>window.location.href='http://wp-statistics.com/donate';</script>";
 }
 
 // This function adds the menu icon to the top level menu.  WordPress 3.8 changed the style of the menu a bit and so a different css file is loaded.

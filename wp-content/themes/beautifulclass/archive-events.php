@@ -46,7 +46,7 @@ else $category_id = '';
                             <li class=""><a href="#tab-expired" data-toggle="tab">Đã kết thúc</a></li>
                         </ul>
                         <div class="tab-content thim-list-event">
-                            <div role="tabpanel" class="tab-pane fade" id="tab-happening">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab-happening">
                                 <?php
                                 $args = array(
                                     'post_type' => 'events',
@@ -108,7 +108,7 @@ else $category_id = '';
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade active in" id="tab-expired">
+                            <div role="tabpanel" class="tab-pane fade" id="tab-expired">
                                 <?php
                                 $args = array(
                                     'post_type' => 'events',

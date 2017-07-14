@@ -27,7 +27,7 @@ else $category_id = '';
             <?php echo do_shortcode('[rev_slider alias="banner-truyen-cuoi"]'); ?>
             <span class="overlay-top-header" style="background:rgba(0,0,0,0.5);"></span>
             <div class="page-title-wrapper">
-                <div class="banner-wrapper container"><h1>Học mà chơiiiiiiiii</h1></div>
+                <div class="banner-wrapper container"><h1>Học mà chơi</h1></div>
             </div>
         </div>
         <div class="breadcrumbs-wrapper">

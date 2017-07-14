@@ -97,9 +97,15 @@ if (!function_exists('header_customs')) {
                                         if (is_user_logged_in()) {
                                             $current_user = wp_get_current_user();
                                             ?>
-                                        <b>Xin chào <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->display_name; ?></span> |</b>
+                                            <b>Xin chào <span style="color: red !important; font-weight: bold !important;"><?php echo $current_user->display_name; ?></span> |</b>
                                             <?php
-//                                            printf('Xin chào %s!',esc_html($current_user->display_name));
+                                            if (in_array('administrator', $current_user->roles)) {
+                                                add_filter('show_admin_bar', '__return_true');
+                                                ?>
+                                                
+                                                <a href="<?php echo admin_url(); ?>" target="_blank">Quản lý</a> |
+                                                <?php
+                                            }
                                             ?>
                                             <a href="<?php echo wp_logout_url(home_url()); ?>">Đăng xuất</a>
                                             <?php
@@ -147,7 +153,7 @@ if (!function_exists('header_customs')) {
                                                     wp_login_form($args);
                                                     ?>
 
-                                                    <p class="link-bottom">Chưa phải là thành viên? <a class="register" href="<?php echo wp_registration_url(); ?>">Đăng ký ngay</a></p>
+                                                    <p class="link-bottom">Chưa phải là thành viên? <a class="register" href="<?php echo home_url('/dang-ky/'); ?>">Đăng ký ngay</a></p>
                                                 </div> <span class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></span></div>
                                         </div>
                                     </div>

@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Customize Registration Form
  * Plugin URI: http://localhost:8080/
- * Description: Thay thế trang đăng ký mặc định của WP
+ * Description: Thay thế trang đăng ký mặc định của WP - Shortcode là "[fgc_custom_registration]"
  * Version: 1.0
  * Author: Phạm Hiếu
  * Author URI: http://vanhieu.wdev.fgct.net
@@ -22,13 +22,31 @@ function registration_form($username, $password, $email, $website, $first_name, 
       margin-bottom:2px;
     }
      
-    input,textarea{
+    input[type=text],input[type=password],textarea{
         margin-bottom:4px;
         width: 250px;
+        border-radius:4px;
+        border-color: #ffb606;
     }
     label {
         width : 200px;
-        color: #FFF;
+    }
+    #reg-last-items {
+        margin-left:31%;
+    }
+    #reg-last-items input {
+        background-color:#ffb606 !important;
+        border-radius:4px !important;
+        width: 100px !important;
+        height: 35px !important;
+        padding: 0px !important;
+        text-transform: uppercase !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        line-height: 30px !important;
+    }
+    #reg-last-items input:hover {
+        background-color:#ff6206 !important;
     }
     </style>
     ';
@@ -75,7 +93,11 @@ function registration_form($username, $password, $email, $website, $first_name, 
                 <label for="bio">Đôi chút về bản thân</label>
                 <textarea name="bio">' . ( isset($_POST['bio']) ? $bio : null ) . '</textarea>
             </div>
-            <input style type="submit" name="submit" value="Đăng Ký"/>
+            <div id="reg-last-items">
+                <input type="reset" name="reset" value="Nhập Lại"/>
+                <input type="submit" name="submit" value="Đăng Ký"/>
+            </div>
+            
         </form>
     </div>
     ';
@@ -116,7 +138,7 @@ function registration_validation($username, $password, $email, $website, $first_
     //Nếu trường website đã được điền, kiểm tra xem nó có hợp lệ hay không
     if (!empty($website)) {
         if (!filter_var($website, FILTER_VALIDATE_URL)) {
-            $reg_errors->add('website', 'Website is not a valid URL');
+            $reg_errors->add('website', 'Website không hợp lệ');
         }
     }
     // lặp qua các lỗi trong đối tượng WP_Error và hiển thị từng lỗi.

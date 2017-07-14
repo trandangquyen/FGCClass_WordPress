@@ -145,6 +145,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Custom functions that contain customize by mrHieu
+ */
+require get_template_directory() . '/inc/core.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -166,3 +171,4 @@ function wpdocs_setup_theme_thumb() {
     set_post_thumbnail_size( 300, 300,array( 'center', 'center')  );
 }
 add_action( 'after_setup_theme', 'wpdocs_setup_theme_thumb' );
+add_filter('show_admin_bar', '__return_false');

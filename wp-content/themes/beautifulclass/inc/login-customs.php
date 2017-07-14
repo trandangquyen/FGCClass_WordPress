@@ -1,11 +1,4 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /*
  * Hàm tự động chuyển đến 1 trang khác sau khi Đăng nhập
  */
@@ -25,7 +18,7 @@ function my_login_redirect($redirect_to, $request, $user) {
     }
 }
 
-add_filter('login_redirect', 'my_login_redirect', 10, 3);
+add_filter('login_redirect', 'my_login_redirect', 1, 3);
 
 /* Cấu hình lại địa chỉ page redirect */
 

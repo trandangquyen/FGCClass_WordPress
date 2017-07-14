@@ -112,6 +112,11 @@ class wfUpdateCheck {
 				}
 				
 				$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+				if (!file_exists($pluginFile)) { //Plugin has been removed since the update status was pulled
+					unset($installedPlugins[$plugin]);
+					continue;
+				}
+				
 				$valsArray = (array) $vals;
 				
 				$slug = (isset($valsArray['slug']) ? $valsArray['slug'] : null);
@@ -156,6 +161,11 @@ class wfUpdateCheck {
 				}
 				
 				$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+				if (!file_exists($pluginFile)) { //Plugin has been removed since the update status was pulled
+					unset($installedPlugins[$plugin]);
+					continue;
+				}
+				
 				$valsArray = (array) $vals;
 				
 				$data = get_plugin_data($pluginFile);
@@ -183,6 +193,10 @@ class wfUpdateCheck {
 		//Get the remaining plugins (not in the wordpress.org repo for whatever reason)
 		foreach ($installedPlugins as $plugin => $data) {
 			$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+			if (!file_exists($pluginFile)) { //Plugin has been removed since the list was generated
+				continue;
+			}
+			
 			$data = get_plugin_data($pluginFile);
 			
 			$slug = null;
@@ -286,6 +300,11 @@ class wfUpdateCheck {
 			if (!empty($update_plugins->response)) {
 				foreach ($update_plugins->response as $plugin => $vals) {
 					$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+					if (!file_exists($pluginFile)) { //Plugin has been removed since the update status was pulled
+						unset($installedPlugins[$plugin]);
+						continue;
+					}
+					
 					$valsArray = (array) $vals;
 					$data = get_plugin_data($pluginFile);
 					
@@ -313,6 +332,11 @@ class wfUpdateCheck {
 			if (!empty($update_plugins->no_update)) {
 				foreach ($update_plugins->no_update as $plugin => $vals) {
 					$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+					if (!file_exists($pluginFile)) { //Plugin has been removed since the update status was pulled
+						unset($installedPlugins[$plugin]);
+						continue;
+					}
+					
 					$valsArray = (array) $vals;
 					$data = get_plugin_data($pluginFile);
 					
@@ -340,6 +364,10 @@ class wfUpdateCheck {
 		//Get the remaining plugins (not in the wordpress.org repo for whatever reason)
 		foreach ($installedPlugins as $plugin => $data) {
 			$pluginFile = wfUtils::getPluginBaseDir() . $plugin;
+			if (!file_exists($pluginFile)) { //Plugin has been removed since the update status was pulled
+				continue;
+			}
+			
 			$data = get_plugin_data($pluginFile);
 			
 			$slug = null;

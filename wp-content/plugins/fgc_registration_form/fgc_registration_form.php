@@ -28,46 +28,46 @@ function registration_form($username, $password, $email, $website, $first_name, 
 
     echo '
     <form action="' . $_SERVER['REQUEST_URI'] . '" method="post">
-    <div>
-    <label for="username">Tên Đăng Nhập <strong>*</strong></label>
-    <input type="text" name="username" value="' . ( isset($_POST['username']) ? $username : null ) . '">
-    </div>
-     
-    <div>
-    <label for="password">Mật Khẩu <strong>*</strong></label>
-    <input type="password" name="password" value="' . ( isset($_POST['password']) ? $password : null ) . '">
-    </div>
-     
-    <div>
-    <label for="email">Email <strong>*</strong></label>
-    <input type="text" name="email" value="' . ( isset($_POST['email']) ? $email : null ) . '">
-    </div>
-     
-    <div>
-    <label for="website">Website</label>
-    <input type="text" name="website" value="' . ( isset($_POST['website']) ? $website : null ) . '">
-    </div>
-     
-    <div>
-    <label for="firstname">Họ</label>
-    <input type="text" name="fname" value="' . ( isset($_POST['fname']) ? $first_name : null ) . '">
-    </div>
-     
-    <div>
-    <label for="website">Tên</label>
-    <input type="text" name="lname" value="' . ( isset($_POST['lname']) ? $last_name : null ) . '">
-    </div>
-     
-    <div>
-    <label for="nickname">Tên hiển thị</label>
-    <input type="text" name="nickname" value="' . ( isset($_POST['nickname']) ? $nickname : null ) . '">
-    </div>
-     
-    <div>
-    <label for="bio">Đôi chút về bản thân</label>
-    <textarea name="bio">' . ( isset($_POST['bio']) ? $bio : null ) . '</textarea>
-    </div>
-    <input type="submit" name="submit" value="Đăng Ký"/>
+        <div>
+            <label for="username">Tên Đăng Nhập <strong>*</strong></label>
+            <input type="text" name="username" value="' . ( isset($_POST['username']) ? $username : null ) . '">
+        </div>
+
+        <div>
+            <label for="password">Mật Khẩu <strong>*</strong></label>
+            <input type="password" name="password" value="' . ( isset($_POST['password']) ? $password : null ) . '">
+        </div>
+
+        <div>
+            <label for="email">Email <strong>*</strong></label>
+            <input type="text" name="email" value="' . ( isset($_POST['email']) ? $email : null ) . '">
+        </div>
+
+        <div>
+            <label for="website">Website</label>
+            <input type="text" name="website" value="' . ( isset($_POST['website']) ? $website : null ) . '">
+        </div>
+
+        <div>
+            <label for="firstname">Họ</label>
+            <input type="text" name="fname" value="' . ( isset($_POST['fname']) ? $first_name : null ) . '">
+        </div>
+
+        <div>
+            <label for="website">Tên</label>
+            <input type="text" name="lname" value="' . ( isset($_POST['lname']) ? $last_name : null ) . '">
+        </div>
+
+        <div>
+            <label for="nickname">Tên hiển thị</label>
+            <input type="text" name="nickname" value="' . ( isset($_POST['nickname']) ? $nickname : null ) . '">
+        </div>
+
+        <div>
+            <label for="bio">Đôi chút về bản thân</label>
+            <textarea name="bio">' . ( isset($_POST['bio']) ? $bio : null ) . '</textarea>
+        </div>
+        <input type="submit" name="submit" value="Đăng Ký"/>
     </form>
     ';
 }
@@ -94,11 +94,11 @@ function registration_validation($username, $password, $email, $website, $first_
     }
     // Yêu cầu số ký tự của Password phải  nhiều hơn 5 ký tự
     if (5 > strlen($password)) {
-        $reg_errors->add('password', 'Độ dài của mậ khẩu phải nhiều hơn 5 ký tự');
+        $reg_errors->add('password', 'Độ dài của mật khẩu phải nhiều hơn 5 ký tự');
     }
     // Kiểm tra tính hợp lệ của email
     if (!is_email($email)) {
-        $reg_errors->add('email_invalid', 'Email của bạn không hợn lệ');
+        $reg_errors->add('email_invalid', 'Email của bạn không hợp lệ');
     }
     // Kiểm tra xem email đã được đăng ký hay chưa
     if (email_exists($email)) {

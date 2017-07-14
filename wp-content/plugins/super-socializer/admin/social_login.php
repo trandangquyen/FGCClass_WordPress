@@ -475,7 +475,7 @@
 						/**
 						 * Check if WooCommerce is active
 						 **/
-						if ( the_champ_ss_woocom_is_active() ) {
+						if ( heateor_ss_is_plugin_active('woocommerce/woocommerce.php') ) {
 						    ?>
 						    <tr>
 								<th>

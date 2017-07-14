@@ -61,7 +61,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 		<tr>
 			<th>URL:</th>
-			<td><a href="${data.url}" target="_blank">${data.url}</a></td>
+			<td><a href="${data.url}" target="_blank" rel="noopener noreferrer">${data.url}</a></td>
 		<tr>
 			<th>Severity:</th>
 			<td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td>
@@ -81,7 +81,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 		<ul>
 			<li><h3>Tools:</h3></li>
 			{{if data.fileExists}}
-			<li><a target="_blank" href="${WFAD.makeViewFileLink(data.file)}">View the file</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${WFAD.makeViewFileLink(data.file)}">View the file</a></li>
 			{{/if}}
 			<li><a href="#" onclick="WFAD.hideFile('${id}', 'delete'); return false;">Hide this file in <em>.htaccess</em></a></li>
 			{{if data.canDelete}}
@@ -118,7 +118,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 			<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 				<tr>
 					<th>URL:</th>
-					<td><a href="${data.url}" target="_blank">${data.url}</a></td>
+					<td><a href="${data.url}" target="_blank" rel="noopener noreferrer">${data.url}</a></td>
 				<tr>
 					<th>Severity:</th>
 					<td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td>
@@ -138,7 +138,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 				<ul>
 					<li><h3>Tools:</h3></li>
 					{{if data.fileExists}}
-					<li><a target="_blank" href="${WFAD.makeViewFileLink(data.file)}">View the file</a></li>
+					<li><a target="_blank" rel="noopener noreferrer" href="${WFAD.makeViewFileLink(data.file)}">View the file</a></li>
 					{{/if}}
 					<li><a href="#" onclick="WFAD.hideFile('${id}', 'delete'); return false;">Hide this file in <em>.htaccess</em></a></li>
 					{{if data.canDelete}}
@@ -174,7 +174,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<h2>${shortMsg}</h2>
 	<p>
 		<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
-		<tr><th>URL:</th><td><a href="${data.url}" target="_blank">${data.url}</a></td>
+		<tr><th>URL:</th><td><a href="${data.url}" target="_blank" rel="noopener noreferrer">${data.url}</a></td>
 		<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
 		<tr><th>Status</th><td>
 			{{if status == 'new' }}New{{/if}}
@@ -217,7 +217,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<h2>${shortMsg}</h2>
 	<p>
 		<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
-		<tr><th>URL:</th><td><a href="${data.url}" target="_blank">${data.url}</a></td>
+		<tr><th>URL:</th><td><a href="${data.url}" target="_blank" rel="noopener noreferrer">${data.url}</a></td>
 		<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
 		<tr><th>Status</th><td>
 			{{if status == 'new' }}New{{/if}}
@@ -269,7 +269,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 		<tr><th><span class="wf-hidden-xs">Theme </span>Name:</th><td>${data.name}</td></tr>
 		<tr><th>Current <span class="wf-hidden-xs">Theme </span>Version:</th><td>${data.version}</td></tr>
 		<tr><th>New <span class="wf-hidden-xs">Theme </span>Version:</th><td>${data.newVersion}</td></tr>
-		<tr><th><span class="wf-hidden-xs">Theme </span>URL:</th><td><a href="${data.URL}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.URL}</span><span class="wf-visible-xs">View</span></a></td></tr>
+		<tr><th><span class="wf-hidden-xs">Theme </span>URL:</th><td><a href="${data.URL}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.URL}</span><span class="wf-visible-xs">View</span></a></td></tr>
 		<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
 		<tr><th>Status</th><td>
 			{{if status == 'new' }}New{{/if}}
@@ -307,8 +307,8 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<p>
 		<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 		<tr><th><span class="wf-hidden-xs">Plugin </span>Name:</th><td>${data.Name}</td></tr>
-		{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
-		<tr><th>Changelog:</th><td><a href="${data.wpURL}/#developers" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.wpURL}/#developers</span><span class="wf-visible-xs">View</span></a></td></tr>
+		{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+		<tr><th>Changelog:</th><td><a href="${data.wpURL}/#developers" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.wpURL}/#developers</span><span class="wf-visible-xs">View</span></a></td></tr>
 		<tr><th>Current <span class="wf-hidden-xs">Plugin </span>Version:</th><td>${data.Version}</td></tr>
 		<tr><th>New <span class="wf-hidden-xs">Plugin </span>Version:</th><td>${data.newVersion}</td></tr>
 		<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
@@ -348,7 +348,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 			<p>
 			<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 				<tr><th><span class="wf-hidden-xs">Plugin </span>Name:</th><td>${data.Name}</td></tr>
-				{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+				{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
 				<tr><th>Current <span class="wf-hidden-xs">Plugin </span>Version:</th><td>${data.Version}</td></tr>
 				<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
 				<tr><th>Status</th><td>
@@ -385,8 +385,8 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 			<p>
 			<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 				<tr><th><span class="wf-hidden-xs">Plugin </span>Name:</th><td>${data.name}</td></tr>
-				{{if data.homepage}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.homepage}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.homepage}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
-				{{if data.wpURL}}<tr><th>Repository<span class="wf-hidden-xs"> Link</span>:</th><td><a href="${data.wpURL}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.wpURL}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+				{{if data.homepage}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.homepage}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.homepage}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+				{{if data.wpURL}}<tr><th>Repository<span class="wf-hidden-xs"> Link</span>:</th><td><a href="${data.wpURL}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.wpURL}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
 				<tr><th>Current <span class="wf-hidden-xs">Plugin </span>Version:</th><td>${data.version}</td></tr>
 				<tr><th>Last Updated:</th><td>${data.dateUpdated}</td></tr>
 				<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
@@ -425,8 +425,8 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 			<p>
 			<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 				<tr><th><span class="wf-hidden-xs">Plugin </span>Name:</th><td>${data.Name}</td></tr>
-				{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
-				{{if data.wpURL}}<tr><th>Repository<span class="wf-hidden-xs"> Link</span>:</th><td><a href="${data.wpURL}" target="_blank"><span class="wf-hidden-xs wf-split-word">${data.wpURL}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+				{{if data.PluginURI}}<tr><th><span class="wf-hidden-xs">Plugin </span>Website:</th><td><a href="${data.PluginURI}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.PluginURI}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
+				{{if data.wpURL}}<tr><th>Repository<span class="wf-hidden-xs"> Link</span>:</th><td><a href="${data.wpURL}" target="_blank" rel="noopener noreferrer"><span class="wf-hidden-xs wf-split-word">${data.wpURL}</span><span class="wf-visible-xs">View</span></a></td></tr>{{/if}}
 				<tr><th>Current <span class="wf-hidden-xs">Plugin </span>Version:</th><td>${data.Version}</td></tr>
 				<tr><th>Severity:</th><td>{{if severity == '1'}}Critical{{else}}Warning{{/if}}</td></tr>
 				<tr><th>Status</th><td>
@@ -579,7 +579,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<div class="wfIssueOptions">
 		<ul>
 			<li><h3>Tools:</h3></li>
-			<li><a target="_blank" href="${data.editUserLink}">Edit this user</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${data.editUserLink}">Edit this user</a></li>
 		</ul>
 	</div>
 	<div class="wfIssueOptions">
@@ -628,7 +628,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<div class="WfIssueOptions">
 		<ul>
 			<li><h3>Tools:</h3></li>
-			<li><a target="_blank" href="${data.editCommentLink}">Edit this ${data.type}</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${data.editCommentLink}">Edit this ${data.type}</a></li>
 		</ul>
 	</div>
 	<div class="wfIssueOptions">
@@ -674,7 +674,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<div class="wfIssueOptions">
 		<ul>
 			<li><h3>Tools:</h3></li> 
-			<li><a target="_blank" href="${data.editPostLink}">Edit this ${data.type}</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${data.editPostLink}">Edit this ${data.type}</a></li>
 		</ul>
 	</div>
 	<div class="wfIssueOptions">
@@ -703,9 +703,9 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<p>
 		<table border="0" class="wfIssue" cellspacing="0" cellpadding="0">
 		{{if data.isMultisite}}
-		<tr><th>Title:</th><td><a href="${data.permalink}" target="_blank">${data.postTitle}</a></td></tr>
+		<tr><th>Title:</th><td><a href="${data.permalink}" target="_blank" rel="noopener noreferrer">${data.postTitle}</a></td></tr>
 		{{else}}
-		<tr><th>Title:</th><td><a href="${data.permalink}" target="_blank">${data.postTitle}</a></td></tr>
+		<tr><th>Title:</th><td><a href="${data.permalink}" target="_blank" rel="noopener noreferrer">${data.postTitle}</a></td></tr>
 		{{/if}}
 		<tr><th>Bad URL:</th><td><strong class="wfWarn wf-split-word">${data.badURL}</strong></td></tr>
 		<tr><th>Posted on:</th><td>${data.postDate}</td></tr>
@@ -728,7 +728,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 	<div class="wfIssueOptions">
 		<ul>
 			<li><h3>Tools:</h3></li> 
-			<li><a target="_blank" href="${data.editPostLink}">Edit this ${data.type}</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${data.editPostLink}">Edit this ${data.type}</a></li>
 		</ul>
 	</div>
 	<div class="wfIssueOptions">
@@ -780,7 +780,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 		<ul>
 			<li><h3>Tools:</h3></li>
 			{{if data.fileExists}}
-			<li><a target="_blank" href="${WFAD.makeViewFileLink(data.file)}">View the file.</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${WFAD.makeViewFileLink(data.file)}">View the file.</a></li>
 			{{/if}}
 			{{if data.canFix}}
 			<li><a href="#" onclick="WFAD.restoreFile('${id}'); return false;">Restore the original version of this file.</a></li>
@@ -789,7 +789,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 			<li><a href="#" onclick="WFAD.deleteFile('${id}'); return false;">Delete this file (can't be undone)</a></li>
 			{{/if}}
 			{{if data.canDiff}}
-			<li><a href="${WFAD.makeDiffLink(data)}" target="_blank">See how the file has changed.</a></li>
+			<li><a href="${WFAD.makeDiffLink(data)}" target="_blank" rel="noopener noreferrer">See how the file has changed.</a></li>
 			{{/if}}
 		</ul>
 		{{if data.canFix}}
@@ -885,7 +885,7 @@ $sigUpdateTime = wfConfig::get('signatureUpdateTime');
 		<ul>
 			<li><h3>Tools:</h3></li>
 			{{if data.optionExists}}
-			<li><a target="_blank" href="${WFAD.makeViewOptionLink(data.option_name, data.site_id)}">View this option.</a></li>
+			<li><a target="_blank" rel="noopener noreferrer" href="${WFAD.makeViewOptionLink(data.option_name, data.site_id)}">View this option.</a></li>
 			{{/if}}
 			{{if data.canDelete}}
 			<li><a href="#" onclick="WFAD.deleteDatabaseOption('${id}'); return false;">Delete this option from the database (can't be undone)</a></li>

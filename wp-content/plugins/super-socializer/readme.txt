@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media, facebook login
 Requires at least: 2.5.0
 Tested up to: 4.8
-Stable tag: 7.8.24
+Stable tag: 7.9.2
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share and Social Comments at your website
@@ -204,6 +204,24 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.9.2 =
+* [Bugfix] Share counts were being cached even when "Refresh Share Count cache every" option (in "Miscellaneous" section) was kept blank
+* [Improvement] Improved Social Login icons
+
+= 7.9.1 =
+* [Bugfix] Logo color of StockTwits share icon was not changing, if specified
+
+= 7.9 =
+* [New] Included Copy Link, Diaspora, Douban, Draugiem, Facebook Messenger, Google Classroom, Kik, Papaly, Polyvore, Refind, Skype, SMS, Trello, Viber, StockTwits and Telegram in sharing networks
+* [New] Added "Comment" icon in sharing networks to send users to comment form at the webpage
+* [New] Added search box above the social networks at options page in admin, to find the desired social networks easily
+* [New] Added option to append myCRED referral ID to the urls being shared
+* [Improvement] Delicious share/bookmark counts are no longer supported, as Delicious bookmark count API is dead
+* [Improvement] Improved social share icons
+* [Bugfix] Twitter share count was not working in some cases
+* [Bugfix] Total share count was not appearing correct in a few cases
+* [Bugfix] Share icons were not appearing at the webpages built using <a href="https://wordpress.org/plugins/elementor/">Elementor</a> plugin
+
 = 7.8.24 =
 * [Improvement] Webpage urls with "?SuperSocializerAuth=LiveJournal" appended were appearing in "Google webmaster tools errors" in some cases
 
@@ -1253,3 +1271,21 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 
 = 7.8.24 =
 * [Improvement] Webpage urls with "?SuperSocializerAuth=LiveJournal" appended were appearing in "Google webmaster tools errors" in some cases
+
+= 7.9 =
+* [New] Included Copy Link, Diaspora, Douban, Draugiem, Facebook Messenger, Google Classroom, Kik, Papaly, Polyvore, Refind, Skype, SMS, Trello, Viber, StockTwits and Telegram in sharing networks
+* [New] Added "Comment" icon in sharing networks to send users to comment form at the webpage
+* [New] Added search box above the social networks at options page in admin, to find the desired social networks easily
+* [New] Added option to append myCRED referral ID to the urls being shared
+* [Improvement] Delicious share/bookmark counts are no longer supported, as Delicious bookmark count API is dead
+* [Improvement] Improved social share icons
+* [Bugfix] Twitter share count was not working in some cases
+* [Bugfix] Total share count was not appearing correct in a few cases
+* [Bugfix] Share icons were not appearing at the webpages built using <a href="https://wordpress.org/plugins/elementor/">Elementor</a> plugin
+
+= 7.9.1 =
+* [Bugfix] Logo color of StockTwits share icon was not changing, if specified
+
+= 7.9.2 =
+* [Bugfix] Share counts were being cached even when "Refresh Share Count cache every" option (in "Miscellaneous" section) was kept blank
+* [Improvement] Improved Social Login icons

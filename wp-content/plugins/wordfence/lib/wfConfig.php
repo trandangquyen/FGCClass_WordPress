@@ -78,6 +78,7 @@ class wfConfig {
 			"other_pwStrengthOnUpdate" => array('value' => true, 'autoload' => self::AUTOLOAD),
 			"other_WFNet" => array('value' => true, 'autoload' => self::AUTOLOAD),
 			"other_scanOutside" => array('value' => false, 'autoload' => self::AUTOLOAD),
+			"other_bypassLitespeedNoabort" => array('value' => false, 'autoload' => self::AUTOLOAD),
 			"deleteTablesOnDeact" => array('value' => false, 'autoload' => self::AUTOLOAD),
 			"autoUpdate" => array('value' => false, 'autoload' => self::AUTOLOAD),
 			"disableCookies" => array('value' => false, 'autoload' => self::AUTOLOAD),
@@ -744,7 +745,7 @@ SQL
 	}
 	public static function autoUpdate(){
 		try {
-			if(getenv('noabort') != '1' && stristr($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false){
+			if (!wfConfig::get('other_bypassLitespeedNoabort', false) && getenv('noabort') != '1' && stristr($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false) {
 				$lastEmail = self::get('lastLiteSpdEmail', false);
 				if( (! $lastEmail) || (time() - (int)$lastEmail > (86400 * 30))){
 					self::set('lastLiteSpdEmail', time());

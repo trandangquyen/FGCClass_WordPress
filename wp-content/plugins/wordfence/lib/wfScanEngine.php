@@ -230,7 +230,7 @@ class wfScanEngine {
 		}
 		
 		if ((time() - $this->startTime) > $timeLimit){
-			$error = 'The scan time limit of ' . wfUtils::makeDuration($timeLimit) . ' has been exceeded and the scan will be terminated. This limit can be customized on the options page. <a href="http://docs.wordfence.com/en/Scan_time_limit" target="_blank">Get More Information</a>';
+			$error = 'The scan time limit of ' . wfUtils::makeDuration($timeLimit) . ' has been exceeded and the scan will be terminated. This limit can be customized on the options page. <a href="http://docs.wordfence.com/en/Scan_time_limit" target="_blank" rel="noopener noreferrer">Get More Information</a>';
 			$this->addIssue('timelimit', 1, md5($this->startTime), md5($this->startTime), 'Scan Time Limit Exceeded', $error, array());
 			$summary = $this->i->getSummaryItems();
 			$this->status(1, 'info', '-------------------');
@@ -442,7 +442,7 @@ class wfScanEngine {
 							else {
 								$shortMsg = 'Your site is listed on Google\'s Safe Browsing malware list.';
 							}
-							$longMsg = "The URL " . esc_html($url) . " is on the malware list. More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($url) . "&client=googlechrome&hl=en-US\" target=\"_blank\">Google Safe Browsing diagnostic page</a>.";
+							$longMsg = "The URL " . esc_html($url) . " is on the malware list. More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($url) . "&client=googlechrome&hl=en-US\" target=\"_blank\" rel=\"noopener noreferrer\">Google Safe Browsing diagnostic page</a>.";
 							$data['gsb'] = $badList;
 						}
 						else if ($badList == 'googpub-phish-shavar') {
@@ -453,7 +453,7 @@ class wfScanEngine {
 							else {
 								$shortMsg = 'Your site is listed on Google\'s Safe Browsing phishing list.';
 							}
-							$longMsg = "The URL " . esc_html($url) . " is on the phishing list. More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($url) . "&client=googlechrome&hl=en-US\" target=\"_blank\">Google Safe Browsing diagnostic page</a>.";
+							$longMsg = "The URL " . esc_html($url) . " is on the phishing list. More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($url) . "&client=googlechrome&hl=en-US\" target=\"_blank\" rel=\"noopener noreferrer\">Google Safe Browsing diagnostic page</a>.";
 							$data['gsb'] = $badList;
 						}
 						else if ($badList == 'wordfence-dbl') {
@@ -525,7 +525,7 @@ class wfScanEngine {
 				$haveIssues = wfIssues::STATUS_FAILED;
 			}
 			else if ($recommendation == 'UNKNOWN') {
-				$added = $this->addIssue('checkHowGetIPs', 2, 'checkHowGetIPs', 'checkHowGetIPs' . $recommendation . WORDFENCE_VERSION, "Unable to accurately detect IPs", 'Wordfence was unable to validate a test request to your website. This can happen if your website is behind a proxy that does not use one of the standard ways to convey the IP of the request or it is unreachable publicly. IP blocking and live traffic information may not be accurate. <a href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice " target="_blank">Get More Information</a>', array());
+				$added = $this->addIssue('checkHowGetIPs', 2, 'checkHowGetIPs', 'checkHowGetIPs' . $recommendation . WORDFENCE_VERSION, "Unable to accurately detect IPs", 'Wordfence was unable to validate a test request to your website. This can happen if your website is behind a proxy that does not use one of the standard ways to convey the IP of the request or it is unreachable publicly. IP blocking and live traffic information may not be accurate. <a href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice " target="_blank" rel="noopener noreferrer">Get More Information</a>', array());
 				if ($added == wfIssues::ISSUE_ADDED || $added == wfIssues::ISSUE_UPDATED) { $haveIssues = wfIssues::STATUS_PROBLEM; }
 				else if ($added == wfIssues::ISSUE_IGNOREP || $added == wfIssues::ISSUE_IGNOREC) { $haveIssues = wfIssues::STATUS_IGNORED; }
 			}
@@ -544,7 +544,7 @@ class wfScanEngine {
 					$extraMsg = ' This site appears to be behind Cloudflare, so using the Cloudflare "CF-Connecting-IP" HTTP header will resolve to the correct IPs.';
 				}
 				
-				$added = $this->addIssue('checkHowGetIPs', 2, 'checkHowGetIPs', 'checkHowGetIPs' . $recommendation . WORDFENCE_VERSION, "'How does Wordfence get IPs' is misconfigured", 'A test request to this website was detected on a different value for this setting. IP blocking and live traffic information may not be accurate. <a href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice " target="_blank">Get More Information</a>' . $extraMsg, array('recommendation' => $recommendation));
+				$added = $this->addIssue('checkHowGetIPs', 2, 'checkHowGetIPs', 'checkHowGetIPs' . $recommendation . WORDFENCE_VERSION, "'How does Wordfence get IPs' is misconfigured", 'A test request to this website was detected on a different value for this setting. IP blocking and live traffic information may not be accurate. <a href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice " target="_blank" rel="noopener noreferrer">Get More Information</a>' . $extraMsg, array('recommendation' => $recommendation));
 				if ($added == wfIssues::ISSUE_ADDED || $added == wfIssues::ISSUE_UPDATED) { $haveIssues = wfIssues::STATUS_PROBLEM; }
 				else if ($added == wfIssues::ISSUE_IGNOREP || $added == wfIssues::ISSUE_IGNOREC) { $haveIssues = wfIssues::STATUS_IGNORED; }
 			}
@@ -601,7 +601,7 @@ class wfScanEngine {
 					$key,
 					$key,
 					'Publicly accessible config, backup, or log file found: ' . esc_html($pathFromRoot),
-					'<a href="' . $test->getUrl() . '" target="_blank">' . $test->getUrl() . '</a> is publicly
+					'<a href="' . $test->getUrl() . '" target="_blank" rel="noopener noreferrer">' . $test->getUrl() . '</a> is publicly
 					accessible and may expose sensitive information about your site. Files such as this one are commonly
 					checked for by scanners such as WPScan and should be removed or made inaccessible.',
 					array(
@@ -797,7 +797,7 @@ class wfScanEngine {
 						$key,
 						$key,
 						'Publicly accessible quarantined file found: ' . esc_html($file),
-						'<a href="' . $test->getUrl() . '" target="_blank">' . $test->getUrl() . '</a> is publicly
+						'<a href="' . $test->getUrl() . '" target="_blank" rel="noopener noreferrer">' . $test->getUrl() . '</a> is publicly
 					accessible and may expose source code or sensitive information about your site. Files such as this one are commonly
 					checked for by scanners and should be removed or made inaccessible.',
 						array(
@@ -911,7 +911,7 @@ class wfScanEngine {
 				
 				if ($result['badList'] == 'goog-malware-shavar') {
 					$shortMsg = "{$uctype} contains a suspected malware URL: " . esc_html($title);
-					$longMsg = "This " . esc_html($type) . " contains a suspected malware URL listed on Google's list of malware sites. The URL is: " . esc_html($result['URL']) . " - More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($result['URL']) . "&client=googlechrome&hl=en-US\" target=\"_blank\">Google Safe Browsing diagnostic page</a>.";
+					$longMsg = "This " . esc_html($type) . " contains a suspected malware URL listed on Google's list of malware sites. The URL is: " . esc_html($result['URL']) . " - More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($result['URL']) . "&client=googlechrome&hl=en-US\" target=\"_blank\" rel=\"noopener noreferrer\">Google Safe Browsing diagnostic page</a>.";
 				}
 				else if ($result['badList'] == 'googpub-phish-shavar') {
 					$shortMsg = "{$uctype} contains a suspected phishing site URL: " . esc_html($title);
@@ -1029,7 +1029,7 @@ class wfScanEngine {
 				
 				if ($result['badList'] == 'goog-malware-shavar') {
 					$shortMsg = "$uctype with author " . esc_html($author) . " contains a suspected malware URL.";
-					$longMsg = "This " . esc_html($type) . " contains a suspected malware URL listed on Google's list of malware sites. The URL is: " . esc_html($result['URL']) . " - More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($result['URL']) . "&client=googlechrome&hl=en-US\" target=\"_blank\">Google Safe Browsing diagnostic page</a>.";
+					$longMsg = "This " . esc_html($type) . " contains a suspected malware URL listed on Google's list of malware sites. The URL is: " . esc_html($result['URL']) . " - More info available at <a href=\"http://safebrowsing.clients.google.com/safebrowsing/diagnostic?site=" . urlencode($result['URL']) . "&client=googlechrome&hl=en-US\" target=\"_blank\" rel=\"noopener noreferrer\">Google Safe Browsing diagnostic page</a>.";
 				}
 				else if ($result['badList'] == 'googpub-phish-shavar') {
 					$shortMsg = "$uctype contains a suspected phishing site URL.";
@@ -1559,7 +1559,7 @@ class wfScanEngine {
 					else {
 						$longMsg .= ' It may have compatibility problems with the current version of WordPress or unknown security issues.';
 					}
-					$longMsg .= ' <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_appears_to_be_abandoned" target="_blank">Get more information.</a>';
+					$longMsg .= ' <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_appears_to_be_abandoned" target="_blank" rel="noopener noreferrer">Get more information.</a>';
 					$added = $this->addIssue('wfPluginAbandoned', $severity, $key, $key, $shortMsg, $longMsg, $statusArray);
 					if ($added == wfIssues::ISSUE_ADDED || $added == wfIssues::ISSUE_UPDATED) { $haveIssues = wfIssues::STATUS_PROBLEM; }
 					else if ($haveIssues != wfIssues::STATUS_PROBLEM && ($added == wfIssues::ISSUE_IGNOREP || $added == wfIssues::ISSUE_IGNOREC)) { $haveIssues = wfIssues::STATUS_IGNORED; }
@@ -1589,7 +1589,7 @@ class wfScanEngine {
 						else {
 							$longMsg = 'It may have compatibility problems with the current version of WordPress or unknown security issues.';
 						}
-						$longMsg .= ' <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_has_been_removed_from_wordpress.org" target="_blank">Get more information.</a>';
+						$longMsg .= ' <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_has_been_removed_from_wordpress.org" target="_blank" rel="noopener noreferrer">Get more information.</a>';
 						$added = $this->addIssue('wfPluginRemoved', 1, $key, $key, $shortMsg, $longMsg, $pluginData);
 						if ($added == wfIssues::ISSUE_ADDED || $added == wfIssues::ISSUE_UPDATED) { $haveIssues = wfIssues::STATUS_PROBLEM; }
 						else if ($haveIssues != wfIssues::STATUS_PROBLEM && ($added == wfIssues::ISSUE_IGNOREP || $added == wfIssues::ISSUE_IGNOREC)) { $haveIssues = wfIssues::STATUS_IGNORED; }
@@ -1610,7 +1610,7 @@ class wfScanEngine {
 				
 				$key = 'wfPluginVulnerable' . ' ' . $plugin['pluginFile'] . ' ' . $plugin['Version'];
 				$shortMsg = "The Plugin \"" . $plugin['Name'] . "\" has an unpatched security vulnerability.";
-				$longMsg = 'To protect your site from this vulnerability, the safest option is to deactivate and completely remove ' . esc_html($plugin['Name']) . ' until the developer releases a security fix. <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_has_an_unpatched_security_vulnerability" target="_blank">Get more information.</a>';
+				$longMsg = 'To protect your site from this vulnerability, the safest option is to deactivate and completely remove ' . esc_html($plugin['Name']) . ' until the developer releases a security fix. <a href="https://docs.wordfence.com/en/Understanding_scan_results#Plugin_has_an_unpatched_security_vulnerability" target="_blank" rel="noopener noreferrer">Get more information.</a>';
 				$added = $this->addIssue('wfPluginVulnerable', 1, $key, $key, $shortMsg, $longMsg, $plugin);
 				if ($added == wfIssues::ISSUE_ADDED || $added == wfIssues::ISSUE_UPDATED) { $haveIssues = wfIssues::STATUS_PROBLEM; }
 				else if ($haveIssues != wfIssues::STATUS_PROBLEM && ($added == wfIssues::ISSUE_IGNOREP || $added == wfIssues::ISSUE_IGNOREC)) { $haveIssues = wfIssues::STATUS_IGNORED; }

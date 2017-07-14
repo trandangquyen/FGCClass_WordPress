@@ -127,7 +127,7 @@ function the_champ_validate_options($theChampOptions){
 }
 
 /**
- * Register plugin settings and its sanitization callback.
+ * Register plugin settings and its sanitization callback
  */
 function the_champ_options_init(){
 	register_setting('the_champ_facebook_options', 'the_champ_facebook', 'the_champ_validate_options');
@@ -149,7 +149,7 @@ function the_champ_options_init(){
 add_action('admin_init', 'the_champ_options_init');
 
 /**
- * Include javascript files in admin.
+ * Include javascript files in admin
  */	
 function the_champ_admin_scripts(){
 	?>
@@ -159,7 +159,7 @@ function the_champ_admin_scripts(){
 }
 
 /**
- * Include Javascript SDK in admin.
+ * Include Javascript SDK in admin
  */	
 function the_champ_fb_sdk_script(){
 	wp_enqueue_script('the_champ_fb_sdk_script', plugins_url('js/admin/fb_sdk.js', __FILE__), false, THE_CHAMP_SS_VERSION);
@@ -387,7 +387,7 @@ function the_champ_social_login_provider_enabled($provider){
 }
 
 /**
- * Check if Facebook commenting is enabled.
+ * Check if Facebook commenting is enabled
  */
 function the_champ_facebook_commenting_enabled(){
 	global $theChampFacebookOptions;
@@ -399,7 +399,7 @@ function the_champ_facebook_commenting_enabled(){
 }
 
 /**
- * Check if Social commenting is enabled.
+ * Check if Social commenting is enabled
  */
 function the_champ_social_commenting_enabled(){
 	global $theChampFacebookOptions;
@@ -411,11 +411,11 @@ function the_champ_social_commenting_enabled(){
 }
 
 /**
- * Check if any Facebook plugin is enabled.
+ * Check if any Facebook plugin is enabled
  */
 function the_champ_facebook_plugin_enabled(){
 	global $theChampFacebookOptions, $theChampCounterOptions;
-	if( the_champ_social_login_provider_enabled('facebook') || the_champ_facebook_commenting_enabled() || the_champ_facebook_like_rec_enabled() ) {
+	if(the_champ_social_login_provider_enabled('facebook') || (the_champ_social_commenting_enabled() && the_champ_facebook_commenting_enabled()) || the_champ_facebook_like_rec_enabled()){
 		return true;
 	}else{
 		return false;
@@ -798,7 +798,7 @@ function the_champ_sharing_meta_setup(){
 		<?php
 		if(the_champ_social_sharing_enabled()){
 			global $theChampSharingOptions;
-			$validNetworks = array('facebook', 'twitter', 'linkedin', 'google_plus', 'delicious', 'buffer', 'reddit', 'pinterest', 'stumbleupon', 'vkontakte');
+			$validNetworks = array('facebook', 'twitter', 'linkedin', 'google_plus', 'buffer', 'reddit', 'pinterest', 'stumbleupon', 'vkontakte');
 			if(isset($theChampSharingOptions['hor_enable']) && isset($theChampSharingOptions['horizontal_counts']) && isset($theChampSharingOptions['horizontal_re_providers']) && count($theChampSharingOptions['horizontal_re_providers']) > 0){
 				?>
 				<p>
@@ -1006,4 +1006,11 @@ add_filter('login_errors', 'heateor_ss_login_error_message');
  */
 function heateor_ss_validate_url($url){
 	return filter_var(trim($url), FILTER_VALIDATE_URL);
+}
+
+/**
+ * Check if plugin is active
+ */
+function heateor_ss_is_plugin_active($pluginFile){
+	return in_array($pluginFile, apply_filters('active_plugins', get_option('active_plugins')));
 }

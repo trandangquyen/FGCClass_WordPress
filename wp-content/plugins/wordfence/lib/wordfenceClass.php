@@ -938,7 +938,7 @@ SQL
 	}
 	public static function _pluginPageActionLinks($links) {
 		if (!wfConfig::get('isPaid')) {
-			$links = array_merge(array('aWordfencePluginCallout' => '<a href="https://www.wordfence.com/zz12/wordfence-signup/" target="_blank"><strong style="color: #11967A; display: inline;">Upgrade To Premium</strong></a>'), $links);
+			$links = array_merge(array('aWordfencePluginCallout' => '<a href="https://www.wordfence.com/zz12/wordfence-signup/" target="_blank" rel="noopener noreferrer"><strong style="color: #11967A; display: inline;">Upgrade To Premium</strong></a>'), $links);
 		} 
 		return $links;
 	}
@@ -2317,7 +2317,7 @@ SQL
 	}
 	public static function ajax_addTwoFactor_callback(){
 		if(! wfConfig::get('isPaid')){
-			return array('errorMsg' => 'Cellphone Sign-in is only available to paid members. <a href="https://www.wordfence.com/gnl1twoFac3/wordfence-signup/" target="_blank">Click here to upgrade now.</a>');
+			return array('errorMsg' => 'Cellphone Sign-in is only available to paid members. <a href="https://www.wordfence.com/gnl1twoFac3/wordfence-signup/" target="_blank" rel="noopener noreferrer">Click here to upgrade now.</a>');
 		}
 		$username = sanitize_text_field($_POST['username']);
 		$phone = sanitize_text_field($_POST['phone']);
@@ -3013,6 +3013,7 @@ SQL
 		if (!empty($opts['email_summary_enabled'])) {
 			wfConfig::set('email_summary_enabled', 1);
 			wfConfig::set('email_summary_interval', $opts['email_summary_interval']);
+			$opts['email_summary_excluded_directories'] = wfUtils::cleanupOneEntryPerLine($opts['email_summary_excluded_directories']);
 			wfConfig::set('email_summary_excluded_directories', $opts['email_summary_excluded_directories']);
 			wfActivityReport::scheduleCronJob();
 		} else {
@@ -3774,8 +3775,8 @@ HTACCESS;
 				The <code>wp-config.php</code> file contains your database credentials which you will need to restore normal site operations.
 				Your site will <b>NOT</b> function once the <code>wp-config.php</code> has been deleted.
 				<p>
-					<a class='wf-btn wf-btn-default' href='/?_wfsf=download&nonce=" . wp_create_nonce('wp-ajax') . "&file=". rawurlencode($file) ."' target='_blank' onclick=\"jQuery('#wp-config-force-delete').show();\">Download a backup copy</a>
-					<a style='display:none' id='wp-config-force-delete' class='wf-btn wf-btn-default' href='#' target='_blank' onclick='WFAD.deleteFile($issueID, true); return false;'>Delete wp-config.php</a>
+					<a class='wf-btn wf-btn-default' href='/?_wfsf=download&nonce=" . wp_create_nonce('wp-ajax') . "&file=". rawurlencode($file) ."' target='_blank' rel=\"noopener noreferrer\" onclick=\"jQuery('#wp-config-force-delete').show();\">Download a backup copy</a>
+					<a style='display:none' id='wp-config-force-delete' class='wf-btn wf-btn-default' href='#' target='_blank' rel=\"noopener noreferrer\" onclick='WFAD.deleteFile($issueID, true); return false;'>Delete wp-config.php</a>
 				</p>",
 			);
 		}
@@ -4029,10 +4030,10 @@ HTACCESS;
 		$suspended = wp_suspend_cache_addition();
 		wp_suspend_cache_addition(true);
 		$auditType = $_POST['auditType'];
-		$symKey = wfCrypt::makeSymHexKey(32); #hex digits which is 128 bits
+		$symKey = wfCrypt::makeSymHexKey(32); //hex digits, so 128 bit -- 256 bit is supported in MySQL 5.7.4 but many are using older
 		$admins = "";
 		$users = "";
-		$query = $wpdb->prepare("select ID, AES_ENCRYPT(user_pass, %s) as crypt_pass from " . $wpdb->users, $symKey);
+		$query = $wpdb->prepare("SELECT ID, AES_ENCRYPT(user_pass, %s) AS crypt_pass FROM " . $wpdb->users, $symKey);
 		$dbh = $wpdb->dbh;
 		$useMySQLi = (is_object($dbh) && $wpdb->use_mysqli);
 		if ($useMySQLi) { //If direct-access MySQLi is available, we use it to minimize the memory footprint instead of letting it fetch everything into an array first
@@ -4044,9 +4045,10 @@ HTACCESS;
 			}
 			while ($rec = $result->fetch_assoc()) {
 				$isAdmin = wfUtils::isAdmin($rec['ID']);
-				if($isAdmin && ($auditType == 'admin' || $auditType == 'both') ) {
+				if ($isAdmin && ($auditType == 'admin' || $auditType == 'both')) {
 					$admins .= $rec['ID'] . ':' . base64_encode($rec['crypt_pass']) . '|';
-				} else if($auditType == 'user' || $auditType == 'both') {
+				}
+				else if($auditType == 'user' || $auditType == 'both') {
 					$users .= $rec['ID'] . ':' . base64_encode($rec['crypt_pass']) . '|';
 				}
 			}
@@ -4076,7 +4078,8 @@ HTACCESS;
 				'email' => $email,
 				'pubCryptSymKey' => wfCrypt::pubCrypt($symKey),
 				'users' => $users,
-				'admins' => $admins
+				'admins' => $admins,
+				'type' => 2,
 				), true); //Force SSL
 			if(is_array($res)){
 				if(isset($res['ok']) && $res['ok'] == '1'){
@@ -4991,7 +4994,7 @@ HTML;
 		<a class="wf-btn wf-btn-default wf-btn-sm wf-dismiss-link" href="#" onclick="wordfenceExt.adminEmailChoice(\'no\'); return false;">Dismiss</a></p></div>';
 	}
 	public static function wafReadOnlyNotice() {
-		echo '<div id="wordfenceWAFReadOnlyNotice" class="fade error"><p><strong>The Wordfence Web Application Firewall is in read-only mode.</strong> PHP is currently running as a command line user and to avoid file permission issues, the WAF is running in read-only mode. It will automatically resume normal operation when run normally by a web server. <a class="wfhelp" target="_blank" href="https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#What_is_read-only_mode.3F"></a></p></div>';
+		echo '<div id="wordfenceWAFReadOnlyNotice" class="fade error"><p><strong>The Wordfence Web Application Firewall is in read-only mode.</strong> PHP is currently running as a command line user and to avoid file permission issues, the WAF is running in read-only mode. It will automatically resume normal operation when run normally by a web server. <a class="wfhelp" target="_blank" rel="noopener noreferrer" href="https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#What_is_read-only_mode.3F"></a></p></div>';
 	}
 	public static function misconfiguredHowGetIPsNotice() {
 		$url = network_admin_url('admin.php?page=WordfenceSecOpt');
@@ -5028,7 +5031,7 @@ HTML;
 			$recommendationMsg = 'This site appears to be behind Cloudflare, so using the Cloudflare "CF-Connecting-IP" HTTP header will resolve to the correct IPs.';
 		}
 		echo '<div id="wordfenceMisconfiguredHowGetIPsNotice" class="fade error"><p><strong>Your \'How does Wordfence get IPs\' setting is misconfigured.</strong> ' . $existingMsg . ' ' . $recommendationMsg . ' <a href="#" onclick="wordfenceExt.misconfiguredHowGetIPsChoice(\'yes\'); return false;">Click here to use the recommended setting</a> or <a href="' . $url . '">visit the options page</a> to manually update it.</p><p>
-		<a class="wf-btn wf-btn-default wf-btn-sm wf-dismiss-link" href="#" onclick="wordfenceExt.misconfiguredHowGetIPsChoice(\'no\'); return false;">Dismiss</a> <a class="wfhelp" target="_blank" href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice"></a></p></div>'; 
+		<a class="wf-btn wf-btn-default wf-btn-sm wf-dismiss-link" href="#" onclick="wordfenceExt.misconfiguredHowGetIPsChoice(\'no\'); return false;">Dismiss</a> <a class="wfhelp" target="_blank" rel="noopener noreferrer" href="https://docs.wordfence.com/en/Misconfigured_how_get_IPs_notice"></a></p></div>'; 
 	}
 	public static function autoUpdateNotice(){
 		echo '<div id="wordfenceAutoUpdateChoice" class="fade error"><p><strong>Do you want Wordfence to stay up-to-date automatically?</strong>&nbsp;&nbsp;&nbsp;<a href="#" onclick="wordfenceExt.autoUpdateChoice(\'yes\'); return false;">Yes, enable auto-update.</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" onclick="wordfenceExt.autoUpdateChoice(\'no\'); return false;">No thanks.</a></p></div>';
@@ -5148,7 +5151,7 @@ HTML;
 		echo <<<JQUERY
 <script type="text/javascript">
 jQuery(document).ready(function($) {
-	$('#wfMenuCallout').closest('a').attr('target', '_blank');
+	$('#wfMenuCallout').closest('a').attr('target', '_blank').attr('rel', 'noopener noreferrer');
 });
 </script>
 JQUERY;
@@ -5683,7 +5686,7 @@ vulnerable code runs. This PHP setting currently refers to an unknown file at:</
 
 <pre class='wf-pre'>%s</pre>
 
-<p>Automatic uninstallation cannot be completed, but you may still be able to <a href='%s' target='_blank'>manually uninstall extended protection</a>.</p>
+<p>Automatic uninstallation cannot be completed, but you may still be able to <a href='%s' target='_blank' rel=\"noopener noreferrer\">manually uninstall extended protection</a>.</p>
 ",
 								esc_html($currentAutoPrependFile),
 								esc_url('https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#How_can_I_remove_the_firewall_setup_manually.3F')
@@ -7335,7 +7338,7 @@ LIMIT %d", $lastSendTime, $limit));
 		<a class="wf-btn wf-btn-default wf-btn-sm wf-dismiss-link" href="' . esc_url($dismissURL) . '">Dismiss</a>
 		<br>
 		<em style="font-size: 85%;">If you cannot complete the setup process,
-		<a target="_blank" href="https://docs.wordfence.com/en/Web_Application_Firewall_Setup">click here for help</a>.</em>
+		<a target="_blank" rel="noopener noreferrer" href="https://docs.wordfence.com/en/Web_Application_Firewall_Setup">click here for help</a>.</em>
 		</div>';
 	}
 

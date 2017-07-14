@@ -20,6 +20,16 @@ function theChampSharingSizeValidate(e) {
     t > 35 ? e.value = 35 : 16 > t && (e.value = 16)
 }
 
+function theChampSearchSharingNetworks(val) {
+    jQuery('td.selectSharingNetworks label.lblSocialNetwork').each(function(){
+        if (jQuery(this).text().toLowerCase().indexOf(val.toLowerCase()) != -1) {
+            jQuery(this).parent().css('display', 'block');
+        } else {
+            jQuery(this).parent().css('display', 'none');
+        }
+    });
+}
+
 function theChampClearShorturlCache(){
     jQuery('#shorturl_cache_loading').css('display', 'block');
     jQuery.ajax({

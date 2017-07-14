@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Super Socializer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 00:33+0530\n"
-"PO-Revision-Date: 2017-05-21 00:33+0530\n"
+"POT-Creation-Date: 2017-06-24 13:11+0530\n"
+"PO-Revision-Date: 2017-06-24 13:12+0530\n"
 "Last-Translator: The Champ <lordofthechamps@gmail.com>\n"
 "Language-Team: Freedom's Gate <freedomsgate.tk@gmail.com>\n"
 "Language: it\n"
@@ -96,28 +96,33 @@ msgstr "Shares"
 msgid "Share"
 msgstr "Share"
 
-#: ../super_socializer.php:966
+#: ../super_socializer.php:764
+#, fuzzy
+msgid "Link copied."
+msgstr "LinkedIn"
+
+#: ../super_socializer.php:951
 msgid "Super Socializer - General Options"
 msgstr "Super Socializer - Opzioni"
 
-#: ../super_socializer.php:966 ../admin/general_options.php:11
+#: ../super_socializer.php:951 ../admin/general_options.php:11
 #: ../admin/social_commenting.php:43
 msgid "General Options"
 msgstr "Opzioni Generali"
 
-#: ../super_socializer.php:1034 ../helper.php:920
+#: ../super_socializer.php:1019 ../helper.php:920
 msgid "Social Avatar"
 msgstr "Social Avatar"
 
-#: ../super_socializer.php:1037
+#: ../super_socializer.php:1022
 msgid "Small Avatar Url"
 msgstr "Url Avatar Piccolo"
 
-#: ../super_socializer.php:1041
+#: ../super_socializer.php:1026
 msgid "Large Avatar Url"
 msgstr "URL Avatar Grande"
 
-#: ../super_socializer.php:1045 ../helper.php:923
+#: ../super_socializer.php:1030 ../helper.php:923
 msgid ""
 "Do not fetch and update social avatar from my profile, next time I Social "
 "Login"
@@ -125,31 +130,31 @@ msgstr ""
 "La prossima volta che uso Social Login, non prendere e/o aggiornare il "
 "social avatar dal mio profilo."
 
-#: ../super_socializer.php:1049 ../helper.php:924
+#: ../super_socializer.php:1034 ../helper.php:924
 msgid "Update social avatar, next time I Social Login"
 msgstr "La prossima volta che si usa Social Login, aggiorna il social avatar."
 
-#: ../super_socializer.php:1129 ../super_socializer.php:1373
+#: ../super_socializer.php:1107 ../super_socializer.php:1360
 msgid ""
 "Your browser is blocking some features of this website. Please follow the "
 "instructions at {support_url} to unblock these."
 msgstr ""
 
-#: ../super_socializer.php:1135
+#: ../super_socializer.php:1113
 msgid "Login with your Social ID"
 msgstr "Login con il tuo ID Social"
 
-#: ../super_socializer.php:1136
+#: ../super_socializer.php:1114
 msgid "Email you entered is already registered or invalid"
 msgstr "La email inserita è già registrata o non è valida"
 
-#: ../super_socializer.php:1141
+#: ../super_socializer.php:1119
 msgid "Please enter a valid email address. You might be required to verify it"
 msgstr ""
 "Si prega di inserire un indirizzo email valido. Potrebbe esserne richiesta "
 "una verifica"
 
-#: ../super_socializer.php:1342
+#: ../super_socializer.php:1322
 #, php-format
 msgid ""
 "Your website visitors will see a popup notification (only once) if their "
@@ -159,7 +164,7 @@ msgid ""
 "features\" option <a href=\"%s\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1342
+#: ../super_socializer.php:1322
 msgid "Okay"
 msgstr ""
 
@@ -262,8 +267,8 @@ msgid "Large Avatar"
 msgstr "Avatar Grande"
 
 #: ../helper.php:935 ../admin/general_options.php:128
-#: ../admin/social_sharing.php:1878 ../admin/social_commenting.php:487
-#: ../admin/social_login.php:938 ../admin/like_buttons.php:786
+#: ../admin/social_sharing.php:1969 ../admin/social_commenting.php:487
+#: ../admin/social_login.php:938 ../admin/like_buttons.php:822
 msgid "Save Changes"
 msgstr "Salva le modifiche"
 
@@ -308,9 +313,9 @@ msgstr ""
 
 #: ../admin/general_options.php:81
 msgid ""
-"If enabled, your website visitors will see a popup notification if their "
-"browsers block any of the features of the plugin so that they can change "
-"their browser settings to unblock these."
+"If enabled, your website visitors will see a popup notification (only once) "
+"if their browsers block any of the features of the plugin so that they can "
+"change their browser settings to unblock these."
 msgstr ""
 
 #: ../admin/general_options.php:91
@@ -331,25 +336,25 @@ msgid "You can specify any additional CSS rules (without &lt;style&gt; tag)"
 msgstr ""
 "È possibile specificare regole CSS aggiuntive (senza &lt;style&gt; tag)"
 
-#: ../admin/general_options.php:139 ../admin/social_sharing.php:1883
+#: ../admin/general_options.php:139 ../admin/social_sharing.php:1974
 #: ../admin/social_commenting.php:492 ../admin/social_login.php:943
-#: ../admin/like_buttons.php:791
+#: ../admin/like_buttons.php:827
 #, fuzzy
 msgid "Instagram Shoutout"
 msgstr "Instagram"
 
-#: ../admin/general_options.php:141 ../admin/social_sharing.php:1885
+#: ../admin/general_options.php:141 ../admin/social_sharing.php:1976
 #: ../admin/social_commenting.php:494 ../admin/social_login.php:945
-#: ../admin/like_buttons.php:793
+#: ../admin/like_buttons.php:829
 msgid ""
 "If you can send (to hello@heateor.com) how our plugin is helping your "
 "business, we can share it on Instagram. You can also send any relevant "
 "hashtags and people to mention in the Instagram post."
 msgstr ""
 
-#: ../admin/general_options.php:142 ../admin/social_sharing.php:1886
+#: ../admin/general_options.php:142 ../admin/social_sharing.php:1977
 #: ../admin/social_commenting.php:495 ../admin/social_login.php:946
-#: ../admin/like_buttons.php:794
+#: ../admin/like_buttons.php:830
 msgid ""
 "<b>Example</b> - Blah-Blah Online Coaching teaches various programming "
 "language courses through their website. They have emerged as one of the most "
@@ -358,9 +363,9 @@ msgid ""
 "time."
 msgstr ""
 
-#: ../admin/general_options.php:143 ../admin/social_sharing.php:1887
+#: ../admin/general_options.php:143 ../admin/social_sharing.php:1978
 #: ../admin/social_commenting.php:496 ../admin/social_login.php:947
-#: ../admin/like_buttons.php:795
+#: ../admin/like_buttons.php:831
 msgid ""
 "@blahblahonlinecoaching proudly use #SuperSocializer to enable social "
 "features at their website, such as - Social Login, Social Share and Social "
@@ -453,8 +458,8 @@ msgstr ""
 
 #: ../admin/help.php:77
 msgid ""
-"You can send us testimonial at <a href=\"mailto:hello@heateor.com"
-"\">hello@heateor.com</a>"
+"You can send us testimonial at <a href=\"mailto:testimonials@heateor.com"
+"\">testimonials@heateor.com</a>"
 msgstr ""
 
 #: ../admin/help.php:82
@@ -479,53 +484,58 @@ msgstr "Abilita Social Sharing"
 msgid "Master control to enable Social Sharing"
 msgstr "Controllo Principale per abilitare Social Sharing"
 
-#: ../admin/social_sharing.php:32
+#: ../admin/social_sharing.php:33
 msgid "Recover Social Share Counts Lost After Moving to SSL/Https"
 msgstr ""
 
-#: ../admin/social_sharing.php:39
+#: ../admin/social_sharing.php:41
 msgid "Theme Selection"
 msgstr "Tema"
 
-#: ../admin/social_sharing.php:40 ../admin/like_buttons.php:37
+#: ../admin/social_sharing.php:42 ../admin/like_buttons.php:37
 msgid "Standard Interface"
 msgstr "Interfaccia Standard"
 
-#: ../admin/social_sharing.php:41 ../admin/like_buttons.php:38
+#: ../admin/social_sharing.php:43 ../admin/like_buttons.php:38
 msgid "Floating Interface"
 msgstr "Interfaccia Floating"
 
-#: ../admin/social_sharing.php:42 ../admin/like_buttons.php:39
+#: ../admin/social_sharing.php:44 ../admin/like_buttons.php:39
 msgid "Miscellaneous"
 msgstr "Miscellanea"
 
-#: ../admin/social_sharing.php:43 ../admin/social_sharing.php:1815
-#: ../admin/social_sharing.php:1817 ../admin/social_login.php:40
-#: ../admin/social_login.php:908 ../admin/like_buttons.php:40
-#: ../admin/like_buttons.php:757
+#: ../admin/social_sharing.php:48 ../admin/like_buttons.php:43
+#, fuzzy
+msgid "3rd Party Integration"
+msgstr "XProfile Integration"
+
+#: ../admin/social_sharing.php:52 ../admin/social_sharing.php:1905
+#: ../admin/social_sharing.php:1907 ../admin/social_login.php:40
+#: ../admin/social_login.php:908 ../admin/like_buttons.php:47
+#: ../admin/like_buttons.php:793
 msgid "Shortcode & Widget"
 msgstr "Shortcode & Widget"
 
-#: ../admin/social_sharing.php:44
+#: ../admin/social_sharing.php:53
 msgid "Troubleshooter"
 msgstr "Risoluzione dei problemi"
 
-#: ../admin/social_sharing.php:45 ../admin/social_sharing.php:1848
+#: ../admin/social_sharing.php:54 ../admin/social_sharing.php:1938
 #: ../admin/social_commenting.php:36 ../admin/social_commenting.php:471
 #: ../admin/social_login.php:41 ../admin/social_login.php:922
-#: ../admin/like_buttons.php:41 ../admin/like_buttons.php:770
+#: ../admin/like_buttons.php:48 ../admin/like_buttons.php:806
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../admin/social_sharing.php:53
+#: ../admin/social_sharing.php:62
 msgid "Standard interface theme"
 msgstr "Tema Interfaccia Standard"
 
-#: ../admin/social_sharing.php:58 ../admin/social_sharing.php:365
+#: ../admin/social_sharing.php:67 ../admin/social_sharing.php:374
 msgid "Icon Preview"
 msgstr "Anteprima Icona"
 
-#: ../admin/social_sharing.php:130 ../admin/social_sharing.php:438
+#: ../admin/social_sharing.php:139 ../admin/social_sharing.php:447
 msgid ""
 "Do not forget to save the configuration after making changes by clicking the "
 "save button below"
@@ -533,57 +543,57 @@ msgstr ""
 "Dopo aver apportato le modifiche, non dimenticate di salvare la "
 "configurazione, fare clic sul pulsante Salva in basso"
 
-#: ../admin/social_sharing.php:137 ../admin/social_sharing.php:445
+#: ../admin/social_sharing.php:146 ../admin/social_sharing.php:454
 msgid "Shape"
 msgstr "Forma"
 
-#: ../admin/social_sharing.php:141 ../admin/social_sharing.php:449
+#: ../admin/social_sharing.php:150 ../admin/social_sharing.php:458
 msgid "Round"
 msgstr "Arrotondata"
 
-#: ../admin/social_sharing.php:143 ../admin/social_sharing.php:451
+#: ../admin/social_sharing.php:152 ../admin/social_sharing.php:460
 msgid "Square"
 msgstr "Quadrata"
 
-#: ../admin/social_sharing.php:145 ../admin/social_sharing.php:453
+#: ../admin/social_sharing.php:154 ../admin/social_sharing.php:462
 msgid "Rectangle"
 msgstr "Rettangolare"
 
-#: ../admin/social_sharing.php:152 ../admin/social_sharing.php:460
+#: ../admin/social_sharing.php:161 ../admin/social_sharing.php:469
 msgid "Shape of the sharing icons"
 msgstr "Forma delle icone"
 
-#: ../admin/social_sharing.php:161 ../admin/social_sharing.php:469
+#: ../admin/social_sharing.php:170 ../admin/social_sharing.php:478
 msgid "Size (in pixels)"
 msgstr "Dimensioni (in pixel)"
 
-#: ../admin/social_sharing.php:177 ../admin/social_sharing.php:485
+#: ../admin/social_sharing.php:186 ../admin/social_sharing.php:494
 msgid "Size of the sharing icons"
 msgstr "Dimensione delle icone"
 
-#: ../admin/social_sharing.php:187 ../admin/social_sharing.php:495
+#: ../admin/social_sharing.php:196 ../admin/social_sharing.php:504
 msgid "Width (in pixels)"
 msgstr "Larghezza (in pixel)"
 
-#: ../admin/social_sharing.php:203 ../admin/social_sharing.php:511
+#: ../admin/social_sharing.php:212 ../admin/social_sharing.php:520
 msgid "Width of the sharing icons"
 msgstr ""
 "Larghezza \n"
 "icone"
 
-#: ../admin/social_sharing.php:211 ../admin/social_sharing.php:519
+#: ../admin/social_sharing.php:220 ../admin/social_sharing.php:528
 msgid "Height (in pixels)"
 msgstr "Altezza (in pixel)"
 
-#: ../admin/social_sharing.php:227 ../admin/social_sharing.php:535
+#: ../admin/social_sharing.php:236 ../admin/social_sharing.php:544
 msgid "Height of the sharing icons"
 msgstr "Altezza delle icone"
 
-#: ../admin/social_sharing.php:237 ../admin/social_sharing.php:545
+#: ../admin/social_sharing.php:246 ../admin/social_sharing.php:554
 msgid "Border radius (in pixels)"
 msgstr "Raggio Bordo (in pixel)"
 
-#: ../admin/social_sharing.php:247 ../admin/social_sharing.php:555
+#: ../admin/social_sharing.php:256 ../admin/social_sharing.php:564
 msgid ""
 "Specify a value for rounded corners. More the value, more rounded will the "
 "corners be. Leave empty for sharp corners."
@@ -591,23 +601,23 @@ msgstr ""
 "Specifica un valore per gli angoli arrotondati. Più alto sarà il valore, più "
 "arrotondati saranno gli angoli. Lascia vuoto per avere spigoli netti."
 
-#: ../admin/social_sharing.php:256 ../admin/social_sharing.php:564
+#: ../admin/social_sharing.php:265 ../admin/social_sharing.php:573
 msgid "Logo Color"
 msgstr "Colore Logo"
 
-#: ../admin/social_sharing.php:260 ../admin/social_sharing.php:281
-#: ../admin/social_sharing.php:301 ../admin/social_sharing.php:568
-#: ../admin/social_sharing.php:589 ../admin/social_sharing.php:608
+#: ../admin/social_sharing.php:269 ../admin/social_sharing.php:290
+#: ../admin/social_sharing.php:310 ../admin/social_sharing.php:577
+#: ../admin/social_sharing.php:598 ../admin/social_sharing.php:617
 msgid "Default"
 msgstr "Predefinito"
 
-#: ../admin/social_sharing.php:262 ../admin/social_sharing.php:282
-#: ../admin/social_sharing.php:306 ../admin/social_sharing.php:570
-#: ../admin/social_sharing.php:590 ../admin/social_sharing.php:613
+#: ../admin/social_sharing.php:271 ../admin/social_sharing.php:291
+#: ../admin/social_sharing.php:315 ../admin/social_sharing.php:579
+#: ../admin/social_sharing.php:599 ../admin/social_sharing.php:622
 msgid "On Hover"
 msgstr "Al Passaggio del Mouse"
 
-#: ../admin/social_sharing.php:270 ../admin/social_sharing.php:578
+#: ../admin/social_sharing.php:279 ../admin/social_sharing.php:587
 msgid ""
 "Specify the color or hex code (example #cc78e0) for the logo of icon. Leave "
 "empty for default. You can get the hex code of the required color from <a "
@@ -618,13 +628,13 @@ msgstr ""
 "ottenere il codice hex da <a href=\"http://www.colorpicker.com/\" target="
 "\"_blank\">questo collegamento</a>"
 
-#: ../admin/social_sharing.php:278 ../admin/social_sharing.php:586
-#: ../admin/social_sharing.php:1269 ../admin/like_buttons.php:399
-#: ../inc/widget.php:431 ../inc/widget.php:738
+#: ../admin/social_sharing.php:287 ../admin/social_sharing.php:595
+#: ../admin/social_sharing.php:1330 ../admin/like_buttons.php:406
+#: ../inc/widget.php:436 ../inc/widget.php:748
 msgid "Background Color"
 msgstr "Colore Background"
 
-#: ../admin/social_sharing.php:289 ../admin/social_sharing.php:597
+#: ../admin/social_sharing.php:298 ../admin/social_sharing.php:606
 msgid ""
 "Specify the color or hex code (example #cc78e0) for icon background. Save "
 "\"transparent\" for transparent background. Leave empty for default. You can "
@@ -637,128 +647,128 @@ msgstr ""
 "<a href=\"http://www.colorpicker.com/\" target=\"_blank\">questo "
 "collegamento</a>"
 
-#: ../admin/social_sharing.php:297 ../admin/social_sharing.php:605
+#: ../admin/social_sharing.php:306 ../admin/social_sharing.php:614
 msgid "Border"
 msgstr "Bordo"
 
-#: ../admin/social_sharing.php:303 ../admin/social_sharing.php:308
-#: ../admin/social_sharing.php:610 ../admin/social_sharing.php:615
+#: ../admin/social_sharing.php:312 ../admin/social_sharing.php:317
+#: ../admin/social_sharing.php:619 ../admin/social_sharing.php:624
 msgid "Border Width"
 msgstr "Larghezza"
 
-#: ../admin/social_sharing.php:304 ../admin/social_sharing.php:309
-#: ../admin/social_sharing.php:611 ../admin/social_sharing.php:616
+#: ../admin/social_sharing.php:313 ../admin/social_sharing.php:318
+#: ../admin/social_sharing.php:620 ../admin/social_sharing.php:625
 msgid "Border Color"
 msgstr "Colore"
 
-#: ../admin/social_sharing.php:316 ../admin/social_sharing.php:623
+#: ../admin/social_sharing.php:325 ../admin/social_sharing.php:632
 msgid "Icon border"
 msgstr "Bordo Icona"
 
-#: ../admin/social_sharing.php:324 ../admin/social_sharing.php:631
+#: ../admin/social_sharing.php:333 ../admin/social_sharing.php:640
 msgid "Counter Position"
 msgstr "Posizione Counter"
 
-#: ../admin/social_sharing.php:324 ../admin/social_sharing.php:631
+#: ../admin/social_sharing.php:333 ../admin/social_sharing.php:640
 msgid "(applies, if counter enabled)"
 msgstr "(Si applica, se il Counter è abilitato)"
 
-#: ../admin/social_sharing.php:328 ../admin/social_sharing.php:635
-#: ../admin/social_sharing.php:886 ../admin/social_sharing.php:1291
-#: ../admin/like_buttons.php:172 ../admin/like_buttons.php:421
-#: ../inc/widget.php:417 ../inc/widget.php:724
+#: ../admin/social_sharing.php:337 ../admin/social_sharing.php:644
+#: ../admin/social_sharing.php:925 ../admin/social_sharing.php:1352
+#: ../admin/like_buttons.php:179 ../admin/like_buttons.php:428
+#: ../inc/widget.php:422 ../inc/widget.php:734
 msgid "Left"
 msgstr "Sinistra"
 
-#: ../admin/social_sharing.php:330 ../admin/social_sharing.php:637
+#: ../admin/social_sharing.php:339 ../admin/social_sharing.php:646
 msgid "Top"
 msgstr "Top"
 
-#: ../admin/social_sharing.php:332 ../admin/social_sharing.php:639
-#: ../admin/social_sharing.php:888 ../admin/social_sharing.php:1292
-#: ../admin/like_buttons.php:174 ../admin/like_buttons.php:422
-#: ../inc/widget.php:418 ../inc/widget.php:725
+#: ../admin/social_sharing.php:341 ../admin/social_sharing.php:648
+#: ../admin/social_sharing.php:927 ../admin/social_sharing.php:1353
+#: ../admin/like_buttons.php:181 ../admin/like_buttons.php:429
+#: ../inc/widget.php:423 ../inc/widget.php:735
 msgid "Right"
 msgstr "Destra"
 
-#: ../admin/social_sharing.php:334 ../admin/social_sharing.php:641
+#: ../admin/social_sharing.php:343 ../admin/social_sharing.php:650
 msgid "Bottom"
 msgstr "Parte inferiore"
 
-#: ../admin/social_sharing.php:336 ../admin/social_sharing.php:643
+#: ../admin/social_sharing.php:345 ../admin/social_sharing.php:652
 msgid "Inner Left"
 msgstr "Interno Sinistra"
 
-#: ../admin/social_sharing.php:338 ../admin/social_sharing.php:645
+#: ../admin/social_sharing.php:347 ../admin/social_sharing.php:654
 msgid "Inner Top"
 msgstr "Interno Superiore"
 
-#: ../admin/social_sharing.php:340 ../admin/social_sharing.php:647
+#: ../admin/social_sharing.php:349 ../admin/social_sharing.php:656
 msgid "Inner Right"
 msgstr "Interno Destra"
 
-#: ../admin/social_sharing.php:342 ../admin/social_sharing.php:649
+#: ../admin/social_sharing.php:351 ../admin/social_sharing.php:658
 msgid "Inner Bottom"
 msgstr "Interno Fonfo"
 
-#: ../admin/social_sharing.php:350 ../admin/social_sharing.php:657
+#: ../admin/social_sharing.php:359 ../admin/social_sharing.php:666
 msgid "Position of share counter"
 msgstr "Posizione dello share counter"
 
-#: ../admin/social_sharing.php:360
+#: ../admin/social_sharing.php:369
 msgid "Floating interface theme"
 msgstr "Tema Interfaccia Floating"
 
-#: ../admin/social_sharing.php:673
+#: ../admin/social_sharing.php:682
 msgid "Standard Sharing Interface Options"
 msgstr "Opzioni Interfaccia Sharing Standard"
 
-#: ../admin/social_sharing.php:679
+#: ../admin/social_sharing.php:688
 msgid "Enable Standard sharing interface"
 msgstr "Abilita interfaccia standard"
 
-#: ../admin/social_sharing.php:689
+#: ../admin/social_sharing.php:698
 msgid "Master control to enable standard sharing"
 msgstr "Controllo Principale per abilitare l'interfaccia standard"
 
-#: ../admin/social_sharing.php:699 ../admin/social_sharing.php:1117
-#: ../admin/like_buttons.php:75 ../admin/like_buttons.php:325
+#: ../admin/social_sharing.php:708 ../admin/social_sharing.php:1156
+#: ../admin/like_buttons.php:82 ../admin/like_buttons.php:332
 msgid "Target Url"
 msgstr "URL di destinazione"
 
-#: ../admin/social_sharing.php:703 ../admin/social_sharing.php:1121
-#: ../admin/like_buttons.php:79 ../admin/like_buttons.php:329
+#: ../admin/social_sharing.php:712 ../admin/social_sharing.php:1160
+#: ../admin/like_buttons.php:86 ../admin/like_buttons.php:336
 msgid "Url of the webpage where icons are located (default)"
 msgstr "URL della pagina web in cui si trovano le icone (predefinito)"
 
-#: ../admin/social_sharing.php:705 ../admin/social_sharing.php:1123
-#: ../admin/like_buttons.php:81 ../admin/like_buttons.php:331
+#: ../admin/social_sharing.php:714 ../admin/social_sharing.php:1162
+#: ../admin/like_buttons.php:88 ../admin/like_buttons.php:338
 msgid "Url of the homepage of your website"
 msgstr "Url della homepage del tuo sito web"
 
-#: ../admin/social_sharing.php:707 ../admin/social_sharing.php:1125
-#: ../admin/like_buttons.php:83 ../admin/like_buttons.php:333
+#: ../admin/social_sharing.php:716 ../admin/social_sharing.php:1164
+#: ../admin/like_buttons.php:90 ../admin/like_buttons.php:340
 msgid "Custom url"
 msgstr "Url personalizzata"
 
-#: ../admin/social_sharing.php:714 ../admin/social_sharing.php:1132
+#: ../admin/social_sharing.php:723 ../admin/social_sharing.php:1171
 msgid "Url to share"
 msgstr "Url da condividere"
 
-#: ../admin/social_sharing.php:722 ../admin/social_login.php:385
-#: ../admin/like_buttons.php:98
+#: ../admin/social_sharing.php:731 ../admin/social_login.php:385
+#: ../admin/like_buttons.php:105
 msgid "Title"
 msgstr "Titolo"
 
-#: ../admin/social_sharing.php:732
+#: ../admin/social_sharing.php:741
 msgid "The text to display above the sharing interface"
 msgstr "Il testo da mostrare sopra l'interfaccia di sharing"
 
-#: ../admin/social_sharing.php:750 ../admin/social_sharing.php:1141
+#: ../admin/social_sharing.php:766 ../admin/social_sharing.php:1180
 msgid "Instagram username"
 msgstr "Username Instagram"
 
-#: ../admin/social_sharing.php:760 ../admin/social_sharing.php:1151
+#: ../admin/social_sharing.php:776 ../admin/social_sharing.php:1190
 msgid ""
 "Username of the Instagram account you want to redirect users to, on clicking "
 "the icon"
@@ -766,137 +776,154 @@ msgstr ""
 "Nome utente dell' account Instagram che si desidera reindirizzare agli "
 "utenti facendo clic sull'icona"
 
-#: ../admin/social_sharing.php:773 ../admin/social_sharing.php:1160
+#: ../admin/social_sharing.php:786 ../admin/social_sharing.php:1200
+#, fuzzy
+msgid "HTML ID of container element of comment form"
+msgstr "ID HTML del modulo dei commenti container"
+
+#: ../admin/social_sharing.php:796 ../admin/social_sharing.php:1210
+msgid ""
+"HTML ID of the element you want to focus on the webpage, on click of Comment "
+"icon."
+msgstr ""
+
+#: ../admin/social_sharing.php:810 ../admin/social_sharing.php:1219
 msgid "Rearrange icons"
 msgstr "Riorganizza le icone"
 
-#: ../admin/social_sharing.php:832 ../admin/social_sharing.php:1219
+#: ../admin/social_sharing.php:869 ../admin/social_sharing.php:1278
 msgid "Drag the icons to rearrange in desired order"
 msgstr "Trascina le icone per riordinare"
 
-#: ../admin/social_sharing.php:840 ../admin/social_sharing.php:1227
+#: ../admin/social_sharing.php:877 ../admin/social_sharing.php:1286
 msgid "Select Sharing Services"
 msgstr "Seleziona i Service"
 
-#: ../admin/social_sharing.php:847 ../admin/social_sharing.php:1234
+#: ../admin/social_sharing.php:884 ../admin/social_sharing.php:1293
 msgid "Select sharing services to show in social share bar"
 msgstr "Seleziona i servizi di sharing da mostrare"
 
-#: ../admin/social_sharing.php:882 ../admin/social_sharing.php:1287
-#: ../admin/like_buttons.php:168 ../admin/like_buttons.php:417
+#: ../admin/social_sharing.php:902 ../admin/social_sharing.php:1311
+#, fuzzy
+msgid "Search social network"
+msgstr "come rete sociale primaria"
+
+#: ../admin/social_sharing.php:921 ../admin/social_sharing.php:1348
+#: ../admin/like_buttons.php:175 ../admin/like_buttons.php:424
 msgid "Horizontal alignment"
 msgstr "Allineamento orizzontale"
 
-#: ../admin/social_sharing.php:887 ../admin/like_buttons.php:173
+#: ../admin/social_sharing.php:926 ../admin/like_buttons.php:180
 msgid "Center"
 msgstr "centro"
 
-#: ../admin/social_sharing.php:896 ../admin/social_sharing.php:1300
+#: ../admin/social_sharing.php:935 ../admin/social_sharing.php:1361
 msgid "Horizontal alignment of the sharing interface"
 msgstr "Allineamento orizzontale della interfaccia sharing"
 
-#: ../admin/social_sharing.php:904 ../admin/like_buttons.php:190
+#: ../admin/social_sharing.php:943 ../admin/like_buttons.php:197
 msgid "Position with respect to content"
 msgstr "Posizione"
 
-#: ../admin/social_sharing.php:908 ../admin/like_buttons.php:194
+#: ../admin/social_sharing.php:947 ../admin/like_buttons.php:201
 msgid "Top of the content"
 msgstr "Parte superiore del contenuto"
 
-#: ../admin/social_sharing.php:910 ../admin/like_buttons.php:196
+#: ../admin/social_sharing.php:949 ../admin/like_buttons.php:203
 msgid "Bottom of the content"
 msgstr "Parte inferiore del contenuto"
 
-#: ../admin/social_sharing.php:917
+#: ../admin/social_sharing.php:956
 msgid "Specify position of the sharing interface with respect to the content"
 msgstr "Specifica la posizione dell'interfaccia rispetto al contenuto"
 
-#: ../admin/social_sharing.php:925 ../admin/social_sharing.php:1366
+#: ../admin/social_sharing.php:964 ../admin/social_sharing.php:1427
 msgid "Placement"
 msgstr "Collocazione"
 
-#: ../admin/social_sharing.php:929 ../admin/social_sharing.php:1370
+#: ../admin/social_sharing.php:968 ../admin/social_sharing.php:1431
 #: ../admin/social_login.php:703 ../admin/social_login.php:733
-#: ../admin/like_buttons.php:215 ../admin/like_buttons.php:500
+#: ../admin/like_buttons.php:222 ../admin/like_buttons.php:507
 msgid "Homepage"
 msgstr "Homepage"
 
-#: ../admin/social_sharing.php:931 ../admin/social_sharing.php:1372
-#: ../admin/like_buttons.php:217 ../admin/like_buttons.php:502
+#: ../admin/social_sharing.php:970 ../admin/social_sharing.php:1433
+#: ../admin/like_buttons.php:224 ../admin/like_buttons.php:509
 msgid "Posts"
 msgstr "Post"
 
-#: ../admin/social_sharing.php:933 ../admin/social_sharing.php:1374
-#: ../admin/like_buttons.php:219 ../admin/like_buttons.php:504
+#: ../admin/social_sharing.php:972 ../admin/social_sharing.php:1435
+#: ../admin/like_buttons.php:226 ../admin/like_buttons.php:511
 msgid "Pages"
 msgstr "Pagine"
 
-#: ../admin/social_sharing.php:935 ../admin/social_sharing.php:1376
-#: ../admin/like_buttons.php:221 ../admin/like_buttons.php:506
+#: ../admin/social_sharing.php:974 ../admin/social_sharing.php:1437
+#: ../admin/like_buttons.php:228 ../admin/like_buttons.php:513
 msgid "Excerpts and Posts page"
 msgstr "Pagine di Estratti ed Articoli"
 
-#: ../admin/social_sharing.php:937 ../admin/social_sharing.php:1378
-#: ../admin/like_buttons.php:223 ../admin/like_buttons.php:508
+#: ../admin/social_sharing.php:976 ../admin/social_sharing.php:1439
+#: ../admin/like_buttons.php:230 ../admin/like_buttons.php:515
 msgid "Category Archives"
 msgstr "Archivi di categorie"
 
-#: ../admin/social_sharing.php:939 ../admin/social_sharing.php:1380
-#: ../admin/like_buttons.php:225 ../admin/like_buttons.php:510
+#: ../admin/social_sharing.php:978 ../admin/social_sharing.php:1441
+#: ../admin/like_buttons.php:232 ../admin/like_buttons.php:517
 msgid "Archive Pages (Category, Tag, Author or Date based pages)"
 msgstr "Arch. Pagine (Categoria., Tag, Autore o Pagine basate su data)"
 
-#: ../admin/social_sharing.php:955 ../admin/like_buttons.php:241
+#: ../admin/social_sharing.php:994 ../admin/like_buttons.php:248
 msgid "BuddyPress activity"
 msgstr "Attività BuddyPress"
 
-#: ../admin/social_sharing.php:957 ../admin/like_buttons.php:244
+#: ../admin/social_sharing.php:996 ../admin/like_buttons.php:251
 msgid "BuddyPress group (only at top of content)"
 msgstr "BuddyPress group (solo nella parte superiore del contenuto)"
 
-#: ../admin/social_sharing.php:963 ../admin/social_sharing.php:1402
-#: ../admin/like_buttons.php:251 ../admin/like_buttons.php:531
+#: ../admin/social_sharing.php:1002 ../admin/social_sharing.php:1463
+#: ../admin/like_buttons.php:258 ../admin/like_buttons.php:538
 msgid "BBPress forum"
 msgstr "BBPress forum"
 
-#: ../admin/social_sharing.php:966 ../admin/social_sharing.php:1405
-#: ../admin/like_buttons.php:254 ../admin/like_buttons.php:534
+#: ../admin/social_sharing.php:1005 ../admin/social_sharing.php:1466
+#: ../admin/like_buttons.php:261 ../admin/like_buttons.php:541
 msgid "BBPress topic"
 msgstr "Argomento BBPress"
 
-#: ../admin/social_sharing.php:969 ../admin/like_buttons.php:257
+#: ../admin/social_sharing.php:1008 ../admin/like_buttons.php:264
 msgid "BBPress reply"
 msgstr "Risposta BBPress"
 
-#: ../admin/social_sharing.php:976 ../admin/like_buttons.php:264
+#: ../admin/social_sharing.php:1015 ../admin/like_buttons.php:271
 msgid "After individual product at WooCommerce Shop page"
 msgstr "Dopo il singolo prodotto nella pagina Shop WooCommerce"
 
-#: ../admin/social_sharing.php:979 ../admin/like_buttons.php:267
+#: ../admin/social_sharing.php:1018 ../admin/like_buttons.php:274
 msgid "WooCommerce Product Page"
 msgstr "WooCommerce Pagina Prodotto"
 
-#: ../admin/social_sharing.php:982 ../admin/like_buttons.php:270
+#: ../admin/social_sharing.php:1021 ../admin/like_buttons.php:277
 msgid "WooCommerce Thankyou Page"
 msgstr "WooCommerce Pagina Thankyou"
 
-#: ../admin/social_sharing.php:993
+#: ../admin/social_sharing.php:1032
 msgid "Specify the pages where you want to enable Sharing interface"
 msgstr "Specifica le pagine dove vuoi abilitare l'Interfaccia Sharing"
 
-#: ../admin/social_sharing.php:1001 ../admin/social_sharing.php:1423
+#: ../admin/social_sharing.php:1040 ../admin/social_sharing.php:1484
 msgid "Show share counts"
 msgstr "Mostra quantità"
 
-#: ../admin/social_sharing.php:1006 ../admin/social_sharing.php:1428
+#: ../admin/social_sharing.php:1045 ../admin/social_sharing.php:1489
+#, fuzzy
 msgid ""
 "Share counts are supported for Facebook, Twitter, Linkedin, GooglePlus, "
-"Delicious, Buffer, Reddit, Pinterest, Stumbleupon and Vkontakte"
+"Buffer, Reddit, Pinterest, Stumbleupon and Vkontakte"
 msgstr ""
 "Share counts sono supportati per Facebook, Twitter, Linkedin, GooglePlus, "
 "Delicious, Buffer, Reddit, Pinterest, Stumbleupon e Vkontakte"
 
-#: ../admin/social_sharing.php:1023 ../admin/social_sharing.php:1436
+#: ../admin/social_sharing.php:1062 ../admin/social_sharing.php:1497
 #, php-format
 msgid ""
 "Use <a href=\"%s\" target=\"_blank\">NewShareCounts</a> to show Twitter "
@@ -905,7 +932,7 @@ msgstr ""
 "Utilizz <a href=\"%s\" target=\"_blank\">NewShareCounts</a> per mostrare i "
 "Twitter share count"
 
-#: ../admin/social_sharing.php:1025 ../admin/social_sharing.php:1438
+#: ../admin/social_sharing.php:1064 ../admin/social_sharing.php:1499
 #, php-format
 msgid ""
 "For this to work, you have to enter your website url %s and sign in using "
@@ -915,7 +942,7 @@ msgstr ""
 "e accedere via Twitter all'indirizzo <a href=\"%s\" target=\"_blank\">del "
 "loro sito web</a>"
 
-#: ../admin/social_sharing.php:1027 ../admin/social_sharing.php:1440
+#: ../admin/social_sharing.php:1066 ../admin/social_sharing.php:1501
 #, php-format
 msgid ""
 "Use <a href=\"%s\" target=\"_blank\">OpenShareCount</a> to show Twitter "
@@ -924,7 +951,7 @@ msgstr ""
 "Utilizza <a href=\"%s\" target=\"_blank\">OpenShareCount</a>  per mostrare i "
 "Twitter share count"
 
-#: ../admin/social_sharing.php:1029 ../admin/social_sharing.php:1442
+#: ../admin/social_sharing.php:1068 ../admin/social_sharing.php:1503
 #, php-format
 msgid ""
 "For this to work, you have to sign up and register your website url %s at <a "
@@ -933,27 +960,27 @@ msgstr ""
 "Per usare questa funzione è necessario iscriversi e registrare la url %s del "
 "proprio sito web su <a href=\"%s\" target=\"_blank\">del loro sito web</a>"
 
-#: ../admin/social_sharing.php:1036 ../admin/social_sharing.php:1449
+#: ../admin/social_sharing.php:1075 ../admin/social_sharing.php:1510
 msgid "If enabled, share counts are displayed above sharing icons."
 msgstr ""
 "Se questa opzione è abilitata, la quantitá di condivisioni sará mostrato "
 "sopra le icone condivise"
 
-#: ../admin/social_sharing.php:1045 ../admin/social_sharing.php:1458
+#: ../admin/social_sharing.php:1084 ../admin/social_sharing.php:1519
 msgid "Show total shares"
 msgstr "Mostra totale"
 
-#: ../admin/social_sharing.php:1055 ../admin/social_sharing.php:1468
+#: ../admin/social_sharing.php:1094 ../admin/social_sharing.php:1529
 msgid "If enabled, total shares will be displayed with sharing icons"
 msgstr ""
 "Se questa opzione è abilitata, la quantitá di condivisioni sará mostrato con "
 "le icone condivise"
 
-#: ../admin/social_sharing.php:1064 ../admin/social_sharing.php:1477
+#: ../admin/social_sharing.php:1103 ../admin/social_sharing.php:1538
 msgid "Enable 'More' icon"
 msgstr "Abilita icona 'More'"
 
-#: ../admin/social_sharing.php:1074 ../admin/social_sharing.php:1487
+#: ../admin/social_sharing.php:1113 ../admin/social_sharing.php:1548
 msgid ""
 "If enabled, \"More\" icon will be displayed after selected sharing icons "
 "which shows additional sharing networks in popup"
@@ -962,19 +989,19 @@ msgstr ""
 "icone sharing selezionate e  mostrerà in un popup altri sharing networks "
 "disponibili"
 
-#: ../admin/social_sharing.php:1091
+#: ../admin/social_sharing.php:1130
 msgid "Floating Sharing Interface Options"
 msgstr "Opzioni"
 
-#: ../admin/social_sharing.php:1097
+#: ../admin/social_sharing.php:1136
 msgid "Enable Floating sharing interface"
 msgstr "Abilita Interfaccia Floating"
 
-#: ../admin/social_sharing.php:1107
+#: ../admin/social_sharing.php:1146
 msgid "Master control to enable floating sharing widget"
 msgstr "Controllo Principale per abilitare il floating sharing widget"
 
-#: ../admin/social_sharing.php:1279
+#: ../admin/social_sharing.php:1340
 msgid ""
 "Specify the color or hex code (example #cc78e0) for the background of "
 "vertical sharing bar. Leave empty for transparent. You can get the hex code "
@@ -985,11 +1012,11 @@ msgstr ""
 "Lascia in bianco per transparente. Puoi ottenere il codice hex da <a href="
 "\"http://www.colorpicker.com/\" target=\"_blank\">questo collegamento</a>"
 
-#: ../admin/social_sharing.php:1309 ../admin/like_buttons.php:439
+#: ../admin/social_sharing.php:1370 ../admin/like_buttons.php:446
 msgid "Left offset"
 msgstr "Left offset"
 
-#: ../admin/social_sharing.php:1319
+#: ../admin/social_sharing.php:1380
 msgid ""
 "Specify a number. Increase in number will shift sharing interface towards "
 "right and decrease will shift it towards left. Number can be negative too."
@@ -998,11 +1025,11 @@ msgstr ""
 "verso destra e un numero minore lo muove verso sinistra. Il Numero può anche "
 "essere negativo."
 
-#: ../admin/social_sharing.php:1329 ../admin/like_buttons.php:459
+#: ../admin/social_sharing.php:1390 ../admin/like_buttons.php:466
 msgid "Right offset"
 msgstr "Right offset"
 
-#: ../admin/social_sharing.php:1339
+#: ../admin/social_sharing.php:1400
 msgid ""
 "Specify a number. Increase in number will shift sharing interface towards "
 "left and decrease will shift it towards right. Number can be negative too."
@@ -1011,11 +1038,11 @@ msgstr ""
 "verso sinistra e un numero minore lo muove verso destra.Il Numero può anche "
 "essere negativo."
 
-#: ../admin/social_sharing.php:1348 ../admin/like_buttons.php:478
+#: ../admin/social_sharing.php:1409 ../admin/like_buttons.php:485
 msgid "Top offset"
 msgstr "Top offset"
 
-#: ../admin/social_sharing.php:1358
+#: ../admin/social_sharing.php:1419
 msgid ""
 "Specify a number. Increase in number will shift sharing interface towards "
 "bottom and decrease will shift it towards top."
@@ -1023,26 +1050,26 @@ msgstr ""
 "Specifica un numero. Un numero piú alto muove l'interfaccia di condivisione "
 "verso il basso e un numero minore lo muove verso l'alto."
 
-#: ../admin/social_sharing.php:1394 ../admin/like_buttons.php:524
+#: ../admin/social_sharing.php:1455 ../admin/like_buttons.php:531
 msgid "BuddyPress group"
 msgstr "BuddyPress group"
 
-#: ../admin/social_sharing.php:1415
+#: ../admin/social_sharing.php:1476
 msgid "Specify the pages where you want to enable vertical Sharing interface"
 msgstr ""
 "Specifica le pagine dove vuoi abilitare l'Interfaccia Sharing Verticale"
 
-#: ../admin/social_sharing.php:1495
+#: ../admin/social_sharing.php:1556
 msgid "Vertical floating bar responsiveness"
 msgstr "Responsiveness Vertical"
 
-#: ../admin/social_sharing.php:1498
+#: ../admin/social_sharing.php:1559
 #, php-format
 msgid "Display vertical interface only when screen is wider than %s pixels"
 msgstr ""
 "Mostra interfaccia verticale solo quando lo schermo è più ampio di %s pixels"
 
-#: ../admin/social_sharing.php:1505
+#: ../admin/social_sharing.php:1566
 msgid ""
 "Display vertical interface only when screen is wider than the width "
 "specified."
@@ -1050,11 +1077,11 @@ msgstr ""
 "Mostra interfaccia verticale solo quando lo schermo è più ampio rispetto "
 "alla larghezza specificata."
 
-#: ../admin/social_sharing.php:1513
+#: ../admin/social_sharing.php:1574
 msgid "Horizontal floating bar responsiveness"
 msgstr "Responsiveness Horizontal"
 
-#: ../admin/social_sharing.php:1516
+#: ../admin/social_sharing.php:1577
 #, php-format
 msgid ""
 "Stick vertical floating interface horizontally at bottom only when screen is "
@@ -1063,7 +1090,7 @@ msgstr ""
 "Posiziona l'Interfaccia Verticale floating in orizzontale e in fondo ma solo "
 "quando lo schermo è più stretto di %s pixel"
 
-#: ../admin/social_sharing.php:1523
+#: ../admin/social_sharing.php:1584
 msgid ""
 "Stick vertical floating interface horizontally at bottom only when screen is "
 "narrower than the width specified"
@@ -1071,53 +1098,53 @@ msgstr ""
 "Posiziona l' interfaccia floating orizzontale in fondo solo quando lo "
 "schermo è più stretto della larghezza specificata"
 
-#: ../admin/social_sharing.php:1533
+#: ../admin/social_sharing.php:1594
 msgid "Horizontal floating bar position"
 msgstr "Posizione Horizontal floating bar"
 
-#: ../admin/social_sharing.php:1536
+#: ../admin/social_sharing.php:1597
 #, php-format
 msgid "%s pixels from %s"
 msgstr "%s pixels da %s"
 
-#: ../admin/social_sharing.php:1537
+#: ../admin/social_sharing.php:1598
 msgid "Auto-adjust according to screen width (responsive)"
 msgstr ""
 
-#: ../admin/social_sharing.php:1544
+#: ../admin/social_sharing.php:1605
 msgid "Alignment of horizontal floating interface. Number can be negative too."
 msgstr ""
 "Sallineamento dell'interfaccia floating orizzontale. Questo numero può "
 "essere anche negativo."
 
-#: ../admin/social_sharing.php:1564 ../admin/like_buttons.php:581
+#: ../admin/social_sharing.php:1625 ../admin/like_buttons.php:588
 msgid "Url shortener"
 msgstr "Url shortener"
 
-#: ../admin/social_sharing.php:1570
+#: ../admin/social_sharing.php:1631
 msgid "Use shortlinks already installed"
 msgstr "Utilizza shortlinks installati"
 
-#: ../admin/social_sharing.php:1580
+#: ../admin/social_sharing.php:1641
 msgid "Uses default short url permalinks without using any additional plugin"
 msgstr ""
 "Utilizza gli short url permalink predefiniti senza l'utilizzo di alcun "
 "plugin aggiuntivo"
 
-#: ../admin/social_sharing.php:1588
+#: ../admin/social_sharing.php:1649
 msgid "Enable bit.ly url shortener for sharing"
 msgstr "Abilita bit.ly url shortener"
 
-#: ../admin/social_sharing.php:1598 ../admin/like_buttons.php:615
+#: ../admin/social_sharing.php:1659 ../admin/like_buttons.php:622
 msgid "Master control to enable bit.ly url shortening for sharing"
 msgstr ""
 "Controllo Principale per abilitare bit.ly url shortening per la condivisione"
 
-#: ../admin/social_sharing.php:1606
+#: ../admin/social_sharing.php:1667
 msgid "bit.ly Login"
 msgstr "bit.ly Login"
 
-#: ../admin/social_sharing.php:1616
+#: ../admin/social_sharing.php:1677
 #, php-format
 msgid ""
 "Login to your bit.ly account and navigate to <a href=\"%s\" target=\"_blank"
@@ -1126,11 +1153,11 @@ msgstr ""
 "Per ottenere il vostro username accedete al vostro account bit.ly e andate a "
 "<a href=\"%s\" target=\"_blank\">questo link</a>"
 
-#: ../admin/social_sharing.php:1625 ../admin/like_buttons.php:642
+#: ../admin/social_sharing.php:1686 ../admin/like_buttons.php:649
 msgid "bit.ly API Key"
 msgstr "bit.ly API Key"
 
-#: ../admin/social_sharing.php:1635 ../admin/like_buttons.php:652
+#: ../admin/social_sharing.php:1696 ../admin/like_buttons.php:659
 #, php-format
 msgid ""
 "Login to your bit.ly account and navigate to <a href=\"%s\" target=\"_blank"
@@ -1139,15 +1166,15 @@ msgstr ""
 "Per ottenere la vostra API key accedete al vostro account bit.ly e andate a "
 "<a href=\"%s\" target=\"_blank\">questo link</a>"
 
-#: ../admin/social_sharing.php:1644 ../admin/like_buttons.php:661
+#: ../admin/social_sharing.php:1705 ../admin/like_buttons.php:668
 msgid "Clear Bitly Cache"
 msgstr "Cancella Bitly Cache"
 
-#: ../admin/social_sharing.php:1648 ../admin/like_buttons.php:665
+#: ../admin/social_sharing.php:1709 ../admin/like_buttons.php:672
 msgid "ShortUrl cache cleared successfully."
 msgstr "ShortUrl cache cancellata correttamente"
 
-#: ../admin/social_sharing.php:1655 ../admin/like_buttons.php:672
+#: ../admin/social_sharing.php:1716 ../admin/like_buttons.php:679
 msgid ""
 "Use this to delete short urls saved in database. Handy, if urls of your "
 "website have been changed but short urls are still being generated for old "
@@ -1157,57 +1184,59 @@ msgstr ""
 "Utile, se gli URL del tuo sito web sono stati modificatie ma gli short URL "
 "sono ancora in uso per i vecchi URL."
 
-#: ../admin/social_sharing.php:1664
+#: ../admin/social_sharing.php:1725
 msgid "Share Count Cache"
 msgstr "Share Count Cache"
 
-#: ../admin/social_sharing.php:1670
+#: ../admin/social_sharing.php:1731
 msgid "Refresh Share Count cache every"
 msgstr "Aggiorna cache ogni"
 
-#: ../admin/social_sharing.php:1675
+#: ../admin/social_sharing.php:1736
 msgid "Second(s)"
 msgstr "Secondo(i)"
 
-#: ../admin/social_sharing.php:1676
+#: ../admin/social_sharing.php:1737
 msgid "Minute(s)"
 msgstr "Minuto(i)"
 
-#: ../admin/social_sharing.php:1677
+#: ../admin/social_sharing.php:1738
 msgid "Hour(s)"
 msgstr "Ora(e)"
 
-#: ../admin/social_sharing.php:1678
+#: ../admin/social_sharing.php:1739
 msgid "Day(s)"
 msgstr "Giorno(i)"
 
-#: ../admin/social_sharing.php:1686
+#: ../admin/social_sharing.php:1747
+#, fuzzy, php-format
 msgid ""
 "Frequent cache refreshing results in slower loading of pages with share "
-"counts enabled"
+"counts enabled. Leave empty to disable cache. More info <a href=\"%s\" "
+"target=\"_blank\">here</a>"
 msgstr ""
 "Quando Share Count è attivato, frequenti aggiornamenti della cache possono "
 "rallentare il caricamento delle pagine."
 
-#: ../admin/social_sharing.php:1694
+#: ../admin/social_sharing.php:1755
 msgid "Clear Share Counts Cache"
 msgstr "Cancella Share Counts Cache"
 
-#: ../admin/social_sharing.php:1698
+#: ../admin/social_sharing.php:1759
 msgid "Share Counts cache cleared successfully."
 msgstr "Share Counts cache cancellata correttamente"
 
-#: ../admin/social_sharing.php:1705
+#: ../admin/social_sharing.php:1766
 msgid "Use this to clear cached share counts"
 msgstr "Da utilizzare per cancellare la cache degli share counts"
 
-#: ../admin/social_sharing.php:1714 ../admin/social_sharing.php:1720
-#: ../admin/social_commenting.php:328 ../admin/like_buttons.php:681
-#: ../admin/like_buttons.php:687
+#: ../admin/social_sharing.php:1775 ../admin/social_sharing.php:1781
+#: ../admin/social_commenting.php:328 ../admin/like_buttons.php:688
+#: ../admin/like_buttons.php:694
 msgid "Language"
 msgstr "Lingua"
 
-#: ../admin/social_sharing.php:1730
+#: ../admin/social_sharing.php:1791
 #, php-format
 msgid ""
 "Enter the code of the language you want to use for like buttons. You can "
@@ -1219,15 +1248,15 @@ msgstr ""
 "\"_blank\">questo collegamento</a>. Lasciare in bianco per usare la lingua "
 "predefinita"
 
-#: ../admin/social_sharing.php:1739
+#: ../admin/social_sharing.php:1800
 msgid "Username in sharing"
 msgstr "Username in sharing"
 
-#: ../admin/social_sharing.php:1745
+#: ../admin/social_sharing.php:1806
 msgid "Twitter username (without @)"
 msgstr "Username Twitter (senza @)"
 
-#: ../admin/social_sharing.php:1755 ../admin/social_sharing.php:1774
+#: ../admin/social_sharing.php:1816 ../admin/social_sharing.php:1835
 msgid ""
 "Provided username will be appended after the content being shared as \"via "
 "@USERNAME\". Leave empty if you do not want any username in the content "
@@ -1236,28 +1265,36 @@ msgstr ""
 "La username fornita viene aggiunta dopo il contenuto condiviso come \"via "
 "@USERNAME\". Lasciare vuoto se non si desidera alcuna username."
 
-#: ../admin/social_sharing.php:1764
+#: ../admin/social_sharing.php:1825
 msgid "Buffer username (without @)"
 msgstr "Username Buffer (senza @)"
 
-#: ../admin/social_sharing.php:1783
+#: ../admin/social_sharing.php:1844
 msgid "AMP"
 msgstr "AMP"
 
-#: ../admin/social_sharing.php:1789
+#: ../admin/social_sharing.php:1850
 msgid "Enable sharing on AMP pages"
 msgstr "Abilita sharing nelle pagine di AMP"
 
-#: ../admin/social_sharing.php:1799
+#: ../admin/social_sharing.php:1860
 msgid "Enable this option to render sharing icons on AMP pages"
 msgstr ""
 "Attiva questa opzione per rendere la condivisione di icone sulle pagine AMP"
 
-#: ../admin/social_sharing.php:1828
+#: ../admin/social_sharing.php:1879 ../admin/like_buttons.php:767
+msgid "myCRED"
+msgstr ""
+
+#: ../admin/social_sharing.php:1885 ../admin/like_buttons.php:773
+msgid "Append myCRED referral ID to the urls being shared"
+msgstr ""
+
+#: ../admin/social_sharing.php:1918
 msgid "Facebook Sharing Troubleshooter"
 msgstr "Risoluzione dei problemi Facebook Sharing"
 
-#: ../admin/social_sharing.php:1833
+#: ../admin/social_sharing.php:1923
 msgid ""
 "If Facebook sharing is not working fine, click at the following link and "
 "enter the problematic url (where Facebook sharing is not working properly) "
@@ -1269,28 +1306,33 @@ msgstr ""
 "che ti ha dato problemi (dove quindi la condivisione di Facebook non ha "
 "funzionato) e cliicca sul pulsante \"Fetch New Scrape Information\" ."
 
-#: ../admin/social_sharing.php:1850 ../admin/social_commenting.php:473
+#: ../admin/social_sharing.php:1940 ../admin/social_commenting.php:473
 #: ../admin/social_login.php:924
 msgid ""
 "<strong>Note:</strong> Plugin will not work on local server. You should have "
 "an online website for the plugin to function properly."
 msgstr ""
 
-#: ../admin/social_sharing.php:1851 ../admin/like_buttons.php:774
+#: ../admin/social_sharing.php:1941 ../admin/like_buttons.php:810
 msgid "How to Place Title and Social Share Icons in the Same Row?"
 msgstr ""
 
-#: ../admin/social_sharing.php:1852
+#: ../admin/social_sharing.php:1942
 msgid ""
 "How to restore Social Share counts lost after moving my website to SSL/Https?"
 msgstr ""
 
-#: ../admin/social_sharing.php:1853 ../admin/social_commenting.php:476
+#: ../admin/social_sharing.php:1943 ../admin/social_commenting.php:476
 #: ../admin/social_login.php:927
 msgid "Why is my browser blocking some features of the plugin?"
 msgstr ""
 
-#: ../admin/social_sharing.php:1854
+#: ../admin/social_sharing.php:1944
+#, fuzzy
+msgid "Why the color of share icons is not being updated?"
+msgstr "Perché gli Share Counts non vengono aggiornati?"
+
+#: ../admin/social_sharing.php:1945
 msgid ""
 "Why is sharer not showing the correct image, title and other meta tags "
 "content?"
@@ -1298,12 +1340,12 @@ msgstr ""
 "Perché il contenuto condiviso non mostra l'immagine corretta, il titolo e "
 "altri contenuti meta tag?"
 
-#: ../admin/social_sharing.php:1855
+#: ../admin/social_sharing.php:1946
 #, fuzzy
 msgid "Why Facebook share counts are not appearing?"
 msgstr "Perché gli Share Counts non vengono aggiornati?"
 
-#: ../admin/social_sharing.php:1856
+#: ../admin/social_sharing.php:1947
 msgid ""
 "How can I show share counts of my website rather than of individual pages/"
 "posts?"
@@ -1311,51 +1353,52 @@ msgstr ""
 "Come posso mostrare conteggi del mio sito web, piuttosto che di singole "
 "pagine/post?"
 
-#: ../admin/social_sharing.php:1857
+#: ../admin/social_sharing.php:1948
 msgid "How can I disable sharing on particular page/post?"
 msgstr ""
 "Come è possibile disattivare la condivisione di una pagina/post in "
 "particolare?"
 
-#: ../admin/social_sharing.php:1858
+#: ../admin/social_sharing.php:1949
 msgid "How can I specify minimum sharing count for sharing networks?"
 msgstr ""
 "Come faccio a specificare il conteggio minimo di sharing per la condivisione "
 "di reti?"
 
-#: ../admin/social_sharing.php:1859
+#: ../admin/social_sharing.php:1950
 msgid "How to share specific page?"
 msgstr "Come posso condividere la pagina specifica?"
 
-#: ../admin/social_sharing.php:1860
+#: ../admin/social_sharing.php:1951
 msgid "How to integrate Google Analytics with sharing?"
 msgstr "Come posso integrare Google Analytics con lo sharing?"
 
-#: ../admin/social_sharing.php:1861
+#: ../admin/social_sharing.php:1952
 msgid "How to customize the look of total share counts?"
 msgstr "Come posso personalizzare l'aspetto del totale degli share counts?"
 
-#: ../admin/social_sharing.php:1862
+#: ../admin/social_sharing.php:1953
 msgid "How to customize the look of individual share counts?"
 msgstr "Come posso personalizzare l'aspetto dei singoli share counts?"
 
-#: ../admin/social_sharing.php:1863
+#: ../admin/social_sharing.php:1954
 msgid "How to show Whatsapp icon only on mobile devices?"
 msgstr "Come posso mostrare l'icona Whatsapp solo sui dispositivi mobili?"
 
-#: ../admin/social_sharing.php:1864
+#: ../admin/social_sharing.php:1955
 msgid "How to hide arrow after floating sharing bar?"
 msgstr "Come posso nascondere la freccia dopo la floating sharing bar?"
 
-#: ../admin/social_sharing.php:1865
-msgid "Why are Share Counts Not Updating?"
+#: ../admin/social_sharing.php:1956
+#, fuzzy
+msgid "Why is share cunt not getting updated?"
 msgstr "Perché gli Share Counts non vengono aggiornati?"
 
-#: ../admin/social_sharing.php:1866 ../admin/like_buttons.php:772
+#: ../admin/social_sharing.php:1957 ../admin/like_buttons.php:808
 msgid "Why is there so much space between like buttons?"
 msgstr "Perché c'è così tanto spazio tra i tasti like?"
 
-#: ../admin/social_sharing.php:1867 ../admin/like_buttons.php:773
+#: ../admin/social_sharing.php:1958 ../admin/like_buttons.php:809
 msgid "Why are floating sharing/like buttons not appearing at homepage?"
 msgstr ""
 "Perché i pulsanti floating di sharing/like non compaiono nella pagina "
@@ -2219,8 +2262,8 @@ msgstr ""
 "verificato mediante l'invio di un link all' indirizzo e-mail specificato. "
 "L'utente non potrà accedere senza aver effettuato la procedura di verifica."
 
-#: ../admin/social_login.php:879 ../inc/widget.php:246 ../inc/widget.php:409
-#: ../inc/widget.php:571 ../inc/widget.php:716
+#: ../admin/social_login.php:879 ../inc/widget.php:248 ../inc/widget.php:414
+#: ../inc/widget.php:578 ../inc/widget.php:726
 msgid "Select"
 msgstr "Selezionare"
 
@@ -2254,66 +2297,66 @@ msgstr ""
 "Controllo Principale per i pulsanti Mi-Piace. Dev'essere abilitato per "
 "attivare le funzionalitá dei pulsanti Mi-Piace"
 
-#: ../admin/like_buttons.php:49
+#: ../admin/like_buttons.php:56
 msgid "Standard Interface Options"
 msgstr "Opzioni"
 
-#: ../admin/like_buttons.php:55
+#: ../admin/like_buttons.php:62
 msgid "Enable standard interface"
 msgstr "Abilita interfaccia standard"
 
-#: ../admin/like_buttons.php:65
+#: ../admin/like_buttons.php:72
 msgid "Master control to enable horizontal like buttons"
 msgstr "Controllo Principale per abilitare i pulsanti orizzontali Mi-Piace"
 
-#: ../admin/like_buttons.php:90 ../admin/like_buttons.php:340
+#: ../admin/like_buttons.php:97 ../admin/like_buttons.php:347
 msgid "Url to like/share/tweet and display like/share/tweet counts"
 msgstr ""
 "Url per mi-piace/share/tweet e visualizzazione mi-piace/share/conteggi tweet"
 
-#: ../admin/like_buttons.php:108
+#: ../admin/like_buttons.php:115
 msgid "The text to display above the interface"
 msgstr "Il testo che sarà mostrato sopra l'interfaccia"
 
-#: ../admin/like_buttons.php:116 ../admin/like_buttons.php:348
+#: ../admin/like_buttons.php:123 ../admin/like_buttons.php:355
 msgid "Select and rearrange providers"
 msgstr "Seleziona e riorganizza i provider"
 
-#: ../admin/like_buttons.php:160 ../admin/like_buttons.php:391
+#: ../admin/like_buttons.php:167 ../admin/like_buttons.php:398
 msgid "Select the providers for interface. Drag them to rearrange."
 msgstr ""
 "Seleziona i  providers per l'interfaccia. Trascina per riorganizzarli. "
 
-#: ../admin/like_buttons.php:182 ../admin/like_buttons.php:430
+#: ../admin/like_buttons.php:189 ../admin/like_buttons.php:437
 msgid "Horizontal alignment of the interface"
 msgstr "Allineamento orizzontale dell'interfaccia"
 
-#: ../admin/like_buttons.php:203
+#: ../admin/like_buttons.php:210
 msgid "Specify position of the interface with respect to the content"
 msgstr "Specificare la posizione dell'interfaccia rispetto al contenuto"
 
-#: ../admin/like_buttons.php:211 ../admin/like_buttons.php:496
+#: ../admin/like_buttons.php:218 ../admin/like_buttons.php:503
 msgid "Interface location"
 msgstr "Collocazione"
 
-#: ../admin/like_buttons.php:281
+#: ../admin/like_buttons.php:288
 msgid "Specify the pages where you want to enable interface"
 msgstr "Specifica le pagine in cui si desidera attivare l'interfaccia"
 
-#: ../admin/like_buttons.php:299
+#: ../admin/like_buttons.php:306
 msgid "Vertical (Floating) like buttons Options"
 msgstr "Opzioni"
 
-#: ../admin/like_buttons.php:305
+#: ../admin/like_buttons.php:312
 msgid "Enable floating like buttons"
 msgstr "Abilita pulsanti"
 
-#: ../admin/like_buttons.php:315
+#: ../admin/like_buttons.php:322
 msgid "Master control to enable vertical (floating) counter widget"
 msgstr ""
 "Controllo Principale per abilitare il counter widget verticale (floating)"
 
-#: ../admin/like_buttons.php:409
+#: ../admin/like_buttons.php:416
 msgid ""
 "Specify the color or hex code (example #cc78e0) for the background of "
 "vertical interface. Leave empty for transparent. You can get the hex code of "
@@ -2324,7 +2367,7 @@ msgstr ""
 "Lascia in bianco per transparente. Puoi ottenere il codice hex da <a href="
 "\"http://www.colorpicker.com/\" target=\"_blank\">questo collegamento</a>"
 
-#: ../admin/like_buttons.php:449
+#: ../admin/like_buttons.php:456
 msgid ""
 "Specify a number. Increase in number will shift interface towards right and "
 "decrease will shift it towards left. Number can be negative too."
@@ -2333,7 +2376,7 @@ msgstr ""
 "verso destra, un numero piú piccolo lo muove verso sinistra. Il Numero può "
 "anche essere negativo."
 
-#: ../admin/like_buttons.php:469
+#: ../admin/like_buttons.php:476
 msgid ""
 "Specify a number. Increase in number will shift interface towards left and "
 "decrease will shift it towards right. Number can be negative too."
@@ -2342,7 +2385,7 @@ msgstr ""
 "verso sinistra, un numero piú piccolo lo muove verso destra.Il Numero può "
 "anche essere negativo."
 
-#: ../admin/like_buttons.php:488
+#: ../admin/like_buttons.php:495
 msgid ""
 "Specify a number. Increase in number will shift interface towards bottom and "
 "decrease will shift it towards top."
@@ -2350,25 +2393,25 @@ msgstr ""
 "Specifica un numero. Un numero piú grande muove l'interfaccia del Contatore "
 "verso il basso, un numero piú piccolo lo muove all'alto."
 
-#: ../admin/like_buttons.php:544
+#: ../admin/like_buttons.php:551
 msgid "Specify the pages where you want to enable vertical interface"
 msgstr "Specifica le pagine dove vuoi abilitare l'interfaccia verticale"
 
-#: ../admin/like_buttons.php:552
+#: ../admin/like_buttons.php:559
 msgid "Hide like buttons on mobile devices"
 msgstr "Nascondi i pulsanti Mi-piace sui dispositivi mobili"
 
-#: ../admin/like_buttons.php:562
+#: ../admin/like_buttons.php:569
 msgid "If enabled, vertical like buttons will not appear on mobile devices"
 msgstr ""
 "Se questa opzione è abilitata, i pulsanti verticali Mi-Piace non appariranno "
 "sui dispositivi mobili"
 
-#: ../admin/like_buttons.php:587
+#: ../admin/like_buttons.php:594
 msgid "Use shortlinks already installed, for tweet button"
 msgstr "Utilizza shortlinks installati er pulsante Tweet"
 
-#: ../admin/like_buttons.php:597
+#: ../admin/like_buttons.php:604
 msgid ""
 "Allows for shortened URLs to be used when sharing content if a shortening "
 "plugin is installed"
@@ -2376,15 +2419,15 @@ msgstr ""
 "Permette di utilizzare URL abbreviati quando c'è condivisione di contenuti e "
 "se è installato uno plugin shortening"
 
-#: ../admin/like_buttons.php:605
+#: ../admin/like_buttons.php:612
 msgid "Enable bit.ly url shortener for tweet button"
 msgstr "Abilita bit.ly url shortener per pulsante Tweet"
 
-#: ../admin/like_buttons.php:623
+#: ../admin/like_buttons.php:630
 msgid "bit.ly username"
 msgstr "bit.ly username"
 
-#: ../admin/like_buttons.php:633
+#: ../admin/like_buttons.php:640
 #, php-format
 msgid ""
 "Login to your bit.ly account and navigate to <a href=\"%s\" target=\"_blank"
@@ -2393,7 +2436,7 @@ msgstr ""
 "Per ottenere il vostro username accedete al vostro account bit.ly e andate a "
 "<a href=\"%s\" target=\"_blank\">questo link</a>"
 
-#: ../admin/like_buttons.php:697
+#: ../admin/like_buttons.php:704
 #, php-format
 msgid ""
 "Enter the code of the language you want to use to render counters. You can "
@@ -2405,15 +2448,15 @@ msgstr ""
 "\"_blank\">questo collegamento</a>. Lasciare in bianco per usare la lingua "
 "predefinita"
 
-#: ../admin/like_buttons.php:706
+#: ../admin/like_buttons.php:713
 msgid "Twitter Username"
 msgstr "Username Twitter"
 
-#: ../admin/like_buttons.php:712
+#: ../admin/like_buttons.php:719
 msgid "Twitter username for Tweet (without @)"
 msgstr "Username Twitter per Tweet (senza @)"
 
-#: ../admin/like_buttons.php:722
+#: ../admin/like_buttons.php:729
 msgid ""
 "Provided username will be appended after the content being tweeted as \"via "
 "@USERNAME\". Leave empty if you do not want any username."
@@ -2421,11 +2464,11 @@ msgstr ""
 "La username fornita viene aggiunta dopo il contenuto del tweet come \"via "
 "@USERNAME\". Lasciare vuoto se non si desidera alcuna username."
 
-#: ../admin/like_buttons.php:731
+#: ../admin/like_buttons.php:738
 msgid "Twitter username for Buffer sharing (without @)"
 msgstr "Username Twitter per Buffer sharing (senza @)"
 
-#: ../admin/like_buttons.php:741
+#: ../admin/like_buttons.php:748
 msgid ""
 "Provided username will be appended after the content in Buffer sharing as "
 "\"via @USERNAME\". Leave empty if you do not want any username."
@@ -2433,15 +2476,15 @@ msgstr ""
 "La username fornita viene aggiunta dopo il contenuto del Buffer sharing come "
 "\"via @USERNAME\". Lasciare vuoto se non si desidera alcuna username."
 
-#: ../admin/like_buttons.php:759
+#: ../admin/like_buttons.php:795
 msgid "Like Buttons Shortcode & Widget"
 msgstr "Pulsanti Shortcode & Widget"
 
-#: ../inc/shortcode.php:201 ../inc/widget.php:47
+#: ../inc/shortcode.php:204 ../inc/widget.php:47
 msgid "Log Out"
 msgstr "Log Out"
 
-#: ../inc/shortcode.php:285
+#: ../inc/shortcode.php:288
 msgid ""
 "Enable Social Login from \"Basic Configuration\" section at \"Super "
 "Socializer > Social Login\" page in admin panel"
@@ -2450,46 +2493,46 @@ msgstr ""
 "nella pagina \"Super Socializer > Social Login\" del pannello di "
 "amministrazione"
 
-#: ../inc/social_sharing.php:23 ../inc/social_sharing.php:298
+#: ../inc/social_sharing.php:23 ../inc/social_sharing.php:291
 msgid "Search for"
 msgstr ""
 
 #: ../inc/social_sharing.php:28 ../inc/social_sharing.php:30
-#: ../inc/social_sharing.php:32 ../inc/social_sharing.php:303
-#: ../inc/social_sharing.php:305 ../inc/social_sharing.php:307
+#: ../inc/social_sharing.php:32 ../inc/social_sharing.php:296
+#: ../inc/social_sharing.php:298 ../inc/social_sharing.php:300
 #, fuzzy
 msgid "Archives"
 msgstr "Archivi di categorie"
 
-#: ../inc/social_sharing.php:819 ../inc/social_sharing.php:1038
+#: ../inc/social_sharing.php:839 ../inc/social_sharing.php:1053
 msgid "Invalid request"
 msgstr "Domanda non valida"
 
-#: ../inc/social_sharing.php:826
+#: ../inc/social_sharing.php:846
 msgid "Providers not selected"
 msgstr "Providers non selezionati"
 
-#: ../inc/social_login.php:719
+#: ../inc/social_login.php:718
 msgid "Email"
 msgstr "Email"
 
-#: ../inc/social_login.php:720
+#: ../inc/social_login.php:719
 msgid "Confirm email"
 msgstr "Conferma email"
 
-#: ../inc/social_login.php:722
+#: ../inc/social_login.php:721
 msgid "Save"
 msgstr "Salva"
 
-#: ../inc/social_login.php:723
+#: ../inc/social_login.php:722
 msgid "Cancel"
 msgstr "Cancella"
 
-#: ../inc/social_login.php:797
+#: ../inc/social_login.php:796
 msgid "Email Verification"
 msgstr "Abilita verifica email"
 
-#: ../inc/social_login.php:799
+#: ../inc/social_login.php:798
 msgid ""
 "Please click on the following link or paste it in browser to verify your "
 "email"
@@ -2529,16 +2572,16 @@ msgstr ""
 msgid "Title (after login):"
 msgstr ""
 
-#: ../inc/widget.php:87 ../inc/widget.php:252 ../inc/widget.php:577
+#: ../inc/widget.php:87 ../inc/widget.php:254 ../inc/widget.php:584
 msgid "Before widget content:"
 msgstr "Prima del contenuto del widget:"
 
-#: ../inc/widget.php:89 ../inc/widget.php:254 ../inc/widget.php:579
+#: ../inc/widget.php:89 ../inc/widget.php:256 ../inc/widget.php:586
 msgid "After widget content:"
 msgstr "Dopo il contenuto del widget:"
 
-#: ../inc/widget.php:92 ../inc/widget.php:256 ../inc/widget.php:434
-#: ../inc/widget.php:581 ../inc/widget.php:741
+#: ../inc/widget.php:92 ../inc/widget.php:258 ../inc/widget.php:439
+#: ../inc/widget.php:588 ../inc/widget.php:751
 msgid "Hide for logged in users:"
 msgstr "Nascondi per gli utenti loggati:"
 
@@ -2551,7 +2594,7 @@ msgstr ""
 "sito web nelle reti sociali popolari come Facebook, Twitter, Tumblr, Google+ "
 "e molti altri"
 
-#: ../inc/widget.php:237
+#: ../inc/widget.php:239
 msgid ""
 "Make sure \"Standard Social Sharing\" is enabled at \"Super Socializer > "
 "Social Sharing\" page."
@@ -2559,24 +2602,24 @@ msgstr ""
 "Assicurati che \"Social Sharing Standard\" sia abilitato alla pagina \"Super "
 "Socializer> Social Sharing\"."
 
-#: ../inc/widget.php:238 ../inc/widget.php:567
+#: ../inc/widget.php:240 ../inc/widget.php:574
 msgid "Title:"
 msgstr "Titolo:"
 
-#: ../inc/widget.php:240 ../inc/widget.php:403
+#: ../inc/widget.php:242 ../inc/widget.php:408
 msgid "Show individual share counts:"
 msgstr "Mostra conteggi condivisioni individuali:"
 
-#: ../inc/widget.php:242 ../inc/widget.php:405
+#: ../inc/widget.php:244 ../inc/widget.php:410
 msgid "Show total shares:"
 msgstr "Mostra totale condivisioni:"
 
-#: ../inc/widget.php:244 ../inc/widget.php:407 ../inc/widget.php:569
-#: ../inc/widget.php:714
+#: ../inc/widget.php:246 ../inc/widget.php:412 ../inc/widget.php:576
+#: ../inc/widget.php:724
 msgid "Target Url:"
 msgstr "URL di destinazione:"
 
-#: ../inc/widget.php:275
+#: ../inc/widget.php:277
 msgid ""
 "Floating sharing widget. Let your website users share content on popular "
 "Social networks like Facebook, Twitter, Tumblr, Google+ and many more"
@@ -2585,7 +2628,7 @@ msgstr ""
 "sito web nei Social networks più popolari come Facebook, Twitter, Tumblr, "
 "Google+, e molti altri"
 
-#: ../inc/widget.php:402
+#: ../inc/widget.php:407
 msgid ""
 "Make sure \"Floating Social Sharing\" is enabled at \"Super Socializer > "
 "Social Sharing\" page."
@@ -2593,23 +2636,23 @@ msgstr ""
 "Assicurati che \"Social Sharing Floating\" sia abilitato alla pagina \"Super "
 "Socializer> Social Sharing\"."
 
-#: ../inc/widget.php:415 ../inc/widget.php:722
+#: ../inc/widget.php:420 ../inc/widget.php:732
 msgid "Alignment"
 msgstr "Allineamento"
 
-#: ../inc/widget.php:421 ../inc/widget.php:728
+#: ../inc/widget.php:426 ../inc/widget.php:738
 msgid "Left Offset"
 msgstr "Left Offset"
 
-#: ../inc/widget.php:425 ../inc/widget.php:732
+#: ../inc/widget.php:430 ../inc/widget.php:742
 msgid "Right Offset"
 msgstr "Right Offset"
 
-#: ../inc/widget.php:428 ../inc/widget.php:735
+#: ../inc/widget.php:433 ../inc/widget.php:745
 msgid "Top Offset"
 msgstr "Top Offset"
 
-#: ../inc/widget.php:453
+#: ../inc/widget.php:458
 msgid ""
 "Standard like buttons widget. Let your website users share/like content on "
 "popular Social networks like Facebook, Twitter, Google+ and many more"
@@ -2618,7 +2661,7 @@ msgstr ""
 "mi piace per i contenuti del tuo sito web nelle reti popolari come Facebook, "
 "Twitter, Tumblr, Google+, e molte altre."
 
-#: ../inc/widget.php:566
+#: ../inc/widget.php:573
 msgid ""
 "Make sure \"Standard Like Buttons\" are enabled from \"Super Socializer > "
 "Like Buttons\" page."
@@ -2626,7 +2669,7 @@ msgstr ""
 "Assicurati che i \"Pulsanti Standard Mi-Piace\" siano abilitati nella pagina "
 "\"Super Socializer > Like Buttons\"."
 
-#: ../inc/widget.php:600
+#: ../inc/widget.php:607
 msgid ""
 "Floating like buttons widget. Let your website users share/like content on "
 "popular Social networks like Facebook, Twitter, Google+ and many more"
@@ -2635,7 +2678,7 @@ msgstr ""
 "contenuti del tuo sito web nei Social networks più popolari come Facebook, "
 "Twitter, Tumblr, Google+, e molti altri"
 
-#: ../inc/widget.php:713
+#: ../inc/widget.php:723
 msgid ""
 "Make sure \"Floating Like Buttons\" are enabled from \"Super Socializer > "
 "Like Buttons\" page."
@@ -2643,15 +2686,15 @@ msgstr ""
 "Assicurati che i \"Pulsanti Floating Mi-Piace\" siano abilitati nella pagina "
 "\"Super Socializer > Like Buttons\"."
 
+#~ msgid "Why are Share Counts Not Updating?"
+#~ msgstr "Perché gli Share Counts non vengono aggiornati?"
+
 #, fuzzy
 #~ msgid "Login with"
 #~ msgstr "Opzioni di Login"
 
 #~ msgid "You are already connected with"
 #~ msgstr "Si è già connessi con"
-
-#~ msgid "as primary social network"
-#~ msgstr "come rete sociale primaria"
 
 #, fuzzy
 #~ msgid "Please specify a vaild reason"

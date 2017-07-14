@@ -4,7 +4,7 @@ $d = new wfDashboard();
 <div class="wrap wordfence">
 	<div class="wf-container-fluid">
 		<?php $pageTitle = "Wordfence Dashboard"; include('pageTitle.php'); ?>
-		<div class="wordfenceHelpLink"><a href="http://docs.wordfence.com/en/Wordfence_Dashboard" target="_blank" class="wfhelp"></a><a href="http://docs.wordfence.com/en/Wordfence_Dashboard" target="_blank">Learn more about the Wordfence Dashboard</a></div>
+		<div class="wordfenceHelpLink"><a href="http://docs.wordfence.com/en/Wordfence_Dashboard" target="_blank" rel="noopener noreferrer" class="wfhelp"></a><a href="http://docs.wordfence.com/en/Wordfence_Dashboard" target="_blank" rel="noopener noreferrer">Learn more about the Wordfence Dashboard</a></div>
 		<div id="wordfenceMode_dashboard"></div>
 		<div class="wf-row wf-add-top">
 			<div class="wf-col-xs-12">

@@ -46,3 +46,28 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+.navigation:hover {
+    opacity: 1;
+}
+
+#main-contents {
+    border: solid #000405 1px;
+}
+#sidebar {
+    border: solid #00008b 1px;
+    border-radius: 5px;
+}
+#toolbar {
+    padding: 0 !important;
+}
+ul.the_champ_login_ul {
+    overflow: auto;
+}
+ul.the_champ_login_ul li {
+    /*float: left !important;*/
+    width: 240px !important;
+    padding-top:11px !important;
+    padding-bottom:11px !important;
+    margin-bottom: -1px !important;
+    border-radius: 4px !important;
+}

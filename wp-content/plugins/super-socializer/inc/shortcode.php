@@ -46,6 +46,8 @@ function the_champ_sharing_shortcode($params){
 			$targetUrl = html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]));
 			$postId = 0;
 		}
+
+		$targetUrl = heateor_ss_apply_target_share_url_filter($targetUrl, $type, false);
 		// if bit.ly url shortener enabled, generate bit.ly short url
 		$shortUrl = '';
 		if(isset($theChampSharingOptions['use_shortlinks']) && function_exists('wp_get_shortlink')){
@@ -139,6 +141,7 @@ function the_champ_counter_shortcode($params){
 			$targetUrl = html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]));
 			$postId = 0;
 		}
+		$targetUrl = heateor_ss_apply_target_like_button_url_filter($targetUrl, $type, false);
 		$alignmentOffset = 0;
 		if($left){
 			$alignmentOffset = $left;

@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Super Socializer
-Plugin URI: http://super-socializer-wordpress.heateor.com
+Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing and more.
-Version: 7.8.24
+Version: 7.9.2
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: Super-Socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.8.24');
+define('THE_CHAMP_SS_VERSION', '7.9.2');
 
 require 'helper.php';
 
@@ -63,7 +63,7 @@ function the_champ_init(){
 	add_action('login_enqueue_scripts', 'the_champ_frontend_styles');
 	add_action('parse_request', 'the_champ_connect');
 	load_plugin_textdomain('Super-Socializer', false, dirname(plugin_basename(__FILE__)).'/languages/');
-	if(the_champ_ss_woocom_is_active()){
+	if(heateor_ss_is_plugin_active('woocommerce/woocommerce.php')){
 		add_action('the_champ_user_successfully_created', 'the_champ_sync_woocom_profile', 10, 3);
 	}
 }
@@ -761,7 +761,7 @@ function the_champ_frontend_scripts(){
 	if(the_champ_social_sharing_enabled() || (the_champ_social_counter_enabled() && the_champ_vertical_social_counter_enabled())){
 		global $theChampSharingOptions, $theChampCounterOptions, $post;
 		?>
-		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'Super-Socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'Super-Socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>;
+		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'Super-Socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'Super-Socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>;var heateorSsCopyLinkMessage = "<?php echo htmlspecialchars(__('Link copied.', 'Super-Socializer'), ENT_QUOTES); ?>";
 		<?php
 		if(isset($theChampSharingOptions['horizontal_counts']) && isset($theChampSharingOptions['horizontal_counter_position'])){
 			echo in_array($theChampSharingOptions['horizontal_counter_position'], array('inner_left', 'inner_right')) ? 'var theChampReduceHorizontalSvgWidth = true;' : '';
@@ -909,30 +909,32 @@ function the_champ_frontend_styles(){
 	<?php
 	wp_enqueue_style( 'the_champ_frontend_css', plugins_url( 'css/front.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
 	$default_svg = false;
-	if ( isset( $theChampSharingOptions['hor_enable'] ) ) {
-		if ( isset( $theChampSharingOptions['horizontal_more'] ) ) {
-			$default_svg = true;
+	if ( isset( $theChampSharingOptions['enable'] ) ) {
+		if ( isset( $theChampSharingOptions['hor_enable'] ) ) {
+			if ( isset( $theChampSharingOptions['horizontal_more'] ) ) {
+				$default_svg = true;
+			}
+			if ( $theChampSharingOptions['horizontal_font_color_default'] != '' ) {
+				wp_enqueue_style( 'the_champ_sharing_svg', plugins_url( 'css/share-default-svg-horizontal.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+			} else {
+				$default_svg = true;
+			}
+			if ( $theChampSharingOptions['horizontal_font_color_hover'] != '' ) {
+				wp_enqueue_style( 'the_champ_sharing_svg_hover', plugins_url( 'css/share-hover-svg-horizontal.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+			}
 		}
-		if ( $theChampSharingOptions['horizontal_font_color_default'] != '' ) {
-			wp_enqueue_style( 'the_champ_sharing_svg', plugins_url( 'css/share-default-svg-horizontal.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
-		} else {
-			$default_svg = true;
-		}
-		if ( $theChampSharingOptions['horizontal_font_color_hover'] != '' ) {
-			wp_enqueue_style( 'the_champ_sharing_svg_hover', plugins_url( 'css/share-hover-svg-horizontal.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
-		}
-	}
-	if ( isset( $theChampSharingOptions['vertical_enable'] ) ) {
-		if ( isset( $theChampSharingOptions['vertical_more'] ) ) {
-			$default_svg = true;
-		}
-		if ( $theChampSharingOptions['vertical_font_color_default'] != '' ) {
-			wp_enqueue_style( 'the_champ_vertical_sharing_svg', plugins_url( 'css/share-default-svg-vertical.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
-		} else {
-			$default_svg = true;
-		}
-		if ( $theChampSharingOptions['vertical_font_color_hover'] != '' ) {
-			wp_enqueue_style( 'the_champ_vertical_sharing_svg_hover', plugins_url( 'css/share-hover-svg-vertical.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+		if ( isset( $theChampSharingOptions['vertical_enable'] ) ) {
+			if ( isset( $theChampSharingOptions['vertical_more'] ) ) {
+				$default_svg = true;
+			}
+			if ( $theChampSharingOptions['vertical_font_color_default'] != '' ) {
+				wp_enqueue_style( 'the_champ_vertical_sharing_svg', plugins_url( 'css/share-default-svg-vertical.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+			} else {
+				$default_svg = true;
+			}
+			if ( $theChampSharingOptions['vertical_font_color_hover'] != '' ) {
+				wp_enqueue_style( 'the_champ_vertical_sharing_svg_hover', plugins_url( 'css/share-hover-svg-vertical.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+			}
 		}
 	}
 	if ( $default_svg ) {
@@ -1059,13 +1061,6 @@ function the_champ_save_avatar( $user_id ) {
 add_action( 'personal_options_update', 'the_champ_save_avatar' );
 add_action( 'edit_user_profile_update', 'the_champ_save_avatar' );
 
-/**
- * Check if WooCommerce is active
- */
-function the_champ_ss_woocom_is_active(){
-	return in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) );
-}
-
 if(!function_exists('array_replace')){
 	/**
 	 * Custom 'array_replace' function for PHP version < 5.3
@@ -1181,6 +1176,7 @@ function the_champ_save_default_options(){
 	   'horizontal_target_url_custom' => '',
 	   'title' => 'Spread the love',
 	   'instagram_username' => '',
+	   'comment_container_id' => 'respond',
 	   'horizontal_re_providers' => array( 'facebook', 'twitter', 'google_plus', 'linkedin', 'pinterest', 'reddit', 'delicious', 'stumbleupon', 'whatsapp' ),
 	   'hor_sharing_alignment' => 'left',
 	   'top' => '1',
@@ -1191,6 +1187,7 @@ function the_champ_save_default_options(){
 	   'vertical_target_url' => 'default',
 	   'vertical_target_url_custom' => '',
 	   'vertical_instagram_username' => '',
+	   'vertical_comment_container_id' => 'respond',
 	   'vertical_re_providers' => array( 'facebook', 'twitter', 'google_plus', 'linkedin', 'pinterest', 'reddit', 'delicious', 'stumbleupon', 'whatsapp' ),
 	   'vertical_bg' => '',
 	   'alignment' => 'left',
@@ -1282,8 +1279,8 @@ function the_champ_addon_update_notification(){
 		if(defined('HEATEOR_SOCIAL_SHARE_MYCRED_INTEGRATION_VERSION') && version_compare('1.3.3', HEATEOR_SOCIAL_SHARE_MYCRED_INTEGRATION_VERSION) > 0){
 			?>
 			<div class="error notice">
-				<h3>Social Sharing - myCRED Integration</h3>
-				<p>Update "Social Sharing myCRED Integration" add-on for maximum compatibility with current version of Super Socialzer</p>
+				<h3>Social Share - myCRED Integration</h3>
+				<p>Update "Social Share myCRED Integration" add-on for maximum compatibility with current version of Super Socialzer</p>
 			</div>
 			<?php
 		}
@@ -1337,6 +1334,13 @@ function the_champ_update_db_check(){
 	$currentVersion = get_option('the_champ_ss_version');
 
 	if($currentVersion && $currentVersion != THE_CHAMP_SS_VERSION){
+
+		if(version_compare("7.9", $currentVersion) > 0){
+			global $theChampSharingOptions;
+			$theChampSharingOptions['comment_container_id'] = 'respond';
+			$theChampSharingOptions['vertical_comment_container_id'] = 'respond';
+			update_option('the_champ_sharing', $theChampSharingOptions);
+		}
 
 		if(version_compare("7.8.22", $currentVersion) > 0){
 			global $theChampSharingOptions;

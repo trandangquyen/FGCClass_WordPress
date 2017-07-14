@@ -570,6 +570,13 @@ article .entry-header {
     background: none;
     border-radius: 0;
 }
+.mo_openid_selected_tab {
+    border-bottom: 2px solid #ffb606;
+}
+#english-books .thim-course-grid .col-sm-4 {
+    height: 222px;
+    overflow: hidden;
+}
 /* -------------------------Media screen-------------- */
 @media (min-width: 768px){
 	.eft-simple-table td {

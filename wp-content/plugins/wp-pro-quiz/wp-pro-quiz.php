@@ -12,7 +12,7 @@ Domain Path: /languages
 
 define('WPPROQUIZ_VERSION', '0.37');
 
-define('WPPROQUIZ_DEV', false);
+define('WPPROQUIZ_DEV', true);
 
 define('WPPROQUIZ_PATH', dirname(__FILE__));
 define('WPPROQUIZ_URL', plugins_url('', __FILE__));

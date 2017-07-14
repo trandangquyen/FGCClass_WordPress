@@ -1476,14 +1476,12 @@ wpProQuizReady(function () {
                 //    results: results,
                 //    forms: formData
                 //});
-                var post_id = jQuery('article').attr('id');
-                if(post_id) post_id = post_id.replace( /^\D+/g, '');
+
                 plugin.methode.ajax({
                     action: 'wp_pro_quiz_admin_ajax',
                     func: 'completedQuiz',
                     data: {
                         quizId: config.quizId,
-                        post_id: post_id,
                         results: results,
                         forms: formData
                     }

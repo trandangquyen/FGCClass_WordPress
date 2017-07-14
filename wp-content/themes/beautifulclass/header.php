@@ -42,42 +42,44 @@
                                     </aside>
                                     <aside id="login-popup-3" class="widget widget_login-popup">
                                         <div class="thim-widget-login-popup thim-widget-login-popup-base">
-                                            <div class="thim-link-login thim-login-popup"> <a class="register" href="#">Register</a> <a class="login" href="#">Login</a></div>
+                                            <?php if ( !is_user_logged_in() ): ?>
+                                            <div class="thim-link-login thim-login-popup"> <?php wp_register('', ''); ?> <a class="login" href="#">Login</a></div>
+
                                             <div id="thim-popup-login" class="has-shortcode">
                                                 <div class="thim-login-container">
-                                                    <a href="#" style="display:none;"></a>
-                                                    <a href="#" style="display:none;"></a>
-                                                    <a href="#" style="display:none;"></a>
-                                                    <a href="#" style="display:none;"></a>
-                                                    <div class="mo-openid-app-icons">
-                                                        <p style="color:#000000"> Login with social networks</p>
-                                                        <a style="width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;" class="btn btn-block btn-social btn-facebook btn-custom-dec login-button" onclick="moOpenIdLogin(&quot;facebook&quot;);"> <i style="padding-top:5px !important" class="fa fa-facebook"></i> Facebook</a>
-                                                        <a style="width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;" class="btn btn-block btn-social btn-google btn-custom-dec login-button" onclick="moOpenIdLogin(&quot;google&quot;);"> <i style="padding-top:5px !important" class="fa fa-google-plus"></i> Google</a>
-                                                        <a style="width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;" class="btn btn-block btn-social btn-twitter btn-custom-dec login-button" onclick="moOpenIdLogin(&quot;twitter&quot;);"> <i style="padding-top:5px !important" class="fa fa-twitter"></i> Twitter</a>
-                                                        <a style="width: 240px !important;padding-top:11px !important;padding-bottom:11px !important;margin-bottom: -1px !important;border-radius: 4px !important;" class="btn btn-block btn-social btn-linkedin btn-custom-dec login-button" onclick="moOpenIdLogin(&quot;linkedin&quot;);"> <i style="padding-top:5px !important" class="fa fa-linkedin"></i> LinkedIn</a>
-                                                    </div>
+                                                    <?php echo do_shortcode('[miniorange_social_login shape="longbuttonwithtext" theme="default" space="4" width="240" height="40"]'); ?>
                                                     <br>
                                                     <div class="thim-login">
                                                         <h2 class="title">Login with your site account</h2>
-                                                        <form name="loginform" id="loginform" action="#" method="post" data-dpmaxz-eid="1">
+                                                        <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post" data-dpmaxz-eid="1">
                                                             <p class="login-username">
-                                                                <input type="text" name="user_login" placeholder="Username or email" id="thim_login" class="input" value="" size="20" data-dpmaxz-eid="2">
+                                                                <input type="text" name="log" placeholder="Username or email" id="user_login" class="input" value="" size="20" data-dpmaxz-eid="2">
                                                             </p>
                                                             <p class="login-password">
-                                                                <input type="password" name="user_password" placeholder="Password" id="thim_pass" class="input" value="" size="20" data-dpmaxz-eid="3"><span id="show_pass"><i class="fa fa-eye"></i></span></p> <a class="lost-pass-link" href="#">Lost your password?</a>
+                                                                <input type="password" name="pwd" placeholder="Password" id="user_pass" class="input" value="" size="20" data-dpmaxz-eid="3"><span id="show_pass"><i class="fa fa-eye"></i></span></p>
+                                                            <?php
+                                                            /**
+                                                             * Fires following the 'Password' field in the login form.
+                                                             *
+                                                             * @since 2.1.0
+                                                             */
+                                                            do_action( 'login_form' );
+                                                            ?>
+                                                            <a class="lost-pass-link" href="#">Lost your password?</a>
                                                             <p class="forgetmenot login-remember">
                                                                 <label for="rememberme">
                                                                     <input name="rememberme" type="checkbox" id="rememberme" value="forever" data-dpmaxz-eid="4"> Remember Me </label>
                                                             </p>
                                                             <p class="submit login-submit">
                                                                 <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Login" data-dpmaxz-eid="5">
-                                                                <input type="hidden" name="redirect_to" value="http://educationwp.thimpress.com/">
+                                                                <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI'] ;?>">
                                                                 <input type="hidden" name="testcookie" value="1">
                                                             </p>
                                                         </form>
                                                         <p class="link-bottom">Not a member yet? <a class="register" href="#">Register now</a></p>
                                                     </div> <span class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></span></div>
                                             </div>
+                                            <?php endif; ?>
                                         </div>
                                     </aside>
                                 </div>
@@ -90,8 +92,8 @@
                         <div class="navigation col-sm-12">
                             <div class="tm-table">
                                 <div class="width-logo table-cell sm-logo">
-                                    <a href="http://localhost:8080/FGCClass_WordPress" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
-                                    <a href="http://localhost:8080/FGCClass_WordPress" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
+                                    <a href="<?php  echo get_site_url(); ?>" class="no-sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo.png" alt="Education WP"></a>
+                                    <a href="<?php  echo get_site_url(); ?>" class="sticky-logo"><img src="<?php echo get_template_directory_uri() ;?>/images/logo-sticky.png" alt="Education WP"></a>
                                 </div>
                                 <nav class="width-navigation table-cell table-right">
 	                                <?php echo wp_nav_menu( array( "theme_location" => "menu-1" ) ); ?>

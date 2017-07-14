@@ -90,21 +90,7 @@ get_header(); ?>
                                         <div class="owl-carousel owl-theme thim-carousel-wrapper thim-course-carousel thim-course-grid">
                                             <?php
                                                     $args = array(
-                                                        'sort_order' => 'asc',
-                                                        'sort_column' => 'post_title',
-                                                        'hierarchical' => 1,
-                                                        'exclude' => '',
-                                                        'include' => '',
-                                                        'meta_key' => '',
-                                                        'meta_value' => '',
-                                                        'authors' => '',
-                                                        'child_of' => 291,
-                                                        'parent' => -1,
-                                                        'exclude_tree' => '',
-                                                        'number' => '',
-                                                        'offset' => 0,
-                                                        'post_type' => 'page',
-                                                        'post_status' => 'publish'
+                                                        'parent'    => 291
                                                     );
                                                     $pages = get_pages($args);
 
@@ -122,7 +108,7 @@ get_header(); ?>
                                                             <div class="value" itemprop="name"> <a href="<?php echo $page->guid ?>"> GV: Hoàng Hải </a></div>
                                                         </div>
                                                     </div>
-                                                    <h2 class="course-title"> <a href="#"><?php echo $page->post_title ?></a></h2>
+                                                    <h2 class="course-title"> <a href="<?php echo $page->guid ?>"><?php echo $page->post_title ?></a></h2>
                                                     <div class="course-meta">
                                                         <div class="course-students">
                                                             <label>Students</label>
@@ -243,41 +229,36 @@ get_header(); ?>
                                 </div>
                                 <div id="panel-12-4-0-1" class="so-panel widget widget_list-event panel-last-child" data-index="10">
                                     <div class="thim-widget-list-event thim-widget-list-event-base">
-                                        <div class="thim-list-event"><a class="view-all" href="#">View All</a>
+                                        <div class="thim-list-event"><a class="view-all" href="<?php echo get_site_url().'/Event/' ?>">Xem Tất Cả</a>
+                                            <?php
+                                                    $args = array(
+                                                        'post_type' => 'events',
+                                                        'numberposts' => -1,
+                                                    );
+                                                    $posts_array = get_posts( $args );
+                                                    ?>
+                                                    <?php foreach ( $posts_array as $post ):
+                                                    if (get_post_meta( $post->ID, 'event-post', true ) == 'happening'):
+                                                    ?>
                                             <div class="item-event post-2951 tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access">
                                                 <div class="time-from">
-                                                    <div class="date"> 25</div>
-                                                    <div class="month"> June</div>
+                                                    <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
+                                                    <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                                 </div>
-                                                <div class="image"><img src="<?php echo get_template_directory_uri();?>/images/event-2-450x233.jpg" alt="event-2" title="event-2" width="450" height="233"></div>
+                                                <div class="image"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></div>
                                                 <div class="event-wrapper">
-                                                    <h5 class="title"> <a href="#"> Mùa hè giáo dục 2017</a></h5>
+                                                    <h5 class="title"> <a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h5>
                                                     <div class="meta">
                                                         <div class="time"> <i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
                                                         <div class="location"> <i class="fa fa-map-marker"></i> Paris, French</div>
                                                     </div>
                                                     <div class="description">
-                                                        <p>Học viên được đi du lịch các nước băc âu, tham gia hội trại hè cũng các bạn sinh viên nước ngoài. Khóa học giúp tăng khả năng giao tiếp</p>
+                                                        <p><?php echo excerpt(20); ?></p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="item-event post-2953 tp_event type-tp_event status-tp-event-upcoming has-post-thumbnail hentry pmpro-has-access">
-                                                <div class="time-from">
-                                                    <div class="date"> 04</div>
-                                                    <div class="month"> July</div>
-                                                </div>
-                                                <div class="image"><img src="<?php echo get_template_directory_uri();?>/images/event-4-450x233.jpg" alt="event-4" title="event-4" width="450" height="233"></div>
-                                                <div class="event-wrapper">
-                                                    <h5 class="title"> <a href="#"> Gặp gỡ người nổi tiếng</a></h5>
-                                                    <div class="meta">
-                                                        <div class="time"> <i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
-                                                        <div class="location"> <i class="fa fa-map-marker"></i> Chicago, US</div>
-                                                    </div>
-                                                    <div class="description">
-                                                        <p>Tham gia trò chuyện cùng David Gate, ông trùm của ngành tiếp thị & quảng cáo tại Chicago, Us</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -298,50 +279,27 @@ get_header(); ?>
                                     <div id="panel-12-5-0-1" class="so-panel widget widget_carousel-post panel-last-child" data-index="12">
                                         <div class="thim-widget-carousel-post thim-widget-carousel-post-base">
                                             <div class="thim-owl-carousel-post thim-carousel-wrapper owl-carousel owl-theme">
+                                                <?php
+                                                    $args = array(
+                                                        'post_type' => 'news',
+                                                        'numberposts' => 5,
+                                                    );
+                                                    $posts_array = get_posts( $args );
+                                                    ?>
+                                                    <?php foreach ( $posts_array as $post ):
+                                                ?>
                                                 <div class="item">
                                                     <div class="image" style="">
-                                                        <a href="#"> <img src="<?php echo get_template_directory_uri();?>/images/blog-8-450x267.jpg" alt="Online Learning Glossary" title="blog-8" width="450" height="267"> </a>
+                                                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></a>
                                                     </div>
                                                     <div class="content">
                                                         <div class="info">
-                                                            <div class="author"> <span>Anthony</span></div>
-                                                            <div class="date"> 20/01/2016</div>
+                                                            <div class="author"> <span><?php the_author_meta( 'user_nicename' , $post->post_author ); ?> </span></div>
+                                                            <div class="date"><?php  echo get_the_date( 'Y/m/d' ) ?></div>
                                                         </div>
-                                                        <h4 class="title"> <a href="#">Bùa thiêng khi học tiếng anh Online</a></h4></div>
+                                                        <h4 class="title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></div>
                                                 </div>
-                                                <div class="item">
-                                                    <div class="image" style="">
-                                                        <a href="#"> <img src="<?php echo get_template_directory_uri();?>/images/blog-5-450x267.jpg" alt="Tips to Succeed in an Online Course" title="blog-5" width="450" height="267"> </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="info">
-                                                            <div class="author"> <span>Anthony</span></div>
-                                                            <div class="date"> 20/01/2016</div>
-                                                        </div>
-                                                        <h4 class="title"> <a href="#">Thủ thuật để học tốt một khóa học Online</a></h4></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="image" style="">
-                                                        <a href="#"> <img src="<?php echo get_template_directory_uri();?>/images/blog-3-450x267.jpg" alt="Introducing: Dr. Deniz Zeynep" title="blog-3" width="450" height="267"> </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="info">
-                                                            <div class="author"> <span>Hinata Hyuga</span></div>
-                                                            <div class="date"> 20/10/2015</div>
-                                                        </div>
-                                                        <h4 class="title"> <a href="#">Giới thiệu về: Dr. Deniz Zeynep</a></h4></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="image" style="">
-                                                        <a href="#"> <img src="<?php echo get_template_directory_uri();?>/images/blog-2-450x267.jpg" alt="LMS WordPress plugin" title="blog-2" width="450" height="267"> </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="info">
-                                                            <div class="author"> <span>Hinata Hyuga</span></div>
-                                                            <div class="date"> 20/10/2015</div>
-                                                        </div>
-                                                        <h4 class="title"> <a href="#">Giao tiếp: vấn đề không phải riêng ai</a></h4></div>
-                                                </div>
+                                                <?php endforeach; ?>
                                             </div>
                                         </div>
                                     </div>

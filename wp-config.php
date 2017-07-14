@@ -33,7 +33,21 @@ if($_SERVER["SERVER_NAME"]==="localhost") {
 
 	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
-} elseif(strpos($_SERVER["SERVER_NAME"], 'dangquyen.wdev.fgct.net') !== false) {
+}elseif($_SERVER["SERVER_NAME"]==="http://dangquyen.wdev.fgct.net/FGCClass_WordPress/"){
+    define('WP_SITEURL', 'http://dangquyen.wdev.fgct.net/FGCClass_WordPress/');
+    define('WP_HOME', WP_SITEURL);
+    define('DB_NAME', 'dangquyen_fgcclass');
+
+    /** MySQL database username */
+    define('DB_USER', 'dangquyen');
+
+    /** MySQL database password */
+    define('DB_PASSWORD', 'quyen.1987');
+
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
+
+}elseif(strpos($_SERVER["SERVER_NAME"], 'dangquyen.wdev.fgct.net') !== false) {
 	define('WP_SITEURL', 'http://dangquyen.wdev.fgct.net/FGCClass_WordPress/');
 	define('WP_HOME', WP_SITEURL);
 	define('DB_NAME', 'dangquyen_fgcclass');
@@ -111,7 +125,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

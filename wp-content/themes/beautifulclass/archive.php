@@ -15,9 +15,11 @@
 
 get_header(); ?>
 <?php
-$categories = get_the_category();
+global $cat;
+
+$categories = get_category($cat);
 if(!empty($categories))
-$category_id = $categories[0]->slug;
+$category_id = $categories->slug;
 else $category_id = '';
 
 ?>
@@ -33,11 +35,11 @@ else $category_id = '';
         <div class="breadcrumbs-wrapper">
             <div class="container">
                 <ul itemprop="breadcrumb" itemscope="" id="breadcrumbs" class="breadcrumbs">
-                    <?php bcn_display_list() ?>
+                    <?php bcn_display_list(); ?>
                 </ul>
             </div>
         </div>
-        <div id="<?php echo $category_id; ?>" class="container site-content sidebar-right" style="transform: none;">
+        <div id="<?php echo $category_id;?>" class="container site-content sidebar-right" style="transform: none;">
             <div class="row" style="transform: none;">
                 <main id="main" class="site-main col-sm-9 alignleft">
                     <div id="lp-archive-courses">
@@ -48,12 +50,13 @@ else $category_id = '';
                             <div class="course-index">
                                     <span>
                                         <?php
-                                        $category = get_category(21);
-                                        $total_post = $category->category_count;
+                                        $total_post = $categories->count;
                                         ?>
 
                                         <?php if($total_post>0): ?>
                                             Đang hiển thị 1-<?php echo $total_post ?> của <?php echo $total_post ?> kết quả
+                                        <?php else: ?>
+                                            Đang hiển thị 0 kết quả
                                         <?php endif;?>
                                     </span>
                             </div>

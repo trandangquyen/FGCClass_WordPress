@@ -145,11 +145,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Custom functions that contain customize by mrHieu
- */
-require get_template_directory() . '/inc/core.php';
-
-/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -171,4 +166,37 @@ function wpdocs_setup_theme_thumb() {
     set_post_thumbnail_size( 300, 300,array( 'center', 'center')  );
 }
 add_action( 'after_setup_theme', 'wpdocs_setup_theme_thumb' );
-add_filter('show_admin_bar', '__return_false');
+
+function wpdocs_theme_thumb_wide() {
+    add_image_size( 'post-thumb-wide', 450, 233, array( 'center', 'center' ) );
+
+}
+add_action( 'after_setup_theme', 'wpdocs_theme_thumb_wide' );
+
+// function to limit excerpt;
+function excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+    return $excerpt;
+}
+// function to limit content;
+function content($post_content,$limit) {
+    $content = explode(' ', $post_content , $limit);
+    if (count($content)>=$limit) {
+        array_pop($content);
+        $content = implode(" ",$content).'...';
+    } else {
+        $content = implode(" ",$content);
+    }
+    $content = preg_replace('`<[^>]*>`','',$content);
+    $content = preg_replace('/\[.+\]/','', $content);
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+    return $content;
+}

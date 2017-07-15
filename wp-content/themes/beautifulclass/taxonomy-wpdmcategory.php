@@ -15,7 +15,9 @@
 
 get_header(); ?>
 <?php
-$categories = get_the_category();
+$categories = get_categories(array(
+    'taxonomy' => 'wpdmcategory',
+));
 if(!empty($categories))
     $category_id = $categories[0]->slug;
 else $category_id = '';
@@ -33,7 +35,9 @@ else $category_id = '';
         <div class="breadcrumbs-wrapper">
             <div class="container">
                 <ul itemprop="breadcrumb" itemscope="" id="breadcrumbs" class="breadcrumbs">
-                    <?php bcn_display_list() ?>
+                    <?php bcn_display_list();
+                    //var_dump($categories);
+                    ?>
                 </ul>
             </div>
         </div>

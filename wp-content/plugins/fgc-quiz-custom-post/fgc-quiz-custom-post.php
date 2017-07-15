@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: FGC Quiz - Custom post
+ * Plugin Name: FGC Class Manager
  * Plugin URI: http://localhost
  * Description: a plugin for FGC Quiz use custom post
  * Version: 1.0

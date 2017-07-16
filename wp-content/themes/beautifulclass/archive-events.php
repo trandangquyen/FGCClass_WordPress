@@ -67,8 +67,8 @@ else $category_id = '';
                                     <div class="event-wrapper"><h5 class="title"><a
                                                     href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>
                                         <div class="meta">
-                                            <div class="time"><i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
-                                            <div class="location"><i class="fa fa-map-marker"></i> Venice, Italy</div>
+                                            <div class="time"><i class="fa fa-clock-o"></i><?php echo get_post_meta( $post->ID, 'event-post-time-start', true ).'-'.get_post_meta( $post->ID, 'event-post-time-end', true )?></div>
+                                            <div class="location"><i class="fa fa-map-marker"></i><?php  echo get_post_meta( $post->ID, 'event-post-location', true); ?></div>
                                         </div>
                                         <div class="description"><p><?php if(has_excerpt() == true) echo excerpt(22); else echo content($post->post_content,22)  ; ?></p>
                                         </div>
@@ -98,8 +98,8 @@ else $category_id = '';
                                             <div class="event-wrapper"><h5 class="title"><a
                                                             href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>
                                                 <div class="meta">
-                                                    <div class="time"><i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
-                                                    <div class="location"><i class="fa fa-map-marker"></i> Venice, Italy</div>
+                                                    <div class="time"><i class="fa fa-clock-o"></i><?php echo get_post_meta( $post->ID, 'event-post-time-start', true ).'-'.get_post_meta( $post->ID, 'event-post-time-end', true )?></div>
+                                                    <div class="location"><i class="fa fa-map-marker"></i><?php  echo get_post_meta( $post->ID, 'event-post-location', true); ?></div>
                                                 </div>
                                                 <div class="description"><p><?php if(has_excerpt() == true) echo excerpt(22); else echo content($post->post_content,22)  ; ?></p>
                                                 </div>
@@ -129,8 +129,8 @@ else $category_id = '';
                                             <div class="event-wrapper"><h5 class="title"><a
                                                             href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>
                                                 <div class="meta">
-                                                    <div class="time"><i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
-                                                    <div class="location"><i class="fa fa-map-marker"></i> Venice, Italy</div>
+                                                    <div class="time"><i class="fa fa-clock-o"></i><?php echo get_post_meta( $post->ID, 'event-post-time-start', true ).'-'.get_post_meta( $post->ID, 'event-post-time-end', true )?></div>
+                                                    <div class="location"><i class="fa fa-map-marker"></i><?php  echo get_post_meta( $post->ID, 'event-post-location', true); ?></div>
                                                 </div>
                                                 <div class="description"><p><?php if(has_excerpt() == true) echo excerpt(22); else echo content($post->post_content,22)  ; ?></p>
                                                 </div>

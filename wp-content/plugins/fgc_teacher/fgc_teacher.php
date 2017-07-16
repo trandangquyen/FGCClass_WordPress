@@ -12,13 +12,19 @@ define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
 class FGC_Manager{
     function __construct()
     {
+        //add js vs css to admin panel
         add_action('admin_enqueue_scripts', array( $this, 'admin_style'));
+        //Create post type & taxonomy events
         add_action( 'init', array( $this, 'codex_events_init'));
+        // Create post type taxonomy news
         add_action( 'init', array( $this, 'codex_news_init'));
+        //Add metabox to postype events
         add_action('add_meta_boxes', array( $this, 'add_metabox_events'));
-        add_action('add_meta_boxes', array( $this, 'add_metabox_datetime_events'));
+        //Update news post when user click on the button 'Update' inside post edit area
         add_action('save_post', array($this,'save_selected_event'), 10, 3);
+        //Add column 'Sự kiện bài viết' to events postype
         add_filter( 'manage_events_posts_columns', array($this,'set_custom_edit_events_columns') );
+        //Add values of the column 'Sự kiện bài viết' to events postype
         add_action( 'manage_events_posts_custom_column' , array($this,'custom_events_column'), 10, 2 );
 
     }
@@ -163,53 +169,39 @@ class FGC_Manager{
     }
     // function to show events option
     function show_option_event($post,$metabox){
-        //get current post meta of this post
+        //Initialize the initial values
         $select_values = array('happening', 'upcoming', "expired");
-
-        $event_selected  = get_post_meta($post->ID,'event-post',true);
+        //start time value of the event
         $show_event_time_start  = get_post_meta($post->ID,'event-post-time-start',true);
+        //end time value of the event
         $show_event_time_end  = get_post_meta($post->ID,'event-post-time-end',true);
+        //location of the event
         $show_event_time_location  = get_post_meta($post->ID,'event-post-location',true);
-
-        $current_event_status = '';
+        //set time zone
         date_default_timezone_set('Asia/Ho_Chi_Minh');
+        //get current date
         $date = date('m/d/Y h:i A');
-        //echo $date.'===';
+        //convert current strings to time values
         $date = strtotime($date);
         $current_event_time_start = strtotime($show_event_time_start);
         $current_event_time_end = strtotime($show_event_time_end);
-        //echo gettype($date), "\n";
-        //echo $show_event_time_start.'===';
-        //echo gettype($show_event_time_start), "\n";
-        //echo $show_event_time_end.'===';
-
-        //echo var_dump($date>$show_event_time_start);
-
+        //set current event status
         if($date>=$current_event_time_start && $date<=$current_event_time_end) {
-
             $current_event_status = 'happening';
-            echo 'Đang diễn ra';
-            echo $current_event_status;
         }
         elseif($date<$current_event_time_start && $date<$current_event_time_end){
-
             $current_event_status = 'upcoming';
-            echo 'Sắp diễn ra';
-            echo $current_event_status;
         }
         elseif($date>$current_event_time_end)
         {
-
             $current_event_status = 'expired';
-            echo 'Đã kết thúc';
-            echo $current_event_status;
         }
         else{
             //check if user not select event time
             $current_event_status = 'expired';
         }
 
-
+        // begin print layout
         ?>
             <div class="date-time-picker">
                 <div class="row">
@@ -286,27 +278,7 @@ class FGC_Manager{
             </div>
         <?php
     }
-    //add meta box with select option time and date to events
-    function add_metabox_datetime_events(){
-        add_meta_box('datetime-option','Chọn thời gian bắt đầu sự kiện',array($this,'show_time_option_event'),'events','advanced','high');
-    }
-    // function to show time options of the event
-    function show_time_option_event($post,$metabox){
-        ?>
-        <div class="container">
-            <div class="row">
-                <div class='col-sm-6'>
-                    <input type='text' class="form-control" id='datetimepicker-start' />
-                </div>
-                <script type="text/javascript">
-                    $(function() {
-                        $('#datetimepicker-start').datetimepicker();
-                    });
-                </script>
-            </div>
-        </div>
-        <?php
-    }
+
     //function to save selected the event
     function save_selected_event($post_id, $post, $update){
         if(!current_user_can("edit_post", $post_id)){
@@ -345,9 +317,6 @@ class FGC_Manager{
 
         }
     }
-
-
-
 
 }
 $fgc_manager = new FGC_Manager();

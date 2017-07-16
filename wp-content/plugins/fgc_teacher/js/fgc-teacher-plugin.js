@@ -6,10 +6,6 @@
             var currentDate = new Date();
             timeStart = new Date(timeStart);
             timeEnd = new Date(timeEnd);
-            console.log(timeStart);
-            console.log(timeEnd);
-            console.log(currentDate);
-
             var startTimeSecond = timeStart.getTime();
             var endTimeSecond = timeEnd.getTime();
             var currentTimeSecond = currentDate.getTime();

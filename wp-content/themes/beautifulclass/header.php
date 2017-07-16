@@ -169,10 +169,10 @@
                                                         <div class="lpr_course course-grid-1">
                                                             <div class="course-item">
                                                                 <div class="course-thumbnail">
-                                                                    <a href="#"><img src="images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a>
+                                                                    <a href="#"><img src="images/course-4-450x450.jpg" alt="Introduction LearnPress ï¿½ LMS plugin" title="course-4" width="450" height="450"></a>
                                                                 </div>
                                                                 <div class="thim-course-content">
-                                                                    <h2 class="course-title"> <a href="#"> Introduction LearnPress – LMS plugin</a></h2>
+                                                                    <h2 class="course-title"> <a href="#"> Introduction LearnPress ï¿½ LMS plugin</a></h2>
                                                                     <div class="course-meta">
                                                                         <div class="course-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                                                                             <div class="value free-course" itemprop="price"> Free</div>
@@ -217,44 +217,4 @@
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default"><a href="#">Shop</a></li>
                 </ul>
             </nav>
-
-
-
-
-<!-- ================================================================================================== -->
-<?php
-ob_start(); ?>
- <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beautifulclass' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description;  ?></p>
-			<?php
-			endif; ?>
-		</div>.site-branding
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beautifulclass' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav>#site-navigation
-	</header>#masthead
-
-	<div id="content" class="site-content">
-	<?php 
-	$html = ob_get_clean();
-
-
-
-?>
 

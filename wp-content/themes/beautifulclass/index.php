@@ -236,6 +236,7 @@ get_header(); ?>
                                                         'numberposts' => -1,
                                                     );
                                                     $posts_array = get_posts( $args );
+                                                    //var_dump($posts_array);
                                                     ?>
                                                     <?php foreach ( $posts_array as $post ):
                                                     if (get_post_meta( $post->ID, 'event-post', true ) == 'happening'):
@@ -249,11 +250,11 @@ get_header(); ?>
                                                 <div class="event-wrapper">
                                                     <h5 class="title"> <a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h5>
                                                     <div class="meta">
-                                                        <div class="time"> <i class="fa fa-clock-o"></i> 8:00 am - 5:00 pm</div>
-                                                        <div class="location"> <i class="fa fa-map-marker"></i> Paris, French</div>
+                                                        <div class="time"> <i class="fa fa-clock-o"></i><?php echo get_post_meta( $post->ID, 'event-post-time-start', true ).'-'.get_post_meta( $post->ID, 'event-post-time-end', true )?></div>
+                                                        <div class="location"> <i class="fa fa-map-marker"></i><?php  echo get_post_meta( $post->ID, 'event-post-location', true); ?></div>
                                                     </div>
                                                     <div class="description">
-                                                        <p><?php echo excerpt(20); ?></p>
+                                                        <p><?php if(has_excerpt() == true) echo excerpt(22); ?></p>
                                                     </div>
                                                 </div>
                                             </div>

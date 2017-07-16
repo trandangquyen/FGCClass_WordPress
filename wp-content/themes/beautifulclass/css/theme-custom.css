@@ -520,6 +520,10 @@ article .entry-header {
   overflow: hidden;
 }
 
+.thim-list-event .item-event .event-wrapper .meta div {
+  font-size: 12px;
+}
+
 /* -------------------------Media screen-------------- */
 @media (min-width: 768px) {
   .eft-simple-table td {

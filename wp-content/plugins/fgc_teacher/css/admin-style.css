@@ -16,3 +16,11 @@
     color: white;
     padding: 5px;
 }
+.error-time{
+    display: none;
+}
+.date-time-picker .descript-ev{
+    position: relative;
+    top: 3px;
+    left: 5px;
+}

@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f2fa45-89f3-4851-b483-ad624efe3214" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/index.php" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/css/admin-style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/css/admin-style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,16 +60,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fgc_teacher.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fgc_teacher.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+            <state relative-caret-position="639">
+              <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
               <folding>
-                <marker date="1500197935147" expanded="true" signature="13004:13040" ph="..." />
-                <marker date="1500197935147" expanded="true" signature="13589:13625" ph="..." />
-                <marker date="1500197935147" expanded="true" signature="14127:14159" ph="{...}" />
+                <marker date="1500200621402" expanded="true" signature="13520:13556" ph="..." />
+                <marker date="1500200621402" expanded="true" signature="14105:14141" ph="..." />
+                <marker date="1500200621402" expanded="true" signature="14643:14675" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="archive-events.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="131" column="229" lean-forward="false" selection-start-line="131" selection-start-column="229" selection-end-line="131" selection-end-column="229" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,8 +87,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="235" column="76" lean-forward="false" selection-start-line="235" selection-start-column="76" selection-end-line="235" selection-end-column="76" />
+            <state relative-caret-position="590">
+              <caret line="253" column="181" lean-forward="false" selection-start-line="253" selection-start-column="111" selection-end-line="253" selection-end-column="181" />
               <folding />
             </state>
           </provider>
@@ -102,23 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive-events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="72" column="165" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="165" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>w3eden</find>
-      <find>CÁC HỌC VIÊN XUẤT SẮC</find>
-      <find>DANH SÁCH BÀI HỌC</find>
       <find>lp-archive-courses</find>
       <find>TRUYỆN CƯỜI SONG NGỮ</find>
       <find>các lớp</find>
@@ -146,6 +135,9 @@
       <find>mobile</find>
       <find>chọn thời gian bắt</find>
       <find>add_metabox_datetime_events'</find>
+      <find>save_selected_event</find>
+      <find>set_custom_edit_events_columns</find>
+      <find>đang</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\FGCClass_WordPress\wp-content\plugins\country-state-city</dir>
@@ -186,7 +178,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-eventscategory.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content-category.php" />
@@ -200,6 +191,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/js/fgc-teacher-plugin.js" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php" />
       </list>
     </option>
   </component>
@@ -213,7 +205,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1932" />
+    <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -591,7 +583,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294597000" />
+    <option name="totallyTimeSpent" value="296749000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,10 +595,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19801463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -855,6 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-40">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,14 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="94" column="38" lean-forward="true" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="72" column="165" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="165" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,14 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="235" column="76" lean-forward="false" selection-start-line="235" selection-start-column="76" selection-end-line="235" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/js/fgc-teacher-plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1000,13 +977,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        <state relative-caret-position="639">
+          <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
           <folding>
-            <marker date="1500197935147" expanded="true" signature="13004:13040" ph="..." />
-            <marker date="1500197935147" expanded="true" signature="13589:13625" ph="..." />
-            <marker date="1500197935147" expanded="true" signature="14127:14159" ph="{...}" />
+            <marker date="1500200621402" expanded="true" signature="13520:13556" ph="..." />
+            <marker date="1500200621402" expanded="true" signature="14105:14141" ph="..." />
+            <marker date="1500200621402" expanded="true" signature="14643:14675" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="253" column="181" lean-forward="false" selection-start-line="253" selection-start-column="111" selection-end-line="253" selection-end-column="181" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="131" column="229" lean-forward="false" selection-start-line="131" selection-start-column="229" selection-end-line="131" selection-end-column="229" />
+          <folding />
         </state>
       </provider>
     </entry>

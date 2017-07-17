@@ -27,7 +27,6 @@
             }
             else if(currentTimeSecond < startTimeSecond && currentTimeSecond < endTimeSecond)
             {
-                console.log('sap dien ra');
                 $('#upcoming').prop({
                     "checked": true,
                     "disabled": false,
@@ -39,7 +38,16 @@
             }
             else if(currentTimeSecond > endTimeSecond)
             {
-                console.log('da ket thuc');
+                $('#expired').prop({
+                    "checked": true,
+                    "disabled": false,
+                });
+                $('#expired').siblings('input').prop({
+                    "checked" : false,
+                    "disabled": true,
+                });
+            }
+            else{
                 $('#expired').prop({
                     "checked": true,
                     "disabled": false,

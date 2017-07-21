@@ -580,6 +580,21 @@ article .entry-header {
 .thim-list-event .item-event .event-wrapper .meta div {
     font-size: 12px;
 }
+#pgc-2901-0-0, #pgc-2901-2-0, #pgc-2901-4-0, #pgc-2901-5-0, #pgc-2901-6-0 {
+    width: 100%;
+    width: calc(100% - ( 0 * 30px ) );
+}
+#pgc-2901-1-0, #pgc-2901-1-1, #pgc-2901-1-2, #pgc-2901-1-3 {
+    width: 25%;
+    width: calc(25% - ( 0.75 * 30px ) );
+}
+#pgc-2901-3-0, #pgc-2901-3-2 {
+    width: 48%;
+    width: calc(48% - ( 0.52 * 30px ) );
+}
+.thim-about-us-quote hr{
+	border: none;
+}
 /* -------------------------Media screen-------------- */
 @media (min-width: 768px){
 	.eft-simple-table td {
@@ -605,4 +620,7 @@ article .entry-header {
 		    overflow: hidden;
 		}
 	}
+}
+#learn-press-course-curriculum ul.curriculum-sections .section-content .course-lesson .meta.course-item-meta{
+	float: right;
 }

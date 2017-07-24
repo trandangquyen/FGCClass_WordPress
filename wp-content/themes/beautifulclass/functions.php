@@ -154,6 +154,8 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+require get_template_directory() . '/inc/custom-quotes-page.php';
+
 // Functions that customed by user
 
 add_action( 'after_setup_theme', 'wpdocs_theme_setup' );

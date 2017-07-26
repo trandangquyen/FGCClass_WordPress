@@ -34,3 +34,36 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.edit-success,.edit-fail{
+    background: #23282d;
+    color: #fff;
+    padding: 10px 8px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.add-eventbt{
+    margin-top: 10px !important; 
+}
+.event-submit,.event-edit,.add-category{
+    clear: both;
+    display: block !important;
+    margin-top: 10px;
+}
+.row *{
+    box-sizing: border-box !important;
+}
+.event-option{
+    position: absolute;
+    top: 2px;
+}
+#event-category-name{
+    height: 35px !important;
+}
+#show-event-cat .item-wrapper{
+    position: relative;
+}
+#show-event-cat .item-wrapper input{
+    position: relative;
+    margin: 0 8px 0 0;
+}

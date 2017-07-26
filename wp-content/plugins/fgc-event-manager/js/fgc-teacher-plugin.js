@@ -20,7 +20,7 @@
                     "checked": true,
                     "disabled": false,
                 });
-                $('#happening').siblings('input').prop({
+                $('#happening').closest('.radio').siblings().find('input').prop({
                     "checked" : false,
                     "disabled": true,
                 });
@@ -31,7 +31,7 @@
                     "checked": true,
                     "disabled": false,
                 });
-                $('#upcoming').siblings('input').prop({
+                $('#upcoming').closest('.radio').siblings().find('input').prop({
                     "checked" : false,
                     "disabled": true,
                 });
@@ -42,7 +42,7 @@
                     "checked": true,
                     "disabled": false,
                 });
-                $('#expired').siblings('input').prop({
+                $('#expired').closest('.radio').siblings().find('input').prop({
                     "checked" : false,
                     "disabled": true,
                 });
@@ -52,7 +52,7 @@
                     "checked": true,
                     "disabled": false,
                 });
-                $('#expired').siblings('input').prop({
+                $('#expired').closest().siblings().find('input').prop({
                     "checked" : false,
                     "disabled": true,
                 });

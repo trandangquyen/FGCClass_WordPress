@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f2fa45-89f3-4851-b483-ad624efe3214" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-305.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-307.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-309.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-311.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-625.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/page/content-page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/css/admin-style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/css/admin-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/css/admin-style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/css/admin-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/js/fgc-teacher-plugin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/js/fgc-teacher-plugin.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,111 +31,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="fgc-event-manager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+              <folding>
+                <marker date="1501058728728" expanded="true" signature="2283:3604" ph="CREATE TABLE... IF" />
+                <marker date="1501058728728" expanded="true" signature="3963:4244" ph="CREATE TABLE... IF" />
+                <marker date="1501058728728" expanded="true" signature="4233:4244" ph="CREATE TABLE... IF" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="fgc_teacher.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3234">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="21">
+              <caret line="212" column="37" lean-forward="false" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fgc-event-manager.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php">
+      <file leaf-file-name="event-controller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/event-controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+            <state relative-caret-position="2075">
+              <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event-category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/event-category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
-                <marker date="1500602535598" expanded="true" signature="2071:2911" ph="CREATE TABLE... IF" />
+                <marker date="1501061212373" expanded="true" signature="60:86" ph="SELECT event... " />
+                <marker date="1501061212373" expanded="true" signature="60:108" ph="SELECT * FRO... wp_events_category" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-291.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-291.php">
+      <file leaf-file-name="edit-event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/edit-event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-305.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-305.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5649">
-              <caret line="280" column="65" lean-forward="false" selection-start-line="236" selection-start-column="60" selection-end-line="280" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-307.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-307.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4977">
-              <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5775">
-              <caret line="275" column="12" lean-forward="false" selection-start-line="275" selection-start-column="12" selection-end-line="275" selection-end-column="25" />
+            <state relative-caret-position="-21">
+              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="16" />
               <folding>
-                <marker date="1500087146921" expanded="true" signature="771:1110" ph="CREATE TABLE... IF" />
-                <marker date="1500087146921" expanded="true" signature="4054:4176" ph="SELECT *, CO... ${FGC_QUIZ_TABLE_POINT}" />
-                <marker date="1500087146921" expanded="true" signature="6555:6641" ph="SELECT * FRO... ${FGC_QUIZ_TABLE_POINT}" />
-                <marker date="1500087146921" expanded="true" signature="8001:8052" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-                <marker date="1500087146921" expanded="true" signature="8199:8251" ph="..." />
-                <marker date="1500087146921" expanded="true" signature="11406:11496" ph="SELECT * FRO... ${FGC_QUIZ_TABLE_POINT}" />
+                <marker date="1500957763505" expanded="true" signature="151:215" ph="SELECT * FRO... wp_events_post" />
+                <marker date="1500957763505" expanded="true" signature="851:915" ph="SELECT * FRO... wp_events_post" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-309.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-309.php">
+      <file leaf-file-name="event-model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Model/event-model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4977">
-              <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
+            <state relative-caret-position="-10">
+              <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding>
+                <marker date="1500919157272" expanded="true" signature="1217:1243" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+                <marker date="1500919157272" expanded="true" signature="1217:1257" ph="SELECT * FRO... wp_events_post" />
+                <marker date="1500919157272" expanded="true" signature="1217:1270" ph="SELECT * FRO... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-new-event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/add-new-event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="651">
+              <caret line="43" column="99" lean-forward="false" selection-start-line="43" selection-start-column="84" selection-end-line="43" selection-end-column="99" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-311.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-311.php">
+      <file leaf-file-name="fgc-teacher-plugin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/js/fgc-teacher-plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4977">
-              <caret line="248" column="127" lean-forward="false" selection-start-line="248" selection-start-column="127" selection-end-line="248" selection-end-column="127" />
+            <state relative-caret-position="1029">
+              <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-319.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-319.php">
+      <file leaf-file-name="show-all-event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/show-all-event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4977">
-              <caret line="248" column="134" lean-forward="false" selection-start-line="248" selection-start-column="134" selection-end-line="248" selection-end-column="134" />
+            <state relative-caret-position="504">
+              <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
+      <file leaf-file-name="fgc-quiz.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz/fgc-quiz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6069">
-              <caret line="300" column="132" lean-forward="false" selection-start-line="300" selection-start-column="111" selection-end-line="300" selection-end-column="132" />
-              <folding />
+            <state relative-caret-position="1008">
+              <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+              <folding>
+                <marker date="1500659805368" expanded="true" signature="6159:6173" ph="SELECT * FRO... $" />
+                <marker date="1500659805368" expanded="true" signature="6576:6637" ph="..." />
+                <marker date="1500659805368" expanded="true" signature="7779:7793" ph="SELECT * FRO... $" />
+                <marker date="1500659805368" expanded="true" signature="7962:8016" ph="SELECT * FRO... $" />
+                <marker date="1500659805368" expanded="true" signature="8181:8290" ph="..." />
+                <marker date="1500659805368" expanded="true" signature="8202:8290" ph="..." />
+                <marker date="1500659805368" expanded="true" signature="8678:8728" ph="..." />
+                <marker date="1500659805368" expanded="true" signature="10366:10420" ph="SELECT * FRO... $" />
+                <marker date="1500659805368" expanded="true" signature="11089:11103" ph="SELECT * FRO... $" />
+                <marker date="1500659805368" expanded="true" signature="17750:17771" ph="DROP TABLE I... " />
+                <marker date="1500659805368" expanded="true" signature="17839:17860" ph="DROP TABLE I... " />
+                <marker date="1500659805368" expanded="true" signature="17924:17945" ph="DROP TABLE I... " />
+                <marker date="1500659805368" expanded="true" signature="18132:18448" ph="CREATE TABLE... ${$fgc_config['table_class']}" />
+                <marker date="1500659805368" expanded="true" signature="18801:19399" ph="CREATE TABLE... ${$fgc_config['table_timetable']}" />
+                <marker date="1500659805368" expanded="true" signature="19721:20013" ph="CREATE TABLE... ${$fgc_config['table_game']}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,27 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>set_post_thumbnail_size</find>
-      <find>wpdocs_theme_thumb_wide</find>
-      <find>item-event post-3062 tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access</find>
-      <find>get_site_url</find>
-      <find>FGC Manager Events</find>
-      <find>tab-pane fade</find>
-      <find>class=&quot;content-area container&quot;</find>
-      <find>main</find>
-      <find>LATEST COURSES</find>
-      <find>Login with your site account</find>
-      <find>&lt;div id=&quot;thim-popup-login</find>
-      <find>$token_params_encrypt</find>
-      <find>class ma</find>
-      <find>mobile</find>
-      <find>chọn thời gian bắt</find>
-      <find>add_metabox_datetime_events'</find>
-      <find>đang</find>
-      <find>set_custom_edit_events_columns</find>
-      <find>id=&quot;main&quot;</find>
-      <find>&lt;div class=&quot;wrap&quot;&gt;</find>
-      <find>images/course-4-450x450</find>
       <find>section-208</find>
       <find>ABSPATH</find>
       <find>fgc_install</find>
@@ -184,6 +174,27 @@
       <find>codex_events_init</find>
       <find>add_metabox_events</find>
       <find>save_selected_event</find>
+      <find>add_new_event</find>
+      <find>action</find>
+      <find>insert_event_post</find>
+      <find>Class name</find>
+      <find>add</find>
+      <find>action=add</find>
+      <find>post_title</find>
+      <find>$new_event</find>
+      <find>show_all_event</find>
+      <find>Sửa sự kiện</find>
+      <find>btn btn-primary</find>
+      <find>datetimepicker-start</find>
+      <find>post_id</find>
+      <find>edit-event</find>
+      <find>timezone_set</find>
+      <find>edit_event_post</find>
+      <find>upcoming</find>
+      <find>date</find>
+      <find>publish</find>
+      <find>inpu</find>
+      <find>category-parent</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\FGCClass_WordPress\wp-content\plugins\country-state-city</dir>
@@ -200,14 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/plugins/quiz-plugin.php" />
-        <option value="$PROJECT_DIR$/wp-admin/edit.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-lop-hoc.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/test.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-171.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/inc/template-tags.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/twentyseventeen/template-parts/post/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-291.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/post/content.php" />
@@ -247,12 +250,30 @@
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-319.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/index.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/View/add-new-event.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc_teacher/Controller/event-controller.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-quiz/class.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-quiz/fgc-quiz.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Model/event-model.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/show-all-event.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/js/fgc-teacher-plugin.js" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/add-new-event.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/edit-event.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/event-controller.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/event-category.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -282,6 +303,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,6 +335,54 @@
               <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fonts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="fgc_teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -325,8 +396,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +421,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.View">
+    <configuration name="View" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -419,6 +491,11 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.View" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -485,12 +562,21 @@
       <workItem from="1500517218742" duration="7965000" />
       <workItem from="1500537027062" duration="6569000" />
       <workItem from="1500560703117" duration="1855000" />
-      <workItem from="1500600739044" duration="1703000" />
+      <workItem from="1500600739044" duration="7079000" />
+      <workItem from="1500615153534" duration="746000" />
+      <workItem from="1500621944121" duration="9393000" />
+      <workItem from="1500636023872" duration="11008000" />
+      <workItem from="1500686894948" duration="18130000" />
+      <workItem from="1500774429005" duration="28480000" />
+      <workItem from="1500863285593" duration="17289000" />
+      <workItem from="1500945824604" duration="11313000" />
+      <workItem from="1501034340903" duration="7427000" />
+      <workItem from="1501054964621" duration="6071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353974000" />
+    <option name="totallyTimeSpent" value="469207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,6 +605,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -537,92 +624,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/wflogs/config.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/post/content-story.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/category-33.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/post/content-attach.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="53" column="53" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/download-manager/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/download-manager/download-manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content-none.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content-search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/post/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content-category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -779,58 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-309.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4977">
-          <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-311.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4977">
-          <caret line="248" column="127" lean-forward="false" selection-start-line="248" selection-start-column="127" selection-end-line="248" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/fgc-quiz-custom-post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500028661633" expanded="true" signature="4326:4338" ph="..." />
-            <marker date="1500028661633" expanded="true" signature="4339:6084" ph="..." />
-            <marker date="1500028661633" expanded="true" signature="4363:5239" ph="..." />
-            <marker date="1500028661633" expanded="true" signature="4388:5214" ph="..." />
-            <marker date="1500028661633" expanded="true" signature="5277:6063" ph="..." />
-            <marker date="1500028661633" expanded="true" signature="5302:6038" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-319.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4977">
-          <caret line="248" column="134" lean-forward="false" selection-start-line="248" selection-start-column="134" selection-end-line="248" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6069">
-          <caret line="300" column="132" lean-forward="false" selection-start-line="300" selection-start-column="111" selection-end-line="300" selection-end-column="132" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-307.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4977">
-          <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,9 +794,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-311.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="248" column="127" lean-forward="false" selection-start-line="248" selection-start-column="127" selection-end-line="248" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-309.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-319.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="248" column="134" lean-forward="false" selection-start-line="248" selection-start-column="134" selection-end-line="248" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/View/edit-event.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/View/add-new-event.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/Controller/event-controller.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz-custom-post/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5775">
+        <state relative-caret-position="539">
           <caret line="275" column="12" lean-forward="false" selection-start-line="275" selection-start-column="12" selection-end-line="275" selection-end-column="25" />
           <folding>
             <marker date="1500087146921" expanded="true" signature="771:1110" ph="CREATE TABLE... IF" />
@@ -856,44 +840,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-307.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="248" column="128" lean-forward="false" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-305.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5649">
           <caret line="280" column="65" lean-forward="false" selection-start-line="236" selection-start-column="60" selection-end-line="280" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-291.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="1428">
+          <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/wp-db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="1824" column="20" lean-forward="true" selection-start-line="1824" selection-start-column="20" selection-end-line="1824" selection-end-column="20" />
+          <folding>
+            <marker date="1497606344087" expanded="true" signature="24951:24958" ph="..." />
+            <marker date="1497606344087" expanded="true" signature="40070:40077" ph="..." />
+            <marker date="1497606344087" expanded="true" signature="43206:43213" ph="..." />
+            <marker date="1497606344087" expanded="true" signature="56414:56448" ph="UPDATE `${$t... " />
+            <marker date="1497606344087" expanded="true" signature="58403:58430" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="300" column="132" lean-forward="false" selection-start-line="300" selection-start-column="111" selection-end-line="300" selection-end-column="132" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php">
+    <entry file="file://$PROJECT_DIR$/wp-admin/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3234">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="62">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz/class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-quiz/fgc-quiz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <marker date="1500659805368" expanded="true" signature="6159:6173" ph="SELECT * FRO... $" />
+            <marker date="1500659805368" expanded="true" signature="6576:6637" ph="..." />
+            <marker date="1500659805368" expanded="true" signature="7779:7793" ph="SELECT * FRO... $" />
+            <marker date="1500659805368" expanded="true" signature="7962:8016" ph="SELECT * FRO... $" />
+            <marker date="1500659805368" expanded="true" signature="8181:8290" ph="..." />
+            <marker date="1500659805368" expanded="true" signature="8202:8290" ph="..." />
+            <marker date="1500659805368" expanded="true" signature="8678:8728" ph="..." />
+            <marker date="1500659805368" expanded="true" signature="10366:10420" ph="SELECT * FRO... $" />
+            <marker date="1500659805368" expanded="true" signature="11089:11103" ph="SELECT * FRO... $" />
+            <marker date="1500659805368" expanded="true" signature="17750:17771" ph="DROP TABLE I... " />
+            <marker date="1500659805368" expanded="true" signature="17839:17860" ph="DROP TABLE I... " />
+            <marker date="1500659805368" expanded="true" signature="17924:17945" ph="DROP TABLE I... " />
+            <marker date="1500659805368" expanded="true" signature="18132:18448" ph="CREATE TABLE... ${$fgc_config['table_class']}" />
+            <marker date="1500659805368" expanded="true" signature="18801:19399" ph="CREATE TABLE... ${$fgc_config['table_timetable']}" />
+            <marker date="1500659805368" expanded="true" signature="19721:20013" ph="CREATE TABLE... ${$fgc_config['table_game']}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/show-all-event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/js/fgc-teacher-plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        <state relative-caret-position="357">
+          <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
           <folding>
-            <marker date="1500602535598" expanded="true" signature="2071:2911" ph="CREATE TABLE... IF" />
+            <marker date="1501058728728" expanded="true" signature="2283:3604" ph="CREATE TABLE... IF" />
+            <marker date="1501058728728" expanded="true" signature="3963:4244" ph="CREATE TABLE... IF" />
+            <marker date="1501058728728" expanded="true" signature="4233:4244" ph="CREATE TABLE... IF" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/add-new-event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="43" column="99" lean-forward="false" selection-start-line="43" selection-start-column="84" selection-end-line="43" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc_teacher/fgc_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="212" column="37" lean-forward="false" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Model/event-model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <marker date="1500919157272" expanded="true" signature="1217:1243" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+            <marker date="1500919157272" expanded="true" signature="1217:1257" ph="SELECT * FRO... wp_events_post" />
+            <marker date="1500919157272" expanded="true" signature="1217:1270" ph="SELECT * FRO... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/edit-event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <marker date="1500957763505" expanded="true" signature="151:215" ph="SELECT * FRO... wp_events_post" />
+            <marker date="1500957763505" expanded="true" signature="851:915" ph="SELECT * FRO... wp_events_post" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/event-category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <marker date="1501061212373" expanded="true" signature="60:86" ph="SELECT event... " />
+            <marker date="1501061212373" expanded="true" signature="60:108" ph="SELECT * FRO... wp_events_category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/event-controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2075">
+          <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 <?php
-class ManagerEvent{
+class EventManagerModel{
     private $wpdb;
     public function __construct()
     {
@@ -9,9 +9,8 @@ class ManagerEvent{
     // insert a new event post
     public function insert_event_post($table_name,$data,$formats)
     {
-        global $wpdb;
         // Debugging: Turn on error reporting for db to see if there's a database error
-        $wpdb->show_errors();
+        $this->wpdb->show_errors();
         //var_dump($data); exit;
         // Actually attempt to insert the data
         $sql_event_insert = $this->wpdb->insert($table_name, $data, $formats);
@@ -40,13 +39,29 @@ class ManagerEvent{
         );
             return $results;
     }
+    public function show_single_event($event_id){
+        $results = $this->wpdb->get_results(
+            "
+            SELECT *
+            FROM wp_events_post
+            WHERE id = $event_id
+            "
+        );
+        return $results;
+    }
     public function delete_event($table,$id,$formats){
         $result = $this->wpdb->delete( $table, $id, $formats );
         $this->wpdb->show_errors($result);
 
     }
+    public function show_event_category(){
+        $results = $this->wpdb->get_results(
+            "SELECT *
+                FROM wp_events_category
+        "
+        );
+        return $results;
+    }
 }
-$new_event = new ManagerEvent();
-
 
 ?>

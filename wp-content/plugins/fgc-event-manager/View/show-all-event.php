@@ -14,6 +14,7 @@
     </thead>
     <tbody>
     <?php
+    //$all_events = $this->neweventmodel->show_all_event();
     foreach ( $all_events as $key => $result ):
         $author = get_userdata( $result->event_post_author );
     ?>

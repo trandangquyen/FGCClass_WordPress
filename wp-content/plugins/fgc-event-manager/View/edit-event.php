@@ -1,51 +1,14 @@
 <?php
 
-if(isset($_GET['edit-event']))
+foreach ( $results as $result )
 {
-    $post_id = $_GET['edit-event'];
-    global $wpdb;
-    $results = $wpdb->get_results(
-        "
-            SELECT *
-            FROM wp_events_post
-            WHERE id = $post_id
-            ",OBJECT
-    );
-    foreach ( $results as $result )
-    {
-        $show_event_time_start = $result->event_post_start;
-        $show_event_time_end = $result->event_post_end;
-        $show_event_location = $result->event_post_location;
-        $post_title = $result->event_post_title;
-        $post_content = $result->event_post_content;
-        $post_status = $result->event_post_status;
-    }
-
-
-}
-else{
-    global $wpdb;
-    if(!isset($_POST['post_id']))
-        $post_id = $wpdb->insert_id;
-    else
-        $post_id = $_POST['post_id'];
-    global $wpdb;
-    $results = $wpdb->get_results(
-        "
-            SELECT *
-            FROM wp_events_post
-            WHERE id = $post_id
-            ",OBJECT
-    );
-    foreach ( $results as $result )
-    {
-        $show_event_time_start = $result->event_post_start;
-        $show_event_time_end = $result->event_post_end;
-        $show_event_location = $result->event_post_location;
-        $post_title = $result->event_post_title;
-        $post_content = $result->event_post_content;
-        $post_status = $result->event_post_status;
-    }
+    $show_event_time_start = $result->event_post_start;
+    $show_event_time_end = $result->event_post_end;
+    $show_event_location = $result->event_post_location;
+    $post_title = $result->event_post_title;
+    $post_content = $result->event_post_content;
+    $post_status = $result->event_post_status;
+    $post_id = $result->id;
 }
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $show_event_time_start = new DateTime($show_event_time_start);

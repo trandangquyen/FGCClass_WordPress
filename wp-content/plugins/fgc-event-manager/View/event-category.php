@@ -1,12 +1,4 @@
-<?php
-global $wpdb;
-$resutls = $wpdb->get_results(
-        "SELECT *
-                FROM wp_events_category
-        "
-);
 
-?>
 <div class="list-category" id="show-event-cat">
     <div class="row">
         <div class="col-xs-4">
@@ -16,7 +8,7 @@ $resutls = $wpdb->get_results(
                 <div class="select-cat-parent">
                     <h3>Chọn danh mục cha</h3>
                     <?php
-                    foreach ($resutls as $result):
+                    foreach ($results as $result):
                         ?>
                         <div class="item-wrapper"><input type="radio" name="cat-parent" value="<?php echo $result->id; ?>"><span><?php echo $result->event_category_name; ?></span></div>
                     <?php endforeach; ?>
@@ -29,7 +21,7 @@ $resutls = $wpdb->get_results(
         <div class="col-xs-3">
             <h2>Tất cả danh mục</h2>
             <?php
-            foreach ($resutls as $result):
+            foreach ($results as $result):
             ?>
             <div class="item-wrapper"><input type="checkbox"><span><?php echo $result->event_category_name; ?></span></div>
             <?php endforeach; ?>

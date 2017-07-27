@@ -1,12 +1,35 @@
 <?php
-    include_once (__DIR__.'/../Model/event-model.php');
-    //echo $_SERVER['QUERY_STRING'];
-    if(strpos($_SERVER['QUERY_STRING'],'page=all-events-list') !== false)
+include_once (__DIR__.'/../Model/event-model.php');
+include_once (__DIR__.'/../lib/load-view.php');
+
+class EventController{
+    protected $current_page;
+    protected $neweventmodel;
+    protected $view;
+    //Constructor
+    public function __construct()
     {
-        $all_events = $new_event ->show_all_event();
+        $this->neweventmodel = new EventManagerModel();
+        $this->current_page = isset($_GET['page']) ? $_GET['page'] : null;
+        $this->view = new ViewLoader();
+    }
+
+    public function ShowCurrentPage(){
+        switch($this->current_page){
+            case 'all-events-list': $this->ShowAllEvent(); break;
+            case 'add-new-event': $this->AddEditEvent(); break;
+            case 'all-category-event': $this->ShowAllCategory(); break;
+            default : break;
+        }
+
+    }
+    public function ShowAllEvent(){
+
+        //var_dump($all_events);
         if(isset($_REQUEST['edit-event']))
         {
-            include_once (__DIR__.'/../View/edit-event.php');
+            $this->view->load('edit-event');
+            //include_once (__DIR__.'/../View/edit-event.php');
         }elseif (isset($_REQUEST['delete-event']))
         {
             global $wpdb;
@@ -14,14 +37,17 @@
             $id = $_REQUEST['delete-event'];
             $id = array( 'ID' => $id );
             $formats =  array( '%d' );
-            $new_event->delete_event($table_name,$id,$formats);
+            $this->neweventmodel->delete_event($table_name,$id,$formats);
             echo "<script>location.href='admin.php?page=all-events-list';</script>";
         }
         else
-        include_once (__DIR__.'/../View/show-all-event.php');
+            $data = array(
+                'all_events' => $this->neweventmodel->show_all_event()
+            );
+            $this->view->load('show-all-event',$data);
+            //include_once (__DIR__.'/../View/show-all-event.php');
     }
-    if(strpos($_SERVER['QUERY_STRING'],'page=add-new-event') !== false)
-    {
+    public function AddEditEvent(){
         if (isset($_POST['event-submit'])) {
             // Debugging output, since you are having troubles finding the issue.
             // echo "SAVING ENTRY";
@@ -70,20 +96,43 @@
                 '%s', // event_post_location should be a string
                 '%s', // event_post_status should be a string
             );
-            $check_insert_event = $new_event->insert_event_post($table_name,$data,$formats);
+            $check_insert_event = $this->neweventmodel->insert_event_post($table_name,$data,$formats);
             if($check_insert_event)
             {
+                if(isset($_GET['edit-event']))
+                {
+                    $post_id = $_GET['edit-event'];
 
-                include_once (__DIR__.'/../View/edit-event.php');
+                }
+                else{
+                    global $wpdb;
+                    if(!isset($_POST['post_id']))
+                        $post_id = $wpdb->insert_id;
+                    else
+                        $post_id = $_POST['post_id'];
+
+                }
+                $data = array(
+                    'results' => $this->neweventmodel->show_single_event($post_id)
+                );
+                $this->view->load('edit-event',$data);
+                //include_once (__DIR__.'/../View/edit-event.php');
             }
 
             else{
-
-                include_once (__DIR__.'/../View/add-new-event.php');
+                /*$data = array(
+                    'results' => $this->neweventmodel->show_single_event($post_id)
+                );*/
+                $this->view->load('add-new-event');
+                //include_once (__DIR__.'/../View/add-new-event.php');
             }
         }
         else if (isset($_GET['edit-event'])){
-            include_once (__DIR__.'/../View/edit-event.php');
+            $post_id = $_GET['edit-event'];
+            $data = array(
+                'results' => $this->neweventmodel->show_single_event($post_id)
+            );
+            $this->view->load('edit-event',$data);
         }
         else if (isset($_POST['event-update'])){
             //global $wpdb;
@@ -106,17 +155,22 @@
                 'event_post_status' => $_POST['event-status']
             );
             $where = array('id'=>$post_id);
-            echo $new_event->edit_event_post($table,$data,$where);
-            include_once (__DIR__.'/../View/edit-event.php');
+            echo $this->neweventmodel->edit_event_post($table,$data,$where);
+            //$post_id = $_GET['edit-event'];
+            $data = array(
+                'results' => $this->neweventmodel->show_single_event($post_id)
+            );
+            $this->view->load('edit-event',$data);
+            //include_once (__DIR__.'/../View/edit-event.php');
         }
 
         else{
-            include_once (__DIR__.'/../View/add-new-event.php');
+            $this->view->load('add-new-event');
+            //include_once (__DIR__.'/../View/add-new-event.php');
         }
     }
-    if(strpos($_SERVER['QUERY_STRING'],'page=all-category-event') !== false)
-    {
 
+    public function ShowAllCategory(){
         if(isset($_POST['event-add-category'])){
             $category_name = $_POST['category-name'];
             $category_parent = isset($_POST['cat-parent'])?$_POST['cat-parent'] : '';
@@ -129,11 +183,18 @@
                 '%s',
                 '%d',
             );
-            $add_event_category = $new_event->insert_event_post($table_name,$data,$formats);
+            $add_event_category = $this->neweventmodel->insert_event_post($table_name,$data,$formats);
         }
-        include_once (__DIR__.'/../View/event-category.php');
+        $data = array(
+            'results' => $this->neweventmodel->show_event_category()
+        );
+        $this->view->load('event-category',$data);
+        //include_once (__DIR__.'/../View/event-category.php');
     }
 
+}
+$controller = new EventController();
+$controller->ShowCurrentPage() ;
 
 
 ?>

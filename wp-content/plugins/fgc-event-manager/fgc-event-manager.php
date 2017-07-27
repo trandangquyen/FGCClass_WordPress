@@ -47,7 +47,7 @@ class FGC_Manager{
         $sql = "CREATE TABLE IF NOT EXISTS $table_name (
           id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
           event_post_author bigint(20) UNSIGNED NOT NULL,
-          event_post_category bigint(20) UNSIGNED NOT NULL,
+          event_post_category bigint(20) UNSIGNED NULL DEFAULT NULL,
           event_post_date datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
           event_post_start datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
           event_post_end datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -104,7 +104,7 @@ class FGC_Manager{
     }
     function show_general_events_page(){
         global $submenu;
-        echo 'Heloo000';
+        echo 'This content do not show in the admin panel';
     }
     //Add submenu to the events manager
     function add_submenu_events_manager(){

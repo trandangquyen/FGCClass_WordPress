@@ -106,21 +106,11 @@ class EventController{
             if($check_insert_event)
             {
                 //if insert data success, check id of event_post to load edit page.
-                //CASE1 : Edit & update
-                /*if(isset($_GET['edit-event']))
-                {
-                    $post_id = $_GET['edit-event'];
-
-                }*/
-                //CASE2 : ADD NEW
-//                else{
-                    global $wpdb;
-                    if(!isset($_POST['post_id']))
-                        $post_id = $wpdb->insert_id;
-                    else
-                        $post_id = $_POST['post_id'];
-
-//                }
+                global $wpdb;
+                if(!isset($_POST['post_id']))
+                    $post_id = $wpdb->insert_id;
+                else
+                    $post_id = $_POST['post_id'];
                 $data = array(
                     'results' => $this->neweventmodel->show_single_event($post_id)
                 );

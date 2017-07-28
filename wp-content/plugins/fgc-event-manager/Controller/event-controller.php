@@ -1,5 +1,7 @@
 <?php
+//load Object Model
 include_once (__DIR__.'/../Model/event-model.php');
+//load controller for View
 include_once (__DIR__.'/../lib/load-view.php');
 
 class EventController{
@@ -13,17 +15,18 @@ class EventController{
         $this->current_page = isset($_GET['page']) ? $_GET['page'] : null;
         $this->view = new ViewLoader();
     }
-
+    //funtion to get current urls and do actions
     public function ShowCurrentPage(){
         switch($this->current_page){
-            case 'all-events-list': $this->ShowAllEvent(); break;
+            case 'all-events-list': $this->ShowAllEvents(); break;
             case 'add-new-event': $this->AddEditEvent(); break;
             case 'all-category-event': $this->ShowAllCategory(); break;
             default : break;
         }
 
     }
-    public function ShowAllEvent(){
+    //Show all events
+    public function ShowAllEvents(){
 
         //var_dump($all_events);
         if(isset($_REQUEST['edit-event']))
@@ -45,9 +48,10 @@ class EventController{
                 'all_events' => $this->neweventmodel->show_all_event()
             );
             $this->view->load('show-all-event',$data);
-            //include_once (__DIR__.'/../View/show-all-event.php');
     }
+    //function to add new or delete events
     public function AddEditEvent(){
+        // in add new event case
         if (isset($_POST['event-submit'])) {
             // Debugging output, since you are having troubles finding the issue.
             // echo "SAVING ENTRY";
@@ -59,8 +63,9 @@ class EventController{
                 echo 'Security error. Do not process the form.';
                 return;
             }
-            // add data
+            // begin to execute add data action
             global $wpdb;
+            //set timezone
             date_default_timezone_set('Asia/Ho_Chi_Minh');
             $date = date("m/d/Y h:i A");
             $final = strtotime($date);
@@ -97,36 +102,36 @@ class EventController{
                 '%s', // event_post_status should be a string
             );
             $check_insert_event = $this->neweventmodel->insert_event_post($table_name,$data,$formats);
+
             if($check_insert_event)
             {
-                if(isset($_GET['edit-event']))
+                //if insert data success, check id of event_post to load edit page.
+                //CASE1 : Edit & update
+                /*if(isset($_GET['edit-event']))
                 {
                     $post_id = $_GET['edit-event'];
 
-                }
-                else{
+                }*/
+                //CASE2 : ADD NEW
+//                else{
                     global $wpdb;
                     if(!isset($_POST['post_id']))
                         $post_id = $wpdb->insert_id;
                     else
                         $post_id = $_POST['post_id'];
 
-                }
+//                }
                 $data = array(
                     'results' => $this->neweventmodel->show_single_event($post_id)
                 );
                 $this->view->load('edit-event',$data);
-                //include_once (__DIR__.'/../View/edit-event.php');
             }
 
             else{
-                /*$data = array(
-                    'results' => $this->neweventmodel->show_single_event($post_id)
-                );*/
                 $this->view->load('add-new-event');
-                //include_once (__DIR__.'/../View/add-new-event.php');
             }
         }
+        // in edit event case
         else if (isset($_GET['edit-event'])){
             $post_id = $_GET['edit-event'];
             $data = array(
@@ -134,11 +139,9 @@ class EventController{
             );
             $this->view->load('edit-event',$data);
         }
+        // in update event case
         else if (isset($_POST['event-update'])){
-            //global $wpdb;
             $post_id = $_POST['post_id'];
-            //var_dump($post_id);
-            //exit;
             $post_title = $_POST['event-title'];
             $post_content = $_POST['event-content'];
             $event_time_start = strtotime($_POST['datetimepicker-start']);
@@ -161,15 +164,13 @@ class EventController{
                 'results' => $this->neweventmodel->show_single_event($post_id)
             );
             $this->view->load('edit-event',$data);
-            //include_once (__DIR__.'/../View/edit-event.php');
         }
 
         else{
             $this->view->load('add-new-event');
-            //include_once (__DIR__.'/../View/add-new-event.php');
         }
     }
-
+    // function to show all event category
     public function ShowAllCategory(){
         if(isset($_POST['event-add-category'])){
             $category_name = $_POST['category-name'];
@@ -189,7 +190,6 @@ class EventController{
             'results' => $this->neweventmodel->show_event_category()
         );
         $this->view->load('event-category',$data);
-        //include_once (__DIR__.'/../View/event-category.php');
     }
 
 }

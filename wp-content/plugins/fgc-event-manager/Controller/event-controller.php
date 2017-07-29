@@ -183,8 +183,7 @@ class EventController{
     }
 
 }
-$controller = new EventController();
-$controller->ShowCurrentPage() ;
+
 
 
 ?>

@@ -10,6 +10,7 @@ Author URI: http://brian.com
 define('FGC_ENDIR_PATH',plugin_dir_path(__FILE__) );
 define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
 class FGC_Manager{
+    protected $current_page;
     function __construct()
     {
         //add js vs css to admin panel
@@ -113,24 +114,24 @@ class FGC_Manager{
             'Tất cả sự kiện',
             'Tất cả sự kiện',
             'manage_options',
-            'all-events-list',
-            array($this,'load_event_controller')
+            'event.all-events-list',
+            array($this,'link_router')
         );
         add_submenu_page(
             'manager-fgc-events',
             'Thêm sự kiện mới',
             'Thêm/Sửa sự kiện',
             'manage_options',
-            'add-new-event',
-            array($this,'load_event_controller')
+            'event.add-new-event',
+            array($this,'link_router')
         );
         add_submenu_page(
             'manager-fgc-events',
             'Danh mục sự kiện',
             'Danh mục sự kiện',
             'manage_options',
-            'all-category-event',
-            array($this,'load_event_controller')
+            'event.all-category-event',
+            array($this,'link_router')
         );
     }
     // Callback funcions in the events manager menu
@@ -138,6 +139,45 @@ class FGC_Manager{
     function load_event_controller()
     {
         include_once (__DIR__.'/Controller/event-controller.php');
+    }
+    function link_router(){
+        $this->current_page = isset($_GET['page']) ? $_GET['page'] : null;
+        $subject = $this->current_page;
+        $pattern = '/event.(.*?)$/';
+        preg_match($pattern, $subject, $matches);
+        if(isset($matches))
+        {
+            $this->load_event_controller();
+            $controller = new EventController();
+            switch($matches[1]){
+                case 'all-events-list':
+                    $controller->ShowAllEvents();
+                    break;
+                case 'add-new-event':
+                    $controller->AddEditEvent();
+                    break;
+                case 'all-category-event':
+                    $controller->ShowAllCategory();
+                    break;
+                default : break;
+            }
+        }
+    }
+    public function load($controller)
+    {
+
+        // change content view to a variable width ab_start();
+        ob_start();
+        require_once __DIR__ . '/../Controller/' . $controller . '.php';
+        $content = ob_get_contents();
+        ob_end_clean();
+        // Assign the content to the loaded view list
+        $this->__content[] = $content;
+        //The function displays the entire view loaded, which is used by the controller
+        foreach ($this->__content as $html){
+            echo $html;
+        }
+
     }
 
 

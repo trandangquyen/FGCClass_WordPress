@@ -163,23 +163,6 @@ class FGC_Manager{
             }
         }
     }
-    public function load($controller)
-    {
-
-        // change content view to a variable width ab_start();
-        ob_start();
-        require_once __DIR__ . '/../Controller/' . $controller . '.php';
-        $content = ob_get_contents();
-        ob_end_clean();
-        // Assign the content to the loaded view list
-        $this->__content[] = $content;
-        //The function displays the entire view loaded, which is used by the controller
-        foreach ($this->__content as $html){
-            echo $html;
-        }
-
-    }
-
 
 }
 $fgc_manager = new FGC_Manager();

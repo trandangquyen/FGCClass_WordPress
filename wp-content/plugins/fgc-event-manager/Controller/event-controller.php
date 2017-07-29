@@ -15,16 +15,6 @@ class EventController{
         $this->current_page = isset($_GET['page']) ? $_GET['page'] : null;
         $this->view = new ViewLoader();
     }
-    //funtion to get current urls and do actions
-    public function ShowCurrentPage(){
-        switch($this->current_page){
-            case 'all-events-list': $this->ShowAllEvents(); break;
-            case 'add-new-event': $this->AddEditEvent(); break;
-            case 'all-category-event': $this->ShowAllCategory(); break;
-            default : break;
-        }
-
-    }
     //Show all events
     public function ShowAllEvents(){
 

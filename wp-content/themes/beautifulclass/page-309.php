@@ -179,7 +179,18 @@ get_header(); ?>
                                                                 <li class="lectures-feature"><i
                                                                         class="fa fa-files-o"></i> <span
                                                                         class="label">Bài giảng</span> <span
-                                                                        class="value">7</span></li>
+                                                                        class="value">
+                                                                        <?php
+                                                                        $args = array(
+                                                                            'numberposts' => -1,
+                                                                            'meta_key' => '_class_id',
+                                                                            'meta_value' => 3,
+                                                                        );
+                                                                        $posts_array = get_posts( $args );
+                                                                        $total_posts_of_class = count($posts_array);
+                                                                        echo $total_posts_of_class;
+                                                                        ?>
+                                                                    </span></li>
                                                                 <li class="quizzes-feature"><i
                                                                         class="fa fa-puzzle-piece"></i> <span
                                                                         class="label">Bài trắc nghiệm</span> <span
@@ -602,55 +613,28 @@ get_header(); ?>
                                 </div>
                             </aside>
                             <aside id="list-post-9" class="widget widget_list-post">
-                                <div class="thim-widget-list-post thim-widget-list-post-base"><h4 class="widget-title">
-                                        Latest Posts</h4>
+                                <div class="thim-widget-list-post thim-widget-list-post-base"><h4 class="widget-title">Bài học mới</h4>
                                     <div class="thim-list-posts sidebar">
-                                        <div class="item-post post-3698 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-course pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-8-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
+                                        <?php
+                                        global $post;
+                                        $args = array(
+                                            'meta_key' => '_class_id',
+                                            'meta_value' => 3,
+                                            'numberposts'=> 3
+                                        );
+                                        $new_posts = get_posts( $args );
+                                        foreach ($new_posts as $lastest_post):
+                                            ?>
+                                            <div class="item-post post-3698 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-course pmpro-has-access">
+                                                <div class="article-image"> <?php echo get_the_post_thumbnail( $lastest_post->ID, 'thumbnail' ); ?>
+                                                </div>
+                                                <div class="article-title-wrapper"><h5><a
+                                                                href="<?php echo $lastest_post->guid?>"
+                                                                class="article-title"><?php echo $lastest_post->post_title ?></a></h5>
+                                                    <div class="article-date"><?php echo $lastest_post->post_date ?></div>
+                                                </div>
                                             </div>
-                                            <div class="article-title-wrapper"><h5><a
-                                                        href="https://educationwp.thimpress.com/online-learning-glossary/"
-                                                        class="article-title">Online Learning Glossary</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                        class="month">Jan</span><span class="year">2016</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="item-post post-3699 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-designer tag-seo pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2016/01/blog-5-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
-                                            </div>
-                                            <div class="article-title-wrapper"><h5><a
-                                                        href="https://educationwp.thimpress.com/tips-to-succeed-in-an-online-course/"
-                                                        class="article-title">Tips to Succeed in an Online
-                                                        Course</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                        class="month">Jan</span><span class="year">2016</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="item-post post-71 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-course tag-thimpress tag-wordpress pmpro-has-access">
-                                            <div class="article-image"><img width="150" height="150"
-                                                                            src="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-150x150.jpg"
-                                                                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                            alt=""
-                                                                            srcset="https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-150x150.jpg 150w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-180x180.jpg 180w, https://3ek5k1tux0822q3g83e30fye-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/blog-3-300x300.jpg 300w"
-                                                                            sizes="(max-width: 150px) 100vw, 150px">
-                                            </div>
-                                            <div class="article-title-wrapper"><h5><a
-                                                        href="https://educationwp.thimpress.com/introducing-dr-deniz-zeynep-2/"
-                                                        class="article-title">Introducing: Dr. Deniz Zeynep</a></h5>
-                                                <div class="article-date"><span class="day">20</span><span
-                                                        class="month">Oct</span><span class="year">2015</span></div>
-                                            </div>
-                                        </div>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </aside>

@@ -11,8 +11,16 @@ define('FGC_ENDIR_PATH',plugin_dir_path(__FILE__) );
 define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
 class FGC_Manager{
     protected $current_page;
+    protected  $db;
     function __construct()
     {
+        global $wpdb;
+        $this->db = $wpdb;
+
+
+
+    }
+    public function execute(){
         //add js vs css to admin panel
         add_action('admin_enqueue_scripts', array( $this, 'admin_style'));
         // Add event manager menu to admin panel
@@ -23,11 +31,9 @@ class FGC_Manager{
         add_action('admin_menu', array($this,'remove_event_menu_title'));
         register_activation_hook( __FILE__, array($this,'fgc_teacher_create_category_db'));
         register_activation_hook( __FILE__, array($this,'fgc_teacher_create_db'));
-
-
     }
     // Update CSS and JS within in Admin area
-    function admin_style() {
+    public function admin_style() {
         wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.min.css');
         wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_URL.'css/bootstrap-datetimepicker.min.css');
         wp_enqueue_style('admin-styles', FGC_ENDIR_URL.'css/admin-style.css');
@@ -166,3 +172,4 @@ class FGC_Manager{
 
 }
 $fgc_manager = new FGC_Manager();
+$fgc_manager->execute();

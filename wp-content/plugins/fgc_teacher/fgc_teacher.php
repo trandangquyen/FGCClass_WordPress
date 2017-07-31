@@ -35,6 +35,7 @@ class FGC_Manager{
             'bai_nghe',
             array($this,'fgc_show_listen_menu')
         );
+        
         add_submenu_page(
             'quan_ly_bai_tap',
             'Bài nghe',
@@ -43,6 +44,7 @@ class FGC_Manager{
             'bai_noi',
             array($this,'fgc_show_talk_menu')
         );
+        
         add_submenu_page(
             'quan_ly_bai_tap',
             'Bài nghe',

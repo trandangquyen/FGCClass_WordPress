@@ -28,7 +28,7 @@
             <div class="content-pusher">
                 <?php
                 header_customs();
-                mobile_menu();
+//                mobile_menu();
                 ?>
                 <!-- ================================================================================================== -->
                 <?php ob_start(); ?>

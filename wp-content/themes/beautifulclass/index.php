@@ -175,6 +175,7 @@ get_header();
                                             <div class="counter-caption">giây</div>
                                         </div>
                                     </div>
+                                    <div id="events-over" style="color:#FFF"></div>
                                     <script type="text/javascript">
                                         $('#datetimepicker2').datetimepicker();
 
@@ -184,16 +185,17 @@ get_header();
                                         })
                                     </script>
                                     <script type="text/javascript">
-                                        // Set the date we're counting down to
-                                        var countDownDate = new Date("08/24/2017 4:24 PM").getTime();
+                                        
+                                        //Ngày để đếm ngược đến
+                                        var countDownDate = new Date("09/15/2017 00:00 AM").getTime();
 
-                                        // Update the count down every 1 second
+                                        // Update đếm ngược sau mỗi một giây
                                         var countdownfunction = setInterval(function () {
 
-                                            // Get todays date and time
+                                            // Lấy ngyaf giờ hiện tại
                                             var now = new Date().getTime();
 
-                                            // Find the distance between now an the count down date
+                                            // Tính khoảng thời gian từ thời điểm hiện tại đến ngày được cài để đếm
                                             var distance = countDownDate - now;
 
                                             // Time calculations for days, hours, minutes and seconds
@@ -224,10 +226,11 @@ get_header();
                                             } else {
                                                 document.getElementById("countdown-days").innerHTML = days;
                                             }
-                                            // If the count down is over, write some text 
+                                            // Nếu quá trình đếm đã kết thúc thì cho ra 1 dòng thông báo
                                             if (distance < 0) {
                                                 clearInterval(countdownfunction);
-                                                document.getElementById("demo").innerHTML = "EXPIRED";
+                                                document.getElementById("events-over").innerHTML = "EVENTS OVER";
+                                                document.getElementById("myCounter").style.display = "none";
                                             }
                                         }, 1000);
                                     </script>

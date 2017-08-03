@@ -2,18 +2,22 @@
 <link rel="stylesheet" href="<?php echo plugins_url('/download-manager/assets/css/chosen.css'); ?>" />
 <script language="JavaScript" src="<?php echo plugins_url('/download-manager/assets/js/chosen.jquery.min.js'); ?>"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo plugins_url('/download-manager/assets/bootstrap/css/bootstrap.css');?>" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+<script  src="<?php echo plugins_url('/download-manager/assets/bootstrap/js/bootstrap.min.js');?>"></script>
+<link href='http://fonts.googleapis.com/css?family=Overpass:300,400,700' rel='stylesheet' type='text/css'>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
     .w3eden .lead,
     .w3eden .btn,
     .w3eden p{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+    }
+    .w3eden .media-body a, .w3eden *:not(.fa){
+        font-family: 'Overpass', sans-serif;
     }
 
     .r{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Overpass', sans-serif;
         font-weight: 300;
         font-size: 11pt;
     }
@@ -24,7 +28,7 @@
         margin-bottom: 5px;
     }
 
-    input{
+    .w3eden input{
         padding: 7px;
     }
     #wphead{
@@ -40,15 +44,15 @@
     #wpbody{
         margin-left: -19px;
     }
-    select{
+    .w3eden select{
         min-width: 150px;
     }
-    .media-body b{
+    .w3eden  .media-body b{
         font-size: 11pt;
         margin-bottom: 5px;
     }
 
-    .media .btn-success{
+    .w3eden .media .btn-success{
         margin-top: 3px;
     }
 
@@ -62,6 +66,14 @@
         /*border-top: 2px solid #3dd269;*/
         /*border-radius: 100%;*/
 
+    }
+
+    .w3eden .label-info {
+        background-color: #5bc0de;
+        display: inline-block;
+        line-height: 15px;
+        padding: 7px 12px 5px;
+        font-family: 'Overpass', sans-serif;
     }
 
     .w3eden .btn{
@@ -231,7 +243,7 @@
                          <div style="min-height: 130px;height: 130px;overflow: hidden" class="panel-body">
                              <div class="media">
                                  <a class="pull-left" href="#">
-                                     <img width="100px" src="http://cdn.wpdownloadmanager.com/wp-content/plugins/download-manager/cache/tinymce-button-200x200.png" class="img-rounded">
+                                     <img width="100px" src="https://cdn.wpdownloadmanager.com/wp-content/plugins/download-manager/cache/tinymce-button-200x200.png" class="img-rounded">
                                  </a>
                                  <div class="media-body">
                                      <b><a target="_blank" href="https://www.wpdownloadmanager.com/download/advanced-tinymce-button/">Advanced TinyMCE button</a></b><br>
@@ -303,7 +315,7 @@
                  <div class="well">
                      <div class="media">
                          <div class="pull-right">
-                             <a href="https://www.wpdownloadmanager.com/downloads/free-add-ons/" class="btn btn-success">Explore Free Add-ons <i class="fa fa-angle-double-right"></i></a>
+                             <a href="https://www.wpdownloadmanager.com/downloads/free-add-ons/" target="_blank" class="btn btn-success">Explore Free Add-ons <i class="fa fa-angle-double-right"></i></a>
                          </div>
                          <div class="media-body">
                              <b>Free Add-ons</b><br/>

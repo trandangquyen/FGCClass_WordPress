@@ -475,7 +475,7 @@ class Apply {
      */
     function queryTag($query)
     {
-        if (is_tag()) {
+        if (is_tag() && $query->is_main_query()) {
             $post_type = get_query_var('post_type');
             if (!is_array($post_type))
                 $post_type = array('post', 'wpdmpro');

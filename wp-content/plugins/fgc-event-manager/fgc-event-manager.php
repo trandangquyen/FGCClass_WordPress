@@ -16,9 +16,6 @@ class FGC_Manager{
     {
         global $wpdb;
         $this->db = $wpdb;
-
-
-
     }
     public function execute(){
         //add js vs css to admin panel

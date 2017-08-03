@@ -19,9 +19,9 @@ $show_event_time_end  = date_format($show_event_time_end ,"m/d/Y h:i A");
 ?>
 <div class="row">
     <div class="col-sm-8">
-        <a href="?page=add-new-event&action=add" class="add-eventbt btn btn-primary" role="button">Thêm sự kiện</a>
+        <a href="?page=event.add-new-event&action=add" class="add-eventbt btn btn-primary" role="button">Thêm sự kiện</a>
         <h2>Sửa sự kiện</h2>
-        <form action="?page=add-new-event" method="post">
+        <form action="?page=event.add-new-event" method="post">
             <?php
             // Add a nonce field
             wp_nonce_field('MyNonceAction', 'ticket_nonce');

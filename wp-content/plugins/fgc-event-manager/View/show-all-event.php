@@ -24,7 +24,7 @@
         <td><?php echo $result->event_post_start; ?></td>
         <td><?php echo $result->event_post_end; ?></td>
         <td><?php echo $result->event_post_location; ?></td>
-        <td><a href="?page=add-new-event&edit-event=<?php echo $result->id?>">Sửa</a> | <a href="?page=all-events-list&delete-event=<?php echo $result->id; ?>">Xóa</a></td>
+        <td><a href="?page=event.add-new-event&edit-event=<?php echo $result->id?>">Sửa</a> | <a href="?page=event.add-new-event&delete-event=<?php echo $result->id; ?>">Xóa</a></td>
         <td><?php echo $author->user_nicename; ?></td>
         <td><?php echo $result->event_post_status; ?></td>
     </tr>

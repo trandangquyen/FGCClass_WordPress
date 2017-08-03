@@ -231,33 +231,34 @@ get_header(); ?>
                                     <div class="thim-widget-list-event thim-widget-list-event-base">
                                         <div class="thim-list-event"><a class="view-all" href="<?php echo get_site_url().'/Event/' ?>">Xem Tất Cả</a>
                                             <?php
-                                            global $wpdb;
-                                            $results = $wpdb->get_results(
-                                                "
-                                                SELECT *
-                                                FROM wp_events_post
-                                                WHERE wp_events_post.event_post_status = 'happening'
-                                                "
-                                            );
-                                            foreach ( $results as $key => $result ):
-                                            ?>
+                                                    $args = array(
+                                                        'post_type' => 'events',
+                                                        'numberposts' => -1,
+                                                    );
+                                                    $posts_array = get_posts( $args );
+                                                    //var_dump($posts_array);
+                                                    ?>
+                                                    <?php foreach ( $posts_array as $post ):
+                                                    if (get_post_meta( $post->ID, 'event-post', true ) == 'happening'):
+                                                    ?>
                                             <div class="item-event post-2951 tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access">
                                                 <div class="time-from">
                                                     <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
                                                     <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                                 </div>
-                                                <div class="image"><?php //the_post_thumbnail( 'post-thumb-wide' ); ?></div>
+                                                <div class="image"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></div>
                                                 <div class="event-wrapper">
-                                                    <h5 class="title"> <a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
+                                                    <h5 class="title"> <a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h5>
                                                     <div class="meta">
-                                                        <div class="time"> <i class="fa fa-clock-o"></i><?php echo $result->event_post_start.' - '.$result->event_post_end; ?></div>
-                                                        <div class="location"> <i class="fa fa-map-marker"></i><?php echo $result->event_post_location; ?></div>
+                                                        <div class="time"> <i class="fa fa-clock-o"></i><?php echo get_post_meta( $post->ID, 'event-post-time-start', true ).'-'.get_post_meta( $post->ID, 'event-post-time-end', true )?></div>
+                                                        <div class="location"> <i class="fa fa-map-marker"></i><?php  echo get_post_meta( $post->ID, 'event-post-location', true); ?></div>
                                                     </div>
                                                     <div class="description">
                                                         <p><?php if(has_excerpt() == true) echo excerpt(22); ?></p>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <?php endif; ?>
                                             <?php endforeach; ?>
                                         </div>
                                     </div>

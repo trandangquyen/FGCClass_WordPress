@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-8">
         <h2>Thêm sự kiện</h2>
-        <form action="?<?php echo $_SERVER['QUERY_STRING']; ?>&action=edit" method="post">
+        <form action="?<?php echo $_SERVER['QUERY_STRING']; ?>&action=edit" method="post" enctype="multipart/form-data">
             <?php
             // Add a nonce field
             wp_nonce_field('MyNonceAction', 'ticket_nonce');
@@ -47,7 +47,9 @@
                 </div>
             </div>
 
-
+            <input type="file" name="my_image_upload" id="my_image_upload"  multiple="false" />
+            <input type="hidden" name=" post_attach_id" id="post_attach_id" value="0" />
+            <?php //wp_nonce_field( 'my_image_upload', 'my_image_upload_nonce' ); ?>
             <script type="text/javascript">
                 jQuery(document).ready(function($) {
                     $('#datetimepicker-start , #datetimepicker-end').datetimepicker();

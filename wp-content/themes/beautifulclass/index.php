@@ -246,7 +246,7 @@ get_header(); ?>
                                                     <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
                                                     <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                                 </div>
-                                                <div class="image"><?php //the_post_thumbnail( 'post-thumb-wide' ); ?></div>
+                                                <div class="image"><?php echo wp_get_attachment_image( $result->attachment_id, 'post-thumb-wide' ) ?></div>
                                                 <div class="event-wrapper">
                                                     <h5 class="title"> <a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
                                                     <div class="meta">

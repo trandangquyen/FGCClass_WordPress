@@ -9,6 +9,8 @@ foreach ( $results as $result )
     $post_content = $result->event_post_content;
     $post_status = $result->event_post_status;
     $post_id = $result->id;
+    $current_attachment_id = $result->attachment_id;
+
 }
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $show_event_time_start = new DateTime($show_event_time_start);
@@ -21,7 +23,7 @@ $show_event_time_end  = date_format($show_event_time_end ,"m/d/Y h:i A");
     <div class="col-sm-8">
         <a href="?page=event.add-new-event&action=add" class="add-eventbt btn btn-primary" role="button">Thêm sự kiện</a>
         <h2>Sửa sự kiện</h2>
-        <form action="?page=event.add-new-event" method="post">
+        <form action="?page=event.add-new-event" method="post" enctype="multipart/form-data">
             <?php
             // Add a nonce field
             wp_nonce_field('MyNonceAction', 'ticket_nonce');
@@ -63,6 +65,10 @@ $show_event_time_end  = date_format($show_event_time_end ,"m/d/Y h:i A");
 
                 </div>
             </div>
+            <div class="current-thumbnail"><?php echo wp_get_attachment_image( $current_attachment_id, 'post-thumb-wide' ) ;?></div>
+            <input type="file" name="my_image_upload" id="my_image_upload"  multiple="false" />
+            <input type="hidden" name="post_attach_id" id="post_attach_id" value="0" />
+            <input type="hidden" name="current_attachment_id" id="current_attachment_id" value="<?php echo $current_attachment_id; ?>" />
             <script type="text/javascript">
                 jQuery(document).ready(function($) {
                     $('#datetimepicker-start , #datetimepicker-end').datetimepicker();

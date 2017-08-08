@@ -248,7 +248,7 @@ get_header(); ?>
                                                 </div>
                                                 <div class="image"><?php echo wp_get_attachment_image( $result->attachment_id, 'post-thumb-wide' ) ?></div>
                                                 <div class="event-wrapper">
-                                                    <h5 class="title"> <a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
+                                                    <h5 class="title"> <a href="event/event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
                                                     <div class="meta">
                                                         <div class="time"> <i class="fa fa-clock-o"></i><?php echo $result->event_post_start.' - '.$result->event_post_end; ?></div>
                                                         <div class="location"> <i class="fa fa-map-marker"></i><?php echo $result->event_post_location; ?></div>

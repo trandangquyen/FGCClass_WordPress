@@ -31,7 +31,7 @@ class FGC_Manager{
     }
     // Update CSS and JS within in Admin area
     public function admin_style() {
-        wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.min.css');
+        wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.css');
         wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_URL.'css/bootstrap-datetimepicker.min.css');
         wp_enqueue_style('admin-styles', FGC_ENDIR_URL.'css/admin-style.css');
         //wp_enqueue_script( 'admin-jquery', FGC_ENDIR_URL. 'js/jquery.min.js', array(), 'v1', false );

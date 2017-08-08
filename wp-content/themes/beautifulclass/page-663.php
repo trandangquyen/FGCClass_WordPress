@@ -57,6 +57,7 @@ else $category_id = '';
                                                 "
                                     );
                                     foreach ( $results as $key => $result ):
+                                        $current_attachment_id = $result->attachment_id;
                                         ?>
 
                                             <div class="item-event post-<?php $post->ID ?> tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access">
@@ -64,8 +65,8 @@ else $category_id = '';
                                                     <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
                                                     <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                                 </div>
-                                                <div class="image"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></div>
-                                                <div class="event-wrapper"><h5 class="title"><a href="event/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
+                                                <div class="image"><?php echo wp_get_attachment_image( $current_attachment_id, 'post-thumb-wide' ) ;?></div>
+                                                <div class="event-wrapper"><h5 class="title"><a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
                                                     <div class="meta">
                                                         <div class="time"><i class="fa fa-clock-o"></i><?php echo $result->event_post_start.' - '.$result->event_post_end; ?></div>
                                                         <div class="location"><i class="fa fa-map-marker"></i><?php echo $result->event_post_location; ?></div>
@@ -87,6 +88,7 @@ else $category_id = '';
                                                 "
                                     );
                                     foreach ( $results as $key => $result ):
+                                        $current_attachment_id = $result->attachment_id;
                                         ?>
 
                                         <div class="item-event post-<?php $post->ID ?> tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access">
@@ -94,8 +96,8 @@ else $category_id = '';
                                                 <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
                                                 <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                             </div>
-                                            <div class="image"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></div>
-                                            <div class="event-wrapper"><h5 class="title"><a href="event/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
+                                            <div class="image"><?php echo wp_get_attachment_image( $current_attachment_id, 'post-thumb-wide' ) ;?></div>
+                                            <div class="event-wrapper"><h5 class="title"><a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
                                                 <div class="meta">
                                                     <div class="time"><i class="fa fa-clock-o"></i><?php echo $result->event_post_start.' - '.$result->event_post_end; ?></div>
                                                     <div class="location"><i class="fa fa-map-marker"></i><?php echo $result->event_post_location; ?></div>
@@ -117,6 +119,7 @@ else $category_id = '';
                                                 "
                                     );
                                     foreach ( $results as $key => $result ):
+                                        $current_attachment_id = $result->attachment_id;
                                         ?>
 
                                         <div class="item-event post-<?php $post->ID ?> tp_event type-tp_event status-tp-event-happenning has-post-thumbnail hentry pmpro-has-access">
@@ -124,8 +127,8 @@ else $category_id = '';
                                                 <div class="date"><?php  echo get_the_date( 'd' ) ?></div>
                                                 <div class="month"><?php  echo get_the_date( 'F' ) ?></div>
                                             </div>
-                                            <div class="image"><?php the_post_thumbnail( 'post-thumb-wide' ); ?></div>
-                                            <div class="event-wrapper"><h5 class="title"><a href="event/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
+                                            <div class="image"><?php echo wp_get_attachment_image( $current_attachment_id, 'post-thumb-wide' ) ;?></div>
+                                            <div class="event-wrapper"><h5 class="title"><a href="event-detail/?event_id=<?php echo $result->id ?>"> <?php echo $result->event_post_title; ?></a></h5>
                                                 <div class="meta">
                                                     <div class="time"><i class="fa fa-clock-o"></i><?php echo $result->event_post_start.' - '.$result->event_post_end; ?></div>
                                                     <div class="location"><i class="fa fa-map-marker"></i><?php echo $result->event_post_location; ?></div>

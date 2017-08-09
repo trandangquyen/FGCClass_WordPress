@@ -12,17 +12,17 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ; ?>/images/template/fav.ico.png">
+    <?php wp_head(); ?>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ; ?>/images/template/fav.ico.png">
     <link rel="apple-touch-icon image_src" href="images/template/fav.ico.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="return ran_col()">
     <!-- Begin Header -->
     <div id="wrapper-container" class="wrapper-container">
         <div class="content-pusher">
@@ -169,10 +169,10 @@
                                                         <div class="lpr_course course-grid-1">
                                                             <div class="course-item">
                                                                 <div class="course-thumbnail">
-                                                                    <a href="#"><img src="images/course-4-450x450.jpg" alt="Introduction LearnPress – LMS plugin" title="course-4" width="450" height="450"></a>
+                                                                    <a href="#"><img src="images/course-4-450x450.jpg" alt="Introduction LearnPress ï¿½ LMS plugin" title="course-4" width="450" height="450"></a>
                                                                 </div>
                                                                 <div class="thim-course-content">
-                                                                    <h2 class="course-title"> <a href="#"> Introduction LearnPress – LMS plugin</a></h2>
+                                                                    <h2 class="course-title"> <a href="#"> Introduction LearnPress ï¿½ LMS plugin</a></h2>
                                                                     <div class="course-meta">
                                                                         <div class="course-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                                                                             <div class="value free-course" itemprop="price"> Free</div>

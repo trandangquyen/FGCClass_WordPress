@@ -1,5 +1,4 @@
 <?php
-
 /**
  * beautifulclass functions and definitions
  *
@@ -130,12 +129,11 @@ function beautifulclass_scripts() {
     wp_enqueue_script('beautifulclass-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), 'v1', true);
     wp_enqueue_script('beautifulclass-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), 'v1', true);
     wp_enqueue_script('beautifulclass-homepage', get_template_directory_uri() . '/js/homepage.js', array(), 'v1', true);
-    
+
 //    wp_enqueue_script('voice-recorder-app', get_template_directory_uri() . '/js/voiceRecorder/js/app.js');
 //    wp_enqueue_script('voice-recorder-jquery', get_template_directory_uri() . '/js/voiceRecorder/js/jquery.js');
     wp_enqueue_script('voice-recorder-jquery', get_template_directory_uri() . '/js/voiceRecorder/src/Fr.voice.js');
     wp_enqueue_script('voice-recorder-jquery', get_template_directory_uri() . '/js/voiceRecorder/src/recorder.js');
-    
 }
 
 add_action('wp_enqueue_scripts', 'beautifulclass_scripts');
@@ -165,7 +163,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-require get_template_directory() . '/inc/custom-quotes-page.php';
+//require get_template_directory() . '/inc/custom-quotes-page.php';
 
 // Functions that customed by user
 
@@ -215,4 +213,14 @@ function content($post_content, $limit) {
     $content = apply_filters('the_content', $content);
     $content = str_replace(']]>', ']]&gt;', $content);
     return $content;
+}
+
+function audio_recorder() {
+    ?>
+    <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="E:\Musics\Nice\Betrayal.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <?php
 }

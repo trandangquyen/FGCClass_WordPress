@@ -104,7 +104,7 @@ class FGCQuotesAndCountdown {
                 if ($quote)
                     printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr('notice notice-error'), esc_html('Quote ' . $quote_contents . '  exist!'));
                 else {
-                    $wpdb->insert('wp_fgc_quotes', array('quote_name' => $quote_name, 'quote_contents' => $quote_contents, 'quote_author' => $quote_author));
+                    $wpdb->insert('wp_fgc_quotes', array('quote_contents' => $quote_contents, 'quote_author' => $quote_author));
                     printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr('notice notice-success'), esc_html('Add quote with contents <i> ' . $quote_contents . '</i> success!'));
                 }
             }
@@ -235,7 +235,7 @@ class FGCQuotesAndCountdown {
     }
 
     
-
+// dc chua nhi :) vl có 1 chự =))
     function show_quotes() {
         global $wpdb;
         $fgc_quotes = (array) $wpdb->get_results("SELECT * FROM wp_fgc_quotes");
@@ -354,14 +354,16 @@ class FGCQuotesAndCountdown {
     }
 function register_quote_shortcode(){
     ob_start();
-    show_quotes();
+    $this->show_quotes();
     return ob_get_clean();
 }
     
 }
+$fgc = new FGCQuotesAndCountdown();
 // Registration new shortcode name [custom_quotes]
-add_shortcode('custom_quotes', array('FGCQuotesAndCountdown','register_quote_shortcode'));
+add_shortcode('custom_quotes', array($fgc,'register_quote_shortcode'));
 
 // Registration Activation Hook
-register_activation_hook( __FILE__, array('FGCQuotesAndCountdown', 'plugin_install'));
-new FGCQuotesAndCountdown();
+register_activation_hook( __FILE__, array($fgc, 'quotes_plugin_install'));
+
+

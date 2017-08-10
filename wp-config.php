@@ -33,7 +33,36 @@ if($_SERVER["SERVER_NAME"]==="localhost") {
 
 	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
-}elseif($_SERVER["SERVER_NAME"]==="http://dangquyen.wdev.fgct.net/FGCClass_WordPress/"){
+}elseif($_SERVER["SERVER_NAME"]==="http://vanhieu.wdev.fgct.net/wordpress/"){
+    define('WP_SITEURL', 'http://vanhieu.wdev.fgct.net/wordpress/');
+    define('WP_HOME', WP_SITEURL);
+    define('DB_NAME', 'vanhieu_wordpress');
+
+    /** MySQL database username */
+    define('DB_USER', 'vanhieu');
+
+    /** MySQL database password */
+    define('DB_PASSWORD', 'hieu.123456');
+
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
+
+}elseif(strpos($_SERVER["SERVER_NAME"], 'vanhieu.wdev.fgct.net') !== false) {
+	define('WP_SITEURL', 'http://vanhieu.wdev.fgct.net/wordpress/');
+	define('WP_HOME', WP_SITEURL);
+	define('DB_NAME', 'vanhieu_wordpress');
+
+	/** MySQL database username */
+	define('DB_USER', 'vanhieu');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'hieu.123456');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
+
+elseif($_SERVER["SERVER_NAME"]==="http://dangquyen.wdev.fgct.net/FGCClass_WordPress/"){
     define('WP_SITEURL', 'http://dangquyen.wdev.fgct.net/FGCClass_WordPress/');
     define('WP_HOME', WP_SITEURL);
     define('DB_NAME', 'dangquyen_fgcclass');

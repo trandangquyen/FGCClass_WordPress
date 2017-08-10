@@ -1290,7 +1290,7 @@ function wp_comment_form_unfiltered_html_nonce() {
  * @param bool   $separate_comments Optional. Whether to separate the comments by comment type.
  *                                  Default false.
  */
-function comments_template( $file = '/comments.php', $separate_comments = false ) {
+function comments_template( $file = '/comments-audio.php', $separate_comments = false ) {
 	global $wp_query, $withcomments, $post, $wpdb, $id, $comment, $user_login, $user_ID, $user_identity, $overridden_cpage;
 
 	if ( !(is_single() || is_page() || $withcomments) || empty($post) )

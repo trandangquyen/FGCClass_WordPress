@@ -21,6 +21,8 @@ class Packages
 
         add_filter('post_row_actions', array($this, 'rowActions'), 10, 2);
 
+        add_action( 'quick_edit_custom_box', array($this, 'quickEditForm'), 10, 2 );
+
 
     }
 
@@ -148,6 +150,11 @@ class Packages
             $actions['download_link'] = '<a title="'.__('Direct Download','download-manager').'" href="'.\WPDM\Package::getMasterDownloadURL($post->ID).'" class="view_stats"><i class="fa fa-download text-success"></i></a>';
 
         return $actions;
+    }
+
+    function quickEditForm($column_name, $post_type){
+
+
     }
 
 

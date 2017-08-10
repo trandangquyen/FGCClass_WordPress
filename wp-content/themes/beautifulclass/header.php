@@ -169,7 +169,7 @@
                                                         <div class="lpr_course course-grid-1">
                                                             <div class="course-item">
                                                                 <div class="course-thumbnail">
-                                                                    <a href="#"><img src="images/course-4-450x450.jpg" alt="Introduction LearnPress � LMS plugin" title="course-4" width="450" height="450"></a>
+                                                                    <a href="#"><img src="#" alt="Introduction LearnPress � LMS plugin" title="course-4" width="450" height="450"></a>
                                                                 </div>
                                                                 <div class="thim-course-content">
                                                                     <h2 class="course-title"> <a href="#"> Introduction LearnPress � LMS plugin</a></h2>

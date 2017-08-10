@@ -14,7 +14,8 @@ class Settings
     }
 
     function Menu(){
-        add_submenu_page('edit.php?post_type=wpdmpro', __('Settings &lsaquo; Download Manager','download-manager'), __('Settings','download-manager'), WPDM_MENU_ACCESS_CAP, 'settings', array($this, 'UI'));
+        $menu_access_cap = apply_filters('wpdm_admin_menu_settings', WPDM_MENU_ACCESS_CAP);
+        add_submenu_page('edit.php?post_type=wpdmpro', __('Settings &lsaquo; Download Manager','download-manager'), __('Settings','download-manager'), $menu_access_cap, 'settings', array($this, 'UI'));
 
     }
 

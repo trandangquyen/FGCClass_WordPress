@@ -3,7 +3,7 @@
 
     <div class="panel panel-default" id="wpdm-wrapper-panel">
         <div class="panel-heading">
-            <button type="button" id="cdh" class="btn btn-default pull-right" style="font-weight: 600"><i class="sinc fa fa-refresh color-green"></i> &nbsp; <?php _e("Clear Download History",'download-manager'); ?></button>
+            <button type="button" id="cdh" class="btn btn-default btn-sm pull-right" style="font-weight: 600"><i class="sinc fa fa-refresh color-green"></i><?php _e("Clear Download History",'download-manager'); ?></button>
             <b><i class="fa fa-bar-chart-o color-purple"></i> &nbsp; <?php echo __('Download History','download-manager'); ?></b>
 
         </div>

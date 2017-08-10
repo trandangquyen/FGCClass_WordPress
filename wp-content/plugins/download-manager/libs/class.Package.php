@@ -1023,6 +1023,8 @@ class Package {
         if ($vars['download_link'] == 'loginform' && $type == 'link') return "";
         if ($vars['download_link'] == 'loginform' && $type == 'page') return $hide_all_message;
 
+        wp_reset_query();
+
         return @str_replace($keys, $values, @stripcslashes($template));
     }
 

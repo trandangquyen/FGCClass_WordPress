@@ -7,9 +7,9 @@ Author: Quyền - Brian
 Version: 1.0
 Author URI: http://brian.com
 */
-define('FGC_ENDIR_PATH',plugin_dir_path(__FILE__) );
-define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
-class FGC_Manager{
+define('FGC_ENDIR_FODPATH',plugin_dir_path(__FILE__) );
+define('FGC_ENDIR_FODURL',plugin_dir_url(__FILE__) );
+class FGC_TE_Manager{
     function __construct()
     {
         //add js vs css to admin panel
@@ -26,22 +26,20 @@ class FGC_Manager{
         add_filter( 'manage_events_posts_columns', array($this,'set_custom_edit_events_columns') );
         //Add values of the column 'Sự kiện bài viết' to events postype
         add_action( 'manage_events_posts_custom_column' , array($this,'custom_events_column'), 10, 2 );
-
     }
     // Update CSS and JS within in Admin area
     function admin_style() {
-        wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.min.css');
-        wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_URL.'css/bootstrap-datetimepicker.min.css');
-        wp_enqueue_style('admin-styles', FGC_ENDIR_URL.'css/admin-style.css');
-        wp_enqueue_script( 'admin-jquery', FGC_ENDIR_URL. 'js/jquery.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-moment', FGC_ENDIR_URL. 'js/moment.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-bootstrap', FGC_ENDIR_URL. 'js/bootstrap.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-datetimepickerjs', FGC_ENDIR_URL. 'js/bootstrap-datetimepicker.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-fgc-customjs', FGC_ENDIR_URL. 'js/fgc-teacher-plugin.js', array(), 'v1', false );
-
-
+        wp_enqueue_style('admin-boostrap', FGC_ENDIR_FODURL.'css/bootstrap.min.css');
+        wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_FODURL.'css/bootstrap-datetimepicker.min.css');
+        wp_enqueue_style('admin-styles', FGC_ENDIR_FODURL.'css/admin-style.css');
+        //wp_enqueue_script( 'admin-jquery', FGC_ENDIR_URL. 'js/jquery.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-moment', FGC_ENDIR_FODURL. 'js/moment.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-bootstrap', FGC_ENDIR_FODURL. 'js/bootstrap.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-datetimepickerjs', FGC_ENDIR_FODURL. 'js/bootstrap-datetimepicker.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-fgc-customjs', FGC_ENDIR_FODURL. 'js/fgc-teacher-plugin.js', array(), 'v1', false );
 
     }
+
     // Create post type events
     function codex_events_init(){
     	$labels = array(
@@ -270,7 +268,7 @@ class FGC_Manager{
                     </div>
 
                     <script type="text/javascript">
-                        $(function() {
+                        jQuery(document).ready(function($) {
                             $('#datetimepicker-start , #datetimepicker-end').datetimepicker();
                         });
                     </script>
@@ -319,4 +317,4 @@ class FGC_Manager{
     }
 
 }
-$fgc_manager = new FGC_Manager();
+$fgc_manager = new FGC_TE_Manager();

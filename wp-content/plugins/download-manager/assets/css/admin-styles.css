@@ -117,9 +117,9 @@ a:focus, a:active{ box-shadow: none !important; }
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     color: #fff;
-    content: "\f058";
+    content: "\f00c";
     font-family: FontAwesome;
-    font-size: 16pt;
+    font-size: 13pt;
     height: 100%;
     margin: -15px 0 0 -60px;
     padding-top: 15px;
@@ -318,16 +318,24 @@ a:focus, a:active{ box-shadow: none !important; }
 .w3eden ul.nav li a:focus,
 .w3eden ul.nav li a{
     outline: none !important;
+    -webkit-transition: ease-in-out 300ms;
+    -moz-transition: ease-in-out 300ms;
+    -ms-transition: ease-in-out 300ms;
+    -o-transition: ease-in-out 300ms;
+    transition: ease-in-out 300ms;
 }
 
 .w3eden .panel-primary {
     border-color: #2080D3;
 }
 
-.w3eden .nav-pills li.active a,
-.w3eden .btn-primary,
+
 .w3eden .panel-primary > .panel-heading{
-    background-image: linear-gradient(to bottom, #2081D5 0px, #1B6CB2 100%) !important;
+    background-image: linear-gradient(to left, #0891ff 0px, #0681e4 100%) !important;
+}
+
+.w3eden .nav-pills li.active a{
+    background-image: linear-gradient(to left, #0891ff 0px, #0681e4 100%) !important;
 }
 .w3eden .panel-default > .panel-heading {
     background-image: linear-gradient(to bottom, #F5F5F5 0px, #E1E1E1 100%);
@@ -394,9 +402,7 @@ a:focus, a:active{ box-shadow: none !important; }
     background: #F5F5F5;
 }
 #wpdm-wrapper-panel > .settings-panel-body{
-    padding-top: 115px;
-    border-radius: 0;
-    background: transparent none repeat scroll 0% 0%;
+    padding-top: 110px; border-radius: 0px; background: transparent none repeat scroll 0% 0%;
     max-width: 1000px;
 }
 #wpdm-wrapper-panel .settings-tabs a{
@@ -404,8 +410,14 @@ a:focus, a:active{ box-shadow: none !important; }
     border: 1px solid #ddd;
 }
 #wpdm-wrapper-panel .settings-tabs li.active a{
-    border: 1px solid #0F75C3;
+    border: 1px solid #0681e4;
+    box-shadow: 0 0 5px rgba(0, 141, 255, 0.3) !important;
 }
+
+#wpdm-wrapper-panel .settings-tabs li:not(.active) a .fa {
+    color: #1191f9;
+}
+
 #wpdm-wrapper-panel .settings-tabs a:hover{
     background: #fafafa;
 }
@@ -517,6 +529,12 @@ a:focus, a:active{ box-shadow: none !important; }
 #fm_settings .nav-tabs li.active a{ background: #F1F1F1 !important; }
 #wpdm-files th {  background: #eeeeee;  border-bottom: 0 none;  }
 
+#fm_settings .panel-body .panel,
+#fm_settings .panel-body .panel-heading {
+    background-image: none;
+    border-radius: 0;
+}
+
 .file-access-settings label {
     margin-right: 10px !important;
 }
@@ -550,4 +568,28 @@ a:focus, a:active{ box-shadow: none !important; }
 
 #wpdmpp_lastest_orders .w3eden .list-group-item .pull-right .badge{
     background: #8557D3;
+}
+
+.panel.panel-default.panel-flat,
+.panel.panel-default.panel-flat .panel-heading{
+    background-image: none !important;
+}
+.panel.panel-default.panel-flat .wp-editor-container{
+    border: 0 !important;
+}
+.panel.panel-default.panel-flat .panel-heading {
+    border-bottom: 1px solid #dddddd !important;
+    background: #F9F9F9 !important;
+}
+.bootstrap-select select{
+    display: none !important;
+}
+.input-group-addon .bootstrap-select{
+    height: 32px;
+}
+.bootstrap-select .btn{
+    border-radius: 3px !important;
+}
+.input-group-addon .bootstrap-select .btn{
+    border: 0;
 }

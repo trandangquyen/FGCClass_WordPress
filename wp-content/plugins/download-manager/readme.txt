@@ -149,6 +149,12 @@ Check download stats and get a push notification when someone downloads, install
 
 == Changelog ==
 
+= 2.9.54 =
+* Fixed issue with captcha verify
+* Fixed issue with private file download
+* Fixed issue with tag archive page
+* Improved admin UI
+
 = 2.9.53 =
 * Fixed the issue with download history clear button
 * Fixed the issue with datatable sorting

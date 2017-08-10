@@ -15,11 +15,9 @@
 
 get_header(); ?>
 <?php
-$categories = get_categories(array(
-    'taxonomy' => 'wpdmcategory',
-));
+$categories = get_queried_object();
 if(!empty($categories))
-    $category_id = $categories[0]->slug;
+    $category_id = $categories->slug;
 else $category_id = '';
 
 ?>
@@ -52,8 +50,7 @@ else $category_id = '';
                             <div class="course-index">
                                     <span>
                                         <?php
-                                        $category = get_category(25);
-                                        $total_post = $category->category_count;
+                                        $total_post = $categories->count;
                                         ?>
 
                                         <?php if($total_post>0): ?>

@@ -153,6 +153,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/custom-quotes-page.php';
 
 // Functions that customed by user
 

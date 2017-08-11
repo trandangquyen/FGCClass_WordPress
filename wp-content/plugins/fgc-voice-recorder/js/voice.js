@@ -6,6 +6,7 @@ let log = console.log.bind(console),
   gUMbtn = id('gUMbtn'),
   start = id('start'),
   stop = id('stop'),
+  status = id('current-status'),
   stream,
   recorder,
   counter=1,
@@ -47,7 +48,8 @@ gUMbtn.onclick = e => {
 start.onclick = e => {
   start.disabled = true;
   stop.removeAttribute('disabled');
-  chunks=[];
+  status.innerHTML = "Đang ghi âm...";
+    chunks=[];
   recorder.start();
 }
 
@@ -55,6 +57,7 @@ start.onclick = e => {
 stop.onclick = e => {
   stop.disabled = true;
   recorder.stop();
+  status.innerHTML = "Đã dừng ghi âm.";
   start.removeAttribute('disabled');
 }
 

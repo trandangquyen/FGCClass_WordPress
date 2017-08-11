@@ -78,12 +78,33 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'beautifulclass' ); ?></p>
 	<?php
 	endif;
+    ?>
+
+    <div id="gUMArea">
+        <div>
+            Chọn định dạng ghi âm:
+            <input type="radio" name="media" value="video"  id="mediaVideo">Video
+            <input type="radio" name="media" value="audio" id="mediaAudio" checked>Audio
+        </div>
+        <button class="btn btn-default" id="gUMbtn">Xác nhận</button>
+    </div>
+    <div id="btns">
+        <div id="current-status"></div>
+        <button class="btn btn-default" id="start">Start</button>
+        <button class="btn btn-default" id="stop">Stop</button>
+    </div>
+    <div>
+        <ul class="list-unstyled" id="ul"></ul>
+    </div>
+    <script src="<?php echo FGC_VOICE_FODURL ?>js/voice.js"></script>
+
+    <?php
     $comments_args = array(
         'title_reply'       => __( 'Để lại một bình luận' ),
         'title_reply_to'    => __( 'Gửi một bình luận cho %s' ),
         'cancel_reply_link' => __( 'Hủy Bình Luận' ),
         'label_submit'      => __( 'Gửi Bình Luận' ),
-        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Nội dung', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'comment_field' => '<p class="comment-form-comment"><label for="comment" style="display: block; clear: both;">' . _x( 'Nội dung', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
         );
 	comment_form($comments_args);
 	?>

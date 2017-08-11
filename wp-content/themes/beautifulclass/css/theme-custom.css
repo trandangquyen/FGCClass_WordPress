@@ -45,6 +45,10 @@ body.thim-body-preload {
   width: 40px;
 }
 
+#attachmentForm > p {
+  clear: both;
+}
+
 footer#colophon.has-footer-bottom {
   margin-bottom: 0;
 }

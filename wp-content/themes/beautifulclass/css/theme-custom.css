@@ -148,16 +148,6 @@ li.comment {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
-  .eft-simple-table td {
-    padding: 0 15px;
-  }
-
-  .eft-simple-table td p {
-    margin: 20px 0;
-    font-size: 14px;
-  }
-}
 .comment-content {
   padding-left: 20px;
 }
@@ -256,7 +246,7 @@ h1.page-title {
 }
 
 .post-thumbnail::before {
-  content: "\f0a2";
+  content: "\f06e";
   width: 30px;
   height: 30px;
   font-size: 17px !important;
@@ -386,6 +376,10 @@ a.course-readmore {
   -o-transform: scale(1.05, 1.05);
 }
 
+#bai-nghe .post-thumbnail::before {
+  content: "\f1c7";
+}
+
 #bai-doc .post-thumbnail::before {
   content: "\f028";
 }
@@ -394,16 +388,44 @@ a.course-readmore {
   content: "\f0a1";
 }
 
-#truyen-cuoi .post-thumbnail::before {
-  content: "\f118";
-}
-
 #bai-viet .post-thumbnail::before {
   content: "\f040";
 }
 
+#truyen-cuoi .post-thumbnail::before {
+  content: "\f118";
+}
+
+#intermediate .post-thumbnail::before {
+  content: "\f255";
+}
+
+#pre-intermediate .post-thumbnail::before {
+  content: "\f25a";
+}
+
+#upper-intermediate .post-thumbnail::before {
+  content: "\f25b";
+}
+
 #learn-via-videos .post-thumbnail::before {
   content: "\f03d";
+}
+
+#ky-nang-nghe .post-thumbnail::before {
+  content: "\f1c7";
+}
+
+#ky-nang-noi .post-thumbnail::before {
+  content: "\f028";
+}
+
+#ky-nang-doc .post-thumbnail::before {
+  content: "\f1c2";
+}
+
+#ky-nang-viet .post-thumbnail::before {
+  content: "\f14b";
 }
 
 .entry-content .w3eden img {
@@ -416,7 +438,7 @@ a.course-readmore {
 }
 #lp-download-courses article .w3eden {
   position: absolute;
-  top: 65px;
+  top: 88px;
   height: 66px;
 }
 #lp-download-courses article a.wpdm-download-link {
@@ -446,6 +468,86 @@ article .entry-header {
 }
 .wrapper-box-icon.overlay .smicon-read .fa-chevron-right:before {
   transition: all .15s ease-in;
+}
+
+.seprate-footer {
+  margin-top: 25px;
+}
+
+.owl-next, .owl-next .fa, .owl-prev, .owl-prev .fa, a, button, input[type=submit] {
+  -webkit-transition: all .15s;
+  -khtml-transition: all .15s;
+  -moz-transition: all .15s;
+  -ms-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all 0.15s;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #3c3c3c;
+  margin: 9px 5px;
+  padding: 1px 18px;
+  border: 1px solid #787878;
+  background: #fff;
+  border-radius: 0;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: #ffffff;
+  color: #ffb606;
+}
+
+.thim-widget-carousel-post .owl-theme .owl-nav [class*=owl-]:hover {
+  background: #ffffff;
+  color: #ffb606;
+}
+
+.thim-widget-carousel-post .owl-theme .owl-nav [class*=owl-] {
+  color: #ffffff;
+  margin: 9px 5px;
+  padding: 1px 18px;
+  border: 1px solid #ffffff;
+  background: none;
+  border-radius: 0;
+}
+
+.mo_openid_selected_tab {
+  border-bottom: 2px solid #ffb606;
+}
+
+#english-books .thim-course-grid .col-sm-4 {
+  height: 222px;
+  overflow: hidden;
+}
+
+.thim-list-event .item-event .event-wrapper .meta div {
+  font-size: 12px;
+}
+
+/* -------------------------Media screen-------------- */
+@media (min-width: 768px) {
+  .eft-simple-table td {
+    padding: 0 15px;
+  }
+
+  .eft-simple-table td p {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .thim-course-grid .col-sm-4 {
+    height: 381px;
+    overflow: hidden;
+  }
+
+  .site-main-category .col-sm-4 {
+    height: 455px;
+    overflow: hidden;
+  }
+  .site-main-category .col-md-3 {
+    height: 360px;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=theme-custom.css.map */

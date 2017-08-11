@@ -93,6 +93,9 @@
                 loop: true,
                 margin: 10,
                 responsiveClass: true,
+                nav: true,
+                dots: false,
+                navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
                 rewind: true,
                 responsive: {
                   0: {

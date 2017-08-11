@@ -17,7 +17,7 @@ $fgc_quotes_countdown_config = [
     'table_countdown' => $wpdb->prefix . 'fgc_countdown_timer',
 ];
 
-class FGCQuotesAndCountdown {
+class FGCQuotes {
 
     public $quotes;
 
@@ -211,7 +211,7 @@ class FGCQuotesAndCountdown {
 
     function manager_quotes() {
 
-        $quote = new FGCQuotesAndCountdown();
+        $quote = new FGCQuotes();
         $action = isset($_GET['action']) ? $_GET['action'] : null;
         $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
         switch ($action) {
@@ -232,10 +232,8 @@ class FGCQuotesAndCountdown {
                 break;
         }
         //$class->list_class();
-    }
+    }   
 
-    
-// dc chua nhi :) vl có 1 chự =))
     function show_quotes() {
         global $wpdb;
         $fgc_quotes = (array) $wpdb->get_results("SELECT * FROM wp_fgc_quotes");
@@ -341,8 +339,8 @@ class FGCQuotesAndCountdown {
                     $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Friendly', 'quote_contents' => 'We must let go of the life we have planned, so as to accept the one that is waiting for us', 'quote_author' => 'Joseph Campbell'));
                     $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Nature', 'quote_contents' => 'Look deep into nature, and then you will understand everything better', 'quote_author' => 'Albert Einstein'));
                     $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Nature', 'quote_contents' => 'Try not to become a man of success, but rather try to become a man of value.', 'quote_author' => 'Albert Einstein'));
-                    $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Nature', 'quote_contents' => 'The Vietnamese people deeply love independence, freedom and peace. But in the face of United States aggression they have risen up, united as one man.', 'quote_author' => 'Ho Chi Minh'));
-                    $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Nature', 'quote_contents' => 'It was patriotism, not communism, that inspired me.', 'quote_author' => 'Ho Chi Minh'));
+                    $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Independence', 'quote_contents' => 'The Vietnamese people deeply love independence, freedom and peace. But in the face of United States aggression they have risen up, united as one man.', 'quote_author' => 'Ho Chi Minh'));
+                    $wpdb->insert($fgc_quotes_countdown_config['table_quotes'], array('quote_name' => 'Free', 'quote_contents' => 'It was patriotism, not communism, that inspired me.', 'quote_author' => 'Ho Chi Minh'));
                     
                     $message[] = 'Insert data class success!';
                 }                    
@@ -359,11 +357,9 @@ function register_quote_shortcode(){
 }
     
 }
-$fgc = new FGCQuotesAndCountdown();
+$fgc = new FGCQuotes();
 // Registration new shortcode name [custom_quotes]
 add_shortcode('custom_quotes', array($fgc,'register_quote_shortcode'));
 
 // Registration Activation Hook
 register_activation_hook( __FILE__, array($fgc, 'quotes_plugin_install'));
-
-

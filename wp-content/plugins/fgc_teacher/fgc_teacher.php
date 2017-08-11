@@ -3,7 +3,7 @@
 Plugin Name: FGC Manager Events & News
 Plugin URI: http://fgc.com
 Description: This plugin was created to help teachers who want to manage events...
-Author: Brian 
+Author: Quyền - Brian
 Version: 1.0
 Author URI: http://brian.com
 */
@@ -12,22 +12,31 @@ define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
 class FGC_Manager{
     function __construct()
     {
+        //add js vs css to admin panel
         add_action('admin_enqueue_scripts', array( $this, 'admin_style'));
+        //Create post type & taxonomy events
         add_action( 'init', array( $this, 'codex_events_init'));
+        // Create post type taxonomy news
         add_action( 'init', array( $this, 'codex_news_init'));
+        //Add metabox to postype events
         add_action('add_meta_boxes', array( $this, 'add_metabox_events'));
+        //Update news post when user click on the button 'Update' inside post edit area
         add_action('save_post', array($this,'save_selected_event'), 10, 3);
+        //Add column 'Sự kiện bài viết' to events postype
         add_filter( 'manage_events_posts_columns', array($this,'set_custom_edit_events_columns') );
+        //Add values of the column 'Sự kiện bài viết' to events postype
         add_action( 'manage_events_posts_custom_column' , array($this,'custom_events_column'), 10, 2 );
-
     }
-    function set_post_type(){
-        global $typenow;
-        $typenow = 'exercises';
-    }
-    // Update CSS within in Admin
+    // Update CSS and JS within in Admin area
     function admin_style() {
+        wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.min.css');
+        wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_URL.'css/bootstrap-datetimepicker.min.css');
         wp_enqueue_style('admin-styles', FGC_ENDIR_URL.'css/admin-style.css');
+        //wp_enqueue_script( 'admin-jquery', FGC_ENDIR_URL. 'js/jquery.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-moment', FGC_ENDIR_URL. 'js/moment.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-bootstrap', FGC_ENDIR_URL. 'js/bootstrap.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-datetimepickerjs', FGC_ENDIR_URL. 'js/bootstrap-datetimepicker.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-fgc-customjs', FGC_ENDIR_URL. 'js/fgc-teacher-plugin.js', array(), 'v1', false );
     }
     // Create post type events
     function codex_events_init(){
@@ -62,7 +71,6 @@ class FGC_Manager{
 		'menu_position'      => null,
         'supports' => array('title', 'editor', 'publicize', 'excerpt', 'custom-fields', 'thumbnail', 'tags', 'comments','author')
 		);
-
 		register_post_type( 'events', $args );
         $labels = array(
             'name' => __('Tất cả danh mục','fgc-manager'),
@@ -77,7 +85,6 @@ class FGC_Manager{
             'new_item_name' => __('New Category Name','fgc-manager'),
             'menu_name' => __('Danh mục sự kiện','fgc-manager'),
         );
-
         $args = array(
             'hierarchical' => true,
             'labels' => $labels,
@@ -86,10 +93,8 @@ class FGC_Manager{
             'query_var' => true,
             'rewrite' => array('slug' =>  'events-category'),
         );
-
         register_taxonomy('eventscategory', array('events'), $args);
     }
-
     // Create post type news
     function codex_news_init(){
         $labels = array(
@@ -123,7 +128,6 @@ class FGC_Manager{
             'menu_position'      => null,
             'supports' => array('title', 'editor', 'publicize', 'excerpt', 'custom-fields', 'thumbnail', 'tags', 'comments','author')
         );
-
         register_post_type( 'news', $args );
         $labels = array(
             'name' => __('Tất cả danh mục','fgc-manager'),
@@ -138,7 +142,6 @@ class FGC_Manager{
             'new_item_name' => __('New Category Name','fgc-manager'),
             'menu_name' => __('Danh mục tin tức','fgc-manager'),
         );
-
         $args = array(
             'hierarchical' => true,
             'labels' => $labels,
@@ -147,7 +150,6 @@ class FGC_Manager{
             'query_var' => true,
             'rewrite' => array('slug' =>  'news-category'),
         );
-
         register_taxonomy('newscategory', array('news'), $args);
     }
     //add meta box with select option to events
@@ -156,50 +158,111 @@ class FGC_Manager{
     }
     // function to show events option
     function show_option_event($post,$metabox){
-        //get current info of this post
+        //Initialize the initial values
         $select_values = array('happening', 'upcoming', "expired");
-        $event_selected  = get_post_meta($post->ID,'event-post',true);
-        foreach ($select_values as $key => $value)
-        {
-            if($value == $event_selected){
-                ?>
-                <input type="radio" name="events" value="<?php echo $value?>" checked>
-                <?php switch ($value){
-                    case 'happening' :
-                        echo 'Đang diễn ra';
-                        break;
-                    case 'upcoming' :
-                        echo 'Sắp diễn ra';
-                        break;
-                    case 'expired';
-                        echo 'Đã kết thúc';
-                        break;
-                    default:
-                        return;
-                }
-                ?><br>
-                <?php
-            }
-            else{
-                ?>
-                <input type="radio" name="events" value="<?php echo $value?>">
-                <?php switch ($value) {
-                    case 'happening' :
-                        echo 'Đang diễn ra';
-                        break;
-                    case 'upcoming' :
-                        echo 'Sắp diễn ra';
-                        break;
-                    case 'expired';
-                        echo 'Đã kết thúc';
-                        break;
-                    default:
-                        echo 'Chưa cài đặt';
-                }
-                ?><br>
-                <?php
-            }
+        //start time value of the event
+        $show_event_time_start  = get_post_meta($post->ID,'event-post-time-start',true);
+        //end time value of the event
+        $show_event_time_end  = get_post_meta($post->ID,'event-post-time-end',true);
+        //location of the event
+        $show_event_time_location  = get_post_meta($post->ID,'event-post-location',true);
+        //set time zone
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        //get current date
+        $date = date('m/d/Y h:i A');
+        //convert current strings to time values
+        $date = strtotime($date);
+        $current_event_time_start = strtotime($show_event_time_start);
+        $current_event_time_end = strtotime($show_event_time_end);
+        //set current event status
+        if($date>=$current_event_time_start && $date<=$current_event_time_end) {
+            $current_event_status = 'happening';
         }
+        elseif($date<$current_event_time_start && $date<$current_event_time_end){
+            $current_event_status = 'upcoming';
+        }
+        elseif($date>$current_event_time_end)
+        {
+            $current_event_status = 'expired';
+        }
+        else{
+            //check if user not select event time
+            $current_event_status = 'expired';
+        }
+        // begin print layout
+        ?>
+            <div class="date-time-picker">
+                <div class="row">
+                    <div class='col-sm-3'>
+                        <?php
+                        foreach ($select_values as $key => $value)
+                        {
+                            if($value == $current_event_status){
+                                ?>
+                                <input id="<?php echo $current_event_status; ?>" type="radio" name="events" value="<?php echo $current_event_status; ?>" checked>
+                                <?php switch ($value){
+                                    case 'happening' :
+                                        echo '<span class="descript-ev">Đang diễn ra</span>';
+                                        break;
+                                    case 'upcoming' :
+                                        echo '<span class="descript-ev">Sắp diễn ra</span>';
+                                        break;
+                                    case 'expired';
+                                        echo '<span class="descript-ev">Đã kết thúc</span>';
+                                        break;
+                                    default:
+                                        echo '<span class="descript-ev">Đã kết thúc</span>';
+                                        break;
+                                }
+                                ?><br>
+                                <?php
+                            }//end if
+                            else{
+                                ?>
+
+                                <input id="<?php echo $value; ?>" type="radio" name="events" value="<?php echo $value; ?>" disabled readonly>
+                                <?php switch ($value) {
+                                    case 'happening' :
+                                        echo '<span class="descript-ev">Đang diễn ra</span>';
+                                        break;
+                                    case 'upcoming' :
+                                        echo '<span class="descript-ev">Sắp diễn ra</span>';
+                                        break;
+                                    case 'expired';
+                                        echo '<span class="descript-ev">Đã kết thúc</span>';
+                                        break;
+                                    default:
+                                        echo '<span class="descript-ev">Đã kết thúc</span>';
+                                        break;
+                                }
+                                ?><br>
+                                <?php
+                            }//end else
+                        }//end foreach
+                        ?>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label for="datetimepicker-start">Thời gian bắt đầu</label>
+                        <input type='text' name="datetimepicker-start" class="form-control" id='datetimepicker-start' value="<?php echo $show_event_time_start; ?>" placeholder="<?php echo (($show_event_time_start != '')? $show_event_time_start:'Chọn thời gian bắt đầu'); ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Chọn thời gian bắt đầu'"/>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label for="datetimepicker-end">Thời gian kết thúc</label>
+                        <input type='text' name="datetimepicker-end" class="form-control" id='datetimepicker-end' value="<?php echo $show_event_time_end; ?>" placeholder="<?php echo (($show_event_time_end != '')? $show_event_time_end:'Chọn thời gian kết thúc'); ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Chọn thời gian kết thúc'"/>
+                        <div class="error-time">Thời gian kết thúc nhỏ</div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <label for="event-location">Địa điểm</label>
+                        <input type='text' name="event-location" class="form-control" id='event-location' value="<?php echo $show_event_time_location; ?>" placeholder="<?php echo (($show_event_time_location != '')? $show_event_time_location:'Nhập vào địa điểm'); ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập vào địa điểm'"/>
+                    </div>
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function($) {
+                            $('#datetimepicker-start , #datetimepicker-end').datetimepicker();
+                        });
+                    </script>
+                </div>
+            </div>
+        <?php
     }
     //function to save selected the event
     function save_selected_event($post_id, $post, $update){
@@ -215,13 +278,17 @@ class FGC_Manager{
             return $post_id;
         }
         $event_post = (isset($_POST["events"])) ? $_POST["events"] : '';
-        update_post_meta($post_id, 'event-post',$event_post);
-
+        $time_start_event = (isset($_POST["datetimepicker-start"])) ? $_POST["datetimepicker-start"] : '';
+        $time_end_event= (isset($_POST["datetimepicker-end"])) ? $_POST["datetimepicker-end"] : '';
+        $event_location = (isset($_POST["event-location"])) ? $_POST["event-location"] : '';
+        update_post_meta($post_id, 'event-post',$event_post);//Assign value to the post meta with event-post key
+        update_post_meta($post_id, 'event-post-time-start',$time_start_event);//Assign value to the post meta with event-post-time-start key
+        update_post_meta($post_id, 'event-post-time-end',$time_end_event);//Assign value to the post meta with event-post-time-end key
+        update_post_meta($post_id, 'event-post-location',$event_location);//Assign value to the post meta with event-post-location key
     }
     // function to add the event column
     function set_custom_edit_events_columns($columns) {
         $columns['statusofevent'] = __( 'Sự kiện bài viết', 'your_text_domain' );
-
         return $columns;
     }
     //function to show value of the event column
@@ -230,12 +297,6 @@ class FGC_Manager{
             case 'statusofevent' :
                 echo get_post_meta( $post_id , 'event-post' , true );
                 break;
-
         }
     }
-
-
-
-
 }
-$fgc_manager = new FGC_Manager();

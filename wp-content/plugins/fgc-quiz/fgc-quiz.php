@@ -59,6 +59,7 @@ class FGC_Quiz {
     function create_menu() {
         $menuSlug = basename(__FILE__);
         add_menu_page('FGC Quiz Manager', 'FGC Quiz Manager', 'administrator', $menuSlug, array( $this, 'manager_class'),null,2);//fgc_settings_page
+//        add_men
         add_submenu_page($menuSlug, "Class Manager", "Class", 'manage_options', $menuSlug . '-list-class',array( $this, 'manager_class'));
         add_submenu_page($menuSlug, "Timetable Manager", "Timetable", 'manage_options', $menuSlug . '-timetable',array( $this, 'manager_timetable'));
         add_submenu_page($menuSlug, "Game Manager", "Game", 'manage_options', $menuSlug . '-game',array( $this, 'manager_game'));

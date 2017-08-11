@@ -230,7 +230,7 @@ function print_box_select_quiz($post) {
 }
 add_action('save_post','save_post_meta_quiz_id');
 function save_post_meta_quiz_id($post_id) {
-    $quiz_id = (int) $_POST['quiz_id']; // when add new
+    $quiz_id = isset($_POST['quiz_id'])?(int) $_POST['quiz_id']:0; // when add new
     if($quiz_id) {
         update_post_meta( $post_id, '_quiz_id', $quiz_id);
     } else delete_post_meta($post_id, '_quiz_id');

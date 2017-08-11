@@ -264,7 +264,7 @@ function wpdm_getlink()
 
     if(isset($_POST['reCaptchaVerify'])){
         $ret = wp_remote_post('https://www.google.com/recaptcha/api/siteverify', array('method' => 'POST', 'body' => array('secret' => get_option('_wpdm_recaptcha_secret_key'), 'response' => $_POST['reCaptchaVerify'], 'remoteip' => $_SERVER['REMOTE_ADDR'])));
-        $ret = json_decode($ret->body);
+        $ret = json_decode($ret['body']);
         if($ret->success == 1){
             $_SESSION['_wpdm_unlocked_'.$file['ID']] = 1;
             update_post_meta($file['ID'], "__wpdmkey_".$key, 3);

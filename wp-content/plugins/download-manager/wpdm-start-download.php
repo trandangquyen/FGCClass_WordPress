@@ -18,7 +18,7 @@ $speed = apply_filters('wpdm_download_speed', $speed);
 
 //get_currentuserinfo();
 
-if($package['post_status'] != 'publish') wp_die(__('Package is not available!','download-manager'));
+if(in_array($package['post_status'], array('draft','inherit','trash','pending'))) wp_die(__('Package is not available!', 'wpdmpro'));
 
 if (wpdm_is_download_limit_exceed($package['ID'])) wp_die(__('Download Limit Exceeded','download-manager'));
 $files = \WPDM\Package::getFiles($package['ID']);
@@ -127,6 +127,7 @@ if ($fileCount > 1 && !$idvdl) {
     else if (file_exists(WP_CONTENT_DIR . end($tmp = explode("wp-content", $indfile)))) //path fix on site move
         $filepath = WP_CONTENT_DIR . end($tmp = explode("wp-content", $indfile));
     else {
+        do_action("wpdm_file_not_found", $package);
         wpdm_download_data('file-not-found.txt', 'File not found or deleted from server');
         die();
     }

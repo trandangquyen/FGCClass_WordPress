@@ -7,9 +7,9 @@ Author: Quyền - Brian
 Version: 1.0
 Author URI: http://brian.com
 */
-define('FGC_ENDIR_PATH',plugin_dir_path(__FILE__) );
-define('FGC_ENDIR_URL',plugin_dir_url(__FILE__) );
-class FGC_Manager{
+define('FGC_ENDIR_FODPATH',plugin_dir_path(__FILE__) );
+define('FGC_ENDIR_FODURL',plugin_dir_url(__FILE__) );
+class FGC_TE_Manager{
     function __construct()
     {
         //add js vs css to admin panel
@@ -29,15 +29,17 @@ class FGC_Manager{
     }
     // Update CSS and JS within in Admin area
     function admin_style() {
-        wp_enqueue_style('admin-boostrap', FGC_ENDIR_URL.'css/bootstrap.min.css');
-        wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_URL.'css/bootstrap-datetimepicker.min.css');
-        wp_enqueue_style('admin-styles', FGC_ENDIR_URL.'css/admin-style.css');
+        wp_enqueue_style('admin-boostrap', FGC_ENDIR_FODURL.'css/bootstrap.min.css');
+        wp_enqueue_style('admin-datetimepicker', FGC_ENDIR_FODURL.'css/bootstrap-datetimepicker.min.css');
+        wp_enqueue_style('admin-styles', FGC_ENDIR_FODURL.'css/admin-style.css');
         //wp_enqueue_script( 'admin-jquery', FGC_ENDIR_URL. 'js/jquery.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-moment', FGC_ENDIR_URL. 'js/moment.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-bootstrap', FGC_ENDIR_URL. 'js/bootstrap.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-datetimepickerjs', FGC_ENDIR_URL. 'js/bootstrap-datetimepicker.min.js', array(), 'v1', false );
-        wp_enqueue_script( 'admin-fgc-customjs', FGC_ENDIR_URL. 'js/fgc-teacher-plugin.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-moment', FGC_ENDIR_FODURL. 'js/moment.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-bootstrap', FGC_ENDIR_FODURL. 'js/bootstrap.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-datetimepickerjs', FGC_ENDIR_FODURL. 'js/bootstrap-datetimepicker.min.js', array(), 'v1', false );
+        wp_enqueue_script( 'admin-fgc-customjs', FGC_ENDIR_FODURL. 'js/fgc-teacher-plugin.js', array(), 'v1', false );
+
     }
+
     // Create post type events
     function codex_events_init(){
     	$labels = array(
@@ -71,6 +73,7 @@ class FGC_Manager{
 		'menu_position'      => null,
         'supports' => array('title', 'editor', 'publicize', 'excerpt', 'custom-fields', 'thumbnail', 'tags', 'comments','author')
 		);
+
 		register_post_type( 'events', $args );
         $labels = array(
             'name' => __('Tất cả danh mục','fgc-manager'),
@@ -85,6 +88,7 @@ class FGC_Manager{
             'new_item_name' => __('New Category Name','fgc-manager'),
             'menu_name' => __('Danh mục sự kiện','fgc-manager'),
         );
+
         $args = array(
             'hierarchical' => true,
             'labels' => $labels,
@@ -93,8 +97,10 @@ class FGC_Manager{
             'query_var' => true,
             'rewrite' => array('slug' =>  'events-category'),
         );
+
         register_taxonomy('eventscategory', array('events'), $args);
     }
+
     // Create post type news
     function codex_news_init(){
         $labels = array(
@@ -128,6 +134,7 @@ class FGC_Manager{
             'menu_position'      => null,
             'supports' => array('title', 'editor', 'publicize', 'excerpt', 'custom-fields', 'thumbnail', 'tags', 'comments','author')
         );
+
         register_post_type( 'news', $args );
         $labels = array(
             'name' => __('Tất cả danh mục','fgc-manager'),
@@ -142,6 +149,7 @@ class FGC_Manager{
             'new_item_name' => __('New Category Name','fgc-manager'),
             'menu_name' => __('Danh mục tin tức','fgc-manager'),
         );
+
         $args = array(
             'hierarchical' => true,
             'labels' => $labels,
@@ -150,6 +158,7 @@ class FGC_Manager{
             'query_var' => true,
             'rewrite' => array('slug' =>  'news-category'),
         );
+
         register_taxonomy('newscategory', array('news'), $args);
     }
     //add meta box with select option to events
@@ -189,6 +198,7 @@ class FGC_Manager{
             //check if user not select event time
             $current_event_status = 'expired';
         }
+
         // begin print layout
         ?>
             <div class="date-time-picker">
@@ -197,6 +207,7 @@ class FGC_Manager{
                         <?php
                         foreach ($select_values as $key => $value)
                         {
+
                             if($value == $current_event_status){
                                 ?>
                                 <input id="<?php echo $current_event_status; ?>" type="radio" name="events" value="<?php echo $current_event_status; ?>" checked>
@@ -239,6 +250,7 @@ class FGC_Manager{
                                 <?php
                             }//end else
                         }//end foreach
+
                         ?>
                     </div>
                     <div class='col-sm-3'>
@@ -264,6 +276,7 @@ class FGC_Manager{
             </div>
         <?php
     }
+
     //function to save selected the event
     function save_selected_event($post_id, $post, $update){
         if(!current_user_can("edit_post", $post_id)){
@@ -285,10 +298,12 @@ class FGC_Manager{
         update_post_meta($post_id, 'event-post-time-start',$time_start_event);//Assign value to the post meta with event-post-time-start key
         update_post_meta($post_id, 'event-post-time-end',$time_end_event);//Assign value to the post meta with event-post-time-end key
         update_post_meta($post_id, 'event-post-location',$event_location);//Assign value to the post meta with event-post-location key
+
     }
     // function to add the event column
     function set_custom_edit_events_columns($columns) {
         $columns['statusofevent'] = __( 'Sự kiện bài viết', 'your_text_domain' );
+
         return $columns;
     }
     //function to show value of the event column
@@ -297,6 +312,9 @@ class FGC_Manager{
             case 'statusofevent' :
                 echo get_post_meta( $post_id , 'event-post' , true );
                 break;
+
         }
     }
+
 }
+$fgc_manager = new FGC_TE_Manager();

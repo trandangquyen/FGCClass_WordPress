@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f2fa45-89f3-4851-b483-ad624efe3214" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/category-33.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/js/voice.js" afterPath="$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/js/voice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" afterPath="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/comment-template.php" afterPath="$PROJECT_DIR$/wp-includes/comment-template.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="fgc_voice_recorder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fgc_voice_recorder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/fgc_voice_recorder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1460">
-              <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+            <state relative-caret-position="840">
+              <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -50,23 +54,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxonomy-wpdmcategory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php">
+      <file leaf-file-name="comment-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="52" column="73" lean-forward="true" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+            <state relative-caret-position="26901">
+              <caret line="1288" column="86" lean-forward="false" selection-start-line="1288" selection-start-column="86" selection-end-line="1288" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive.php">
+      <file leaf-file-name="theme-custom.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="109" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="86" column="46" lean-forward="false" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
               <folding>
-                <element signature="e#1460#5344#0#HTML" expanded="false" />
+                <marker date="1502424861459" expanded="true" signature="3937:3965" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="voice.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/js/voice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments-audio.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments-audio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2037">
+              <caret line="106" column="117" lean-forward="false" selection-start-line="106" selection-start-column="81" selection-end-line="106" selection-end-column="117" />
+              <folding>
+                <marker date="1502358294159" expanded="true" signature="3839:4039" ph="..." />
+                <marker date="1502358294159" expanded="true" signature="3868:3896" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,12 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$all_events</find>
-      <find>con</find>
-      <find>all_events</find>
-      <find>dele</find>
-      <find>FGC_ENDIR_PATH</find>
-      <find>BÀI HỌC DÀNH CHO LỚP A1</find>
       <find>bài giảng</find>
       <find>BÀI HỌC MỚI</find>
       <find>get_posts</find>
@@ -106,6 +137,12 @@
       <find>Bài đọc</find>
       <find>thim-course-archive</find>
       <find>archive</find>
+      <find>gUMArea</find>
+      <find>comm</find>
+      <find>current-status</find>
+      <find>for=&quot;comment&quot;</find>
+      <find>comments.php</find>
+      <find>Your email address will not be published</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\FGCClass_WordPress\wp-content\plugins\country-state-city</dir>
@@ -122,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/template-parts/content-category.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/category-9.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/category-4.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/js/homepage.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/single.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
@@ -164,15 +198,18 @@
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/page-663.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/fgc-event-manager.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/single-voicerecorder.php" />
-        <option value="$PROJECT_DIR$/wp-includes/comment-template.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments-audio.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive-voicerecorder.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/archive.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-voicescategory.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/fgc_voice_recorder.php" />
+        <option value="$PROJECT_DIR$/wp-includes/comment-template.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/js/voice.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss" />
       </list>
     </option>
   </component>
@@ -190,7 +227,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="2" />
     <option name="width" value="1932" />
@@ -232,50 +269,6 @@
               <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
               <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fgc-event-manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fgc-voice-recorder" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -284,6 +277,19 @@
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="beautifulclass" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="beautifulclass" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FGCClass_WordPress" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FGCClass_WordPress" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-includes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -491,12 +497,15 @@
       <workItem from="1502265703983" duration="7737000" />
       <workItem from="1502289460045" duration="1175000" />
       <workItem from="1502332366822" duration="6248000" />
-      <workItem from="1502349628617" duration="5921000" />
+      <workItem from="1502349628617" duration="8277000" />
+      <workItem from="1502415763232" duration="256000" />
+      <workItem from="1502417223709" duration="4949000" />
+      <workItem from="1502435805019" duration="2121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="613596000" />
+    <option name="totallyTimeSpent" value="623278000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,7 +517,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25729167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -544,16 +553,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/show-all-event-controller.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/show-all-category-controller.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/Controller/add-edit-event-controller.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/View/event-category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-event-manager/lib/load-view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -629,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,8 +664,8 @@
         <state relative-caret-position="21">
           <caret line="276" column="46" lean-forward="false" selection-start-line="276" selection-start-column="46" selection-end-line="276" selection-end-column="46" />
           <folding>
-            <marker date="1502079523636" expanded="true" signature="21573:21649" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1502079523636" expanded="true" signature="21573:21750" ph="SELECT * FRO... wp_events_post" />
+            <marker date="1502358294182" expanded="true" signature="21573:21649" ph="SELECT * FRO... wp_events_post" />
+            <marker date="1502358294182" expanded="true" signature="21573:21750" ph="SELECT * FRO... wp_events_post" />
           </folding>
         </state>
       </provider>
@@ -676,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="67" column="126" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,15 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,11 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="956">
           <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <marker date="1501183184581" expanded="true" signature="1206:1246" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1501183184581" expanded="true" signature="1428:1492" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1501183184581" expanded="true" signature="1828:1876" ph="SELECT * FRO... wp_events_category" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3108">
           <caret line="148" column="48" lean-forward="false" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,42 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1924" column="9" lean-forward="false" selection-start-line="1924" selection-start-column="9" selection-end-line="1924" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments-audio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <marker date="1502289963664" expanded="true" signature="3839:4039" ph="..." />
-            <marker date="1502289963664" expanded="true" signature="3868:3896" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4095">
-          <caret line="201" column="1" lean-forward="false" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/single-voicerecorder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
           <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-290">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,28 +752,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1722">
           <caret line="93" column="99" lean-forward="false" selection-start-line="93" selection-start-column="92" selection-end-line="93" selection-end-column="109" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/category-33.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/category-33.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/page-663.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="837">
           <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
-          <folding>
-            <marker date="1501899655328" expanded="true" signature="2385:2562" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1501899655328" expanded="true" signature="5014:5181" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1501899655328" expanded="true" signature="5014:5190" ph="SELECT * FRO... wp_events_post" />
-            <marker date="1501899655328" expanded="true" signature="7581:7756" ph="SELECT * FRO... wp_events_post" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="616" column="36" lean-forward="false" selection-start-line="616" selection-start-column="36" selection-end-line="637" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,27 +809,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="64" column="72" lean-forward="false" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
-          <folding>
-            <marker date="1501901287149" expanded="true" signature="2419:3749" ph="CREATE TABLE... IF" />
-            <marker date="1501901287149" expanded="true" signature="4108:4389" ph="CREATE TABLE... IF" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="109" selection-end-column="23" />
-          <folding>
-            <element signature="e#1460#5344#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/taxonomy-wpdmcategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="52" column="73" lean-forward="true" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+        <state relative-caret-position="861">
+          <caret line="52" column="73" lean-forward="false" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="201" column="1" lean-forward="true" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="109" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-comments-post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/single-voicerecorder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497606343707" expanded="true" signature="4100:4198" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="4332:4467" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="10089:10201" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="10276:10384" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="10516:10658" ph="SELECT DATE_... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="11601:11709" ph="SELECT comme... $" />
+            <marker date="1497606343707" expanded="true" signature="20356:20503" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="23905:23963" ph="SELECT post_... ${$wpdb-&gt;posts}" />
+            <marker date="1497606343707" expanded="true" signature="27000:27178" ph="SELECT `comm... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="42142:42206" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="42502:42562" ph="SELECT meta_... ${$wpdb-&gt;commentmeta}" />
+            <marker date="1497606343707" expanded="true" signature="77956:78046" ph="SELECT COUNT... ${$wpdb-&gt;comments}" />
+            <marker date="1497606343707" expanded="true" signature="81669:81843" ph="SELECT ID, p... $" />
+            <marker date="1497606343707" expanded="true" signature="82006:82183" ph="SELECT ID, p... $" />
+            <marker date="1497606343707" expanded="true" signature="82357:82432" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1497606343707" expanded="true" signature="84034:84117" ph="UPDATE ${$wp... " />
+            <marker date="1497606343707" expanded="true" signature="89361:89432" ph="UPDATE ${$wp... " />
+            <marker date="1497606343707" expanded="true" signature="89497:89575" ph="UPDATE ${$wp... " />
+            <marker date="1497606343707" expanded="true" signature="93444:93514" ph="SELECT ${$wp... ${$wpdb-&gt;comments}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/fgc_voice_recorder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -921,10 +892,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/fgc_voice_recorder.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments-audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        <state relative-caret-position="2037">
+          <caret line="106" column="117" lean-forward="false" selection-start-line="106" selection-start-column="81" selection-end-line="106" selection-end-column="117" />
+          <folding>
+            <marker date="1502358294159" expanded="true" signature="3839:4039" ph="..." />
+            <marker date="1502358294159" expanded="true" signature="3868:3896" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/css/theme-custom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26901">
+          <caret line="1288" column="86" lean-forward="false" selection-start-line="1288" selection-start-column="86" selection-end-line="1288" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/beautifulclass/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="86" column="46" lean-forward="false" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+          <folding>
+            <marker date="1502424861459" expanded="true" signature="3937:3965" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/fgc-voice-recorder/js/voice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding />
         </state>
       </provider>
